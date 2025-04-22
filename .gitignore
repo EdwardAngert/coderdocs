@@ -1,0 +1,9 @@
+# coderdocs/.gitignore
+
+node_modules/
+dist/
+.DS_Store
+.env
+coder/*     # Optional: to avoid checking in submodule content itself
+!coder/.git # But keep submodule metadata
+

@@ -1,0 +1,16 @@
+{
+  "name": "coderdocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync-docs": "node scripts/sync-docs.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.1",
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  }
+}
