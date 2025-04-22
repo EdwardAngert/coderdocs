@@ -1,8 +1,14 @@
+---
+title: Configure Control Plane Access
+description: Coder server's primary configuration is done via environment variables. For a
+version: main
+audience: admin
+---
 # Configure Control Plane Access
 
 Coder server's primary configuration is done via environment variables. For a
 full list of the options, run `coder server --help` or see our
-[CLI documentation](../../reference/cli/server.md).
+[CLI documentation](../../reference/cli/server).
 
 ## Access URL
 
@@ -39,8 +45,8 @@ coder server
 ## Wildcard access URL
 
 `CODER_WILDCARD_ACCESS_URL` is necessary for
-[port forwarding](../networking/port-forwarding.md#dashboard) via the dashboard
-or running [coder_apps](../templates/index.md) on an absolute path. Set this to
+[port forwarding](../networking/port-forwarding#dashboard) via the dashboard
+or running [coder_apps](../templates/index) on an absolute path. Set this to
 a wildcard subdomain that resolves to Coder (e.g. `*.coder.example.com`).
 
 > [!NOTE]
@@ -55,8 +61,8 @@ If you are providing TLS certificates directly to the Coder server, either
 1. Configure multiple certificates and keys via
    [`coder.tls.secretNames`](https://github.com/coder/coder/blob/main/helm/coder/values.yaml)
    in the Helm Chart, or
-   [`--tls-cert-file`](../../reference/cli/server.md#--tls-cert-file) and
-   [`--tls-key-file`](../../reference/cli/server.md#--tls-key-file) command line
+   [`--tls-cert-file`](../../reference/cli/server#--tls-cert-file) and
+   [`--tls-key-file`](../../reference/cli/server#--tls-key-file) command line
    options (these both take a comma separated list of files; list certificates
    and their respective keys in the same order).
 
@@ -66,9 +72,9 @@ The Coder server can directly use TLS certificates with `CODER_TLS_ENABLE` and
 accompanying configuration flags. However, Coder can also run behind a
 reverse-proxy to terminate TLS certificates from LetsEncrypt.
 
-- [Apache](../../tutorials/reverse-proxy-apache.md)
-- [Caddy](../../tutorials/reverse-proxy-caddy.md)
-- [NGINX](../../tutorials/reverse-proxy-nginx.md)
+- [Apache](../../tutorials/reverse-proxy-apache)
+- [Caddy](../../tutorials/reverse-proxy-caddy)
+- [NGINX](../../tutorials/reverse-proxy-nginx)
 
 ### Kubernetes TLS configuration
 
@@ -148,10 +154,10 @@ integrations with Git providers, such as GitHub, GitLab, and Bitbucket.
 External authentication can also be used to integrate with external services
 like JFrog Artifactory and others.
 
-Please refer to the [external authentication](../external-auth.md) section for
+Please refer to the [external authentication](../external-auth) section for
 more information.
 
 ## Up Next
 
-- [Setup and manage templates](../templates/index.md)
-- [Setup external provisioners](../provisioners/index.md)
+- [Setup and manage templates](../templates/index)
+- [Setup external provisioners](../provisioners/index)

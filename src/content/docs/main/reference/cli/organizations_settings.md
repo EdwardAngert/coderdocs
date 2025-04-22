@@ -1,3 +1,10 @@
+---
+title: organizations settings
+description: Manage organization settings.
+version: main
+audience: developer
+tier: premium
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # organizations settings
 
@@ -17,5 +24,5 @@ coder organizations settings
 
 | Name                                                  | Purpose                                 |
 |-------------------------------------------------------|-----------------------------------------|
-| [<code>show</code>](./organizations_settings_show.md) | Outputs specified organization setting. |
-| [<code>set</code>](./organizations_settings_set.md)   | Update specified organization setting.  |
+| [<code>show</code>](./organizations_settings_show) | Outputs specified organization setting. |
+| [<code>set</code>](./organizations_settings_set)   | Update specified organization setting.  |

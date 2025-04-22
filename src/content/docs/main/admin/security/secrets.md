@@ -1,9 +1,15 @@
+---
+title: Secrets
+description: Coder is open-minded about how you get your secrets into your workspaces. For
+version: main
+audience: admin
+---
 # Secrets
 
 Coder is open-minded about how you get your secrets into your workspaces. For
 more information about how to use secrets and other security tips, visit our
 guide to
-[security best practices](../../tutorials/best-practices/security-best-practices.md#secrets).
+[security best practices](../../tutorials/best-practices/security-best-practices#secrets).
 
 This article explains how to use secrets in a workspace. To authenticate the
 workspace provisioner, see the
@@ -22,7 +28,7 @@ Often, this workflow is simply:
 1. Your users write them to a persistent file after they've built their
    workspace
 
-[Template parameters](../templates/extending-templates/parameters.md) are a
+[Template parameters](../templates/extending-templates/parameters) are a
 dangerous way to accept secrets. We show parameters in cleartext around the
 product. Assume anyone with view access to a workspace can also see its
 parameters.
@@ -36,7 +42,7 @@ environment variable.
 
 Users can view their public key in their account settings:
 
-![SSH keys in account settings](../../images/ssh-keys.png)
+![SSH keys in account settings](%images/%images/./../images/ssh-keys.png)
 
 > [!NOTE]
 > SSH keys are never stored in Coder workspaces, and are fetched only when
@@ -81,7 +87,7 @@ While you can inject secrets into the workspace via environment variables, you
 can also show them in the Workspace UI with
 [`coder_metadata`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/metadata).
 
-![Secrets UI](../../images/admin/secret-metadata.PNG)
+![Secrets UI](%images/%images/./../images/admin/secret-metadata.PNG)
 
 Can be produced with
 
@@ -113,9 +119,9 @@ store and retrieve secrets in your workspace. For example, you can use
 [HashiCorp Vault](https://www.vaultproject.io/) to inject secrets into your
 workspace.
 
-Refer to our [HashiCorp Vault Integration](../integrations/vault.md) guide for
+Refer to our [HashiCorp Vault Integration](../integrations/vault) guide for
 more information on how to integrate HashiCorp Vault with Coder.
 
 ## Next steps
 
-- [Security - best practices](../../tutorials/best-practices/security-best-practices.md)
+- [Security - best practices](../../tutorials/best-practices/security-best-practices)

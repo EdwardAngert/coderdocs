@@ -1,3 +1,9 @@
+---
+title: tokens
+description: Manage personal access tokens
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # tokens
 
@@ -34,6 +40,6 @@ Tokens are used to authenticate automated clients to Coder.
 
 | Name                                      | Purpose        |
 |-------------------------------------------|----------------|
-| [<code>create</code>](./tokens_create.md) | Create a token |
-| [<code>list</code>](./tokens_list.md)     | List tokens    |
-| [<code>remove</code>](./tokens_remove.md) | Delete a token |
+| [<code>create</code>](./tokens_create) | Create a token |
+| [<code>list</code>](./tokens_list)     | List tokens    |
+| [<code>remove</code>](./tokens_remove) | Delete a token |

@@ -1,3 +1,10 @@
+---
+title: Permissions
+description: Licensed Coder administrators can control who can use and modify the template.
+version: main
+audience: admin
+tier: premium
+---
 # Permissions
 
 > [!NOTE]
@@ -6,7 +13,7 @@
 
 Licensed Coder administrators can control who can use and modify the template.
 
-![Template Permissions](../../images/templates/permissions.png)
+![Template Permissions](%images/%images/./../images/templates/permissions.png)
 
 Permissions allow you to control who can use and modify the template. Both
 individual user and groups can be added to the access list for a template.
@@ -20,4 +27,4 @@ By default the `Everyone` group is assigned to each template meaning any Coder
 user can use the template to create a workspace. To prevent this, disable the
 `Allow everyone to use the template` setting when creating a template.
 
-![Create Template Permissions](../../images/templates/create-template-permissions.png)
+![Create Template Permissions](%images/%images/./../images/templates/create-template-permissions.png)

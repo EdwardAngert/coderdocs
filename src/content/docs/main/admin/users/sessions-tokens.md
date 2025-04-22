@@ -1,10 +1,16 @@
+---
+title: API & Session Tokens
+description: Users can generate tokens to make API requests on behalf of themselves.
+version: main
+audience: admin
+---
 # API & Session Tokens
 
 Users can generate tokens to make API requests on behalf of themselves.
 
 ## Short-Lived Tokens (Sessions)
 
-The [Coder CLI](../../install/cli.md) and
+The [Coder CLI](../../install/cli) and
 [Backstage Plugin](https://github.com/coder/backstage-plugins) use short-lived
 token to authenticate. To generate a short-lived session token on behalf of your
 account, visit the following URL: `https://coder.example.com/cli-auth`
@@ -13,9 +19,9 @@ account, visit the following URL: `https://coder.example.com/cli-auth`
 
 By default, sessions last 24 hours and are automatically refreshed. You can
 configure
-[`CODER_SESSION_DURATION`](../../reference/cli/server.md#--session-duration) to
+[`CODER_SESSION_DURATION`](../../reference/cli/server#--session-duration) to
 change the duration and
-[`CODER_DISABLE_SESSION_EXPIRY_REFRESH`](../../reference/cli/server.md#--disable-session-expiry-refresh)
+[`CODER_DISABLE_SESSION_EXPIRY_REFRESH`](../../reference/cli/server#--disable-session-expiry-refresh)
 to configure this behavior.
 
 ## Long-Lived Tokens (API Tokens)
@@ -34,7 +40,7 @@ to `https://coder.example.com/settings/account`
 
 Navigate to the tokens page in the sidebar and create a new token:
 
-![Create an API token](../../images/admin/users/create-token.png)
+![Create an API token](%images/%images/./../images/admin/users/create-token.png)
 
 #### CLI
 
@@ -45,7 +51,7 @@ coder tokens create --name=my-token --lifetime=720h
 ```
 
 See the help docs for
-[`coder tokens create`](../../reference/cli/tokens_create.md) for more info.
+[`coder tokens create`](../../reference/cli/tokens_create) for more info.
 
 </div>
 
@@ -65,12 +71,12 @@ coder tokens create my-token --user <username>
 ```
 
 See the full CLI reference for
-[`coder tokens create`](../../reference/cli/tokens_create.md)
+[`coder tokens create`](../../reference/cli/tokens_create)
 
 #### API
 
 Use our API reference for more information on how to
-[create token API key](../../reference/api/users.md#create-token-api-key)
+[create token API key](../../reference/api/users#create-token-api-key)
 
 </div>
 

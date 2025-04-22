@@ -1,3 +1,9 @@
+---
+title: Setting up a Coder deployment
+description: 'For day-zero Coder users, we recommend following this guide to set up a local'
+version: main
+audience: all
+---
 # Setting up a Coder deployment
 
 For day-zero Coder users, we recommend following this guide to set up a local
@@ -5,8 +11,8 @@ Coder deployment from our
 [open source repository](https://github.com/coder/coder).
 
 We'll use [Docker](https://docs.docker.com/engine) to manage the compute for a
-slim deployment to experiment with [workspaces](../user-guides/index.md) and
-[templates](../admin/templates/index.md).
+slim deployment to experiment with [workspaces](../user-guides/index) and
+[templates](../admin/templates/index).
 
 Docker is not necessary for every Coder deployment and is only used here for
 simplicity.
@@ -56,7 +62,7 @@ coder server
 The output will provide you with an access URL to create your first
 administrator account.
 
-![Coder login screen](../images/start/setup-page.png)
+![Coder login screen](%images/%images/./images/start/setup-page.png)
 
 Once you've signed in, you'll be brought to an empty workspaces page, which
 we'll soon populate with your first development environments.

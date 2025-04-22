@@ -1,3 +1,11 @@
+---
+title: Logs
+description: >-
+  All Coder services log to standard output, which can be critical for
+  identifying
+version: main
+audience: admin
+---
 # Logs
 
 All Coder services log to standard output, which can be critical for identifying
@@ -12,11 +20,11 @@ on Kubernetes or `journalctl -u coder` if you deployed Coder on a host
 machine/VM.
 
 - To change the log format/location, you can set
-  [`CODER_LOGGING_HUMAN`](../../reference/cli/server.md#--log-human) and
-  [`CODER_LOGGING_JSON](../../reference/cli/server.md#--log-json) server config.
+  [`CODER_LOGGING_HUMAN`](../../reference/cli/server#--log-human) and
+  [`CODER_LOGGING_JSON](../../reference/cli/server#--log-json) server config.
   options.
 - To only display certain types of logs, use
-  the[`CODER_LOG_FILTER`](../../reference/cli/server.md#-l---log-filter) server
+  the[`CODER_LOG_FILTER`](../../reference/cli/server#-l---log-filter) server
   config.
 
 Events such as server errors, audit logs, user activities, and SSO & OpenID
@@ -24,14 +32,14 @@ Connect logs are all captured in the `coderd` logs.
 
 ## `provisionerd` Logs
 
-Logs for [external provisioners](../provisioners/index.md) are structured
-[and configured](../../reference/cli/provisioner_start.md#--log-human) similarly
+Logs for [external provisioners](../provisioners/index) are structured
+[and configured](../../reference/cli/provisioner_start#--log-human) similarly
 to `coderd` logs. Use these logs to troubleshoot and monitor the Terraform
 operations behind workspaces and templates.
 
 ## Workspace Logs
 
-The [Coder agent](../infrastructure/architecture.md#agents) inside workspaces
+The [Coder agent](../infrastructure/architecture#agents) inside workspaces
 provides useful logs around workspace-to-server and client-to-workspace
 connections. For Kubernetes workspaces, these are typically the pod logs as the
 agent runs via the container entrypoint.
@@ -54,7 +62,7 @@ Linux workspaces.
 Sometimes, a workspace may take a while to start or even fail to start due to
 underlying events on the Kubernetes cluster such as a node being out of
 resources or a missing image. You can install
-[coder-logstream-kube](../integrations/kubernetes-logs.md) to stream Kubernetes
+[coder-logstream-kube](../integrations/kubernetes-logs) to stream Kubernetes
 events to the Coder UI.
 
-![Kubernetes logs in Coder dashboard](../../images/admin/monitoring/logstream-kube.png)
+![Kubernetes logs in Coder dashboard](%images/%images/./../images/admin/monitoring/logstream-kube.png)

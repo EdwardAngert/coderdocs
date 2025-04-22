@@ -1,3 +1,9 @@
+---
+title: provisioner keys
+description: Manage provisioner keys
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # provisioner keys
 
@@ -17,6 +23,6 @@ coder provisioner keys
 
 | Name                                                | Purpose                                  |
 |-----------------------------------------------------|------------------------------------------|
-| [<code>create</code>](./provisioner_keys_create.md) | Create a new provisioner key             |
-| [<code>list</code>](./provisioner_keys_list.md)     | List provisioner keys in an organization |
-| [<code>delete</code>](./provisioner_keys_delete.md) | Delete a provisioner key                 |
+| [<code>create</code>](./provisioner_keys_create) | Create a new provisioner key             |
+| [<code>list</code>](./provisioner_keys_list)     | List provisioner keys in an organization |
+| [<code>delete</code>](./provisioner_keys_delete) | Delete a provisioner key                 |

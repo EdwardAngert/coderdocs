@@ -1,3 +1,9 @@
+---
+title: Port Forwarding
+description: Port forwarding lets developers securely access processes on their Coder
+version: main
+audience: admin
+---
 # Port Forwarding
 
 Port forwarding lets developers securely access processes on their Coder
@@ -49,9 +55,9 @@ For more examples, see `coder port-forward --help`.
 ## Dashboard
 
 To enable port forwarding via the dashboard, Coder must be configured with a
-[wildcard access URL](../../admin/setup/index.md#wildcard-access-url). If an
+[wildcard access URL](../../admin/setup/index#wildcard-access-url). If an
 access URL is not specified, Coder will create
-[a publicly accessible URL](../../admin/setup/index.md#tunnel) to reverse
+[a publicly accessible URL](../../admin/setup/index#tunnel) to reverse
 proxy the deployment, and port forwarding will work.
 
 There is a
@@ -90,7 +96,7 @@ Valid `share` values include `owner` - private to the user, `authenticated` -
 accessible by any user authenticated to the Coder deployment, and `public` -
 accessible by users outside of the Coder deployment.
 
-![Port forwarding from an app in the UI](../../images/networking/portforwarddashboard.png)
+![Port forwarding from an app in the UI](%images/%images/./../images/networking/portforwarddashboard.png)
 
 ## Accessing workspace ports
 
@@ -99,7 +105,7 @@ to specify an arbitrary port. Coder will also detect if apps inside the
 workspace are listening on ports, and list them below the port input (this is
 only supported on Windows and Linux workspace agents).
 
-![Port forwarding in the UI](../../images/networking/listeningports.png)
+![Port forwarding in the UI](%images/%images/./../images/networking/listeningports.png)
 
 ### Sharing ports
 
@@ -118,7 +124,7 @@ Once a port is shared at either `authenticated` or `public` levels, it will stay
 pinned in the open ports UI for better accessibility regardless of whether or
 not it is still accessible.
 
-![Annotated port controls in the UI](../../images/networking/annotatedports.png)
+![Annotated port controls in the UI](%images/%images/./../images/networking/annotatedports.png)
 
 The sharing level is limited by the maximum level enforced in the template
 settings in premium deployments, and not restricted in OSS deployments.
@@ -141,7 +147,7 @@ maximum sharing level is set to `Owner`, meaning port sharing is disabled for
 end-users. OSS deployments allow all workspaces to share ports at both the
 `authenticated` and `public` levels.
 
-![Max port sharing level in the UI](../../images/networking/portsharingmax.png)
+![Max port sharing level in the UI](%images/%images/./../images/networking/portsharingmax.png)
 
 ### Configuring port protocol
 
@@ -281,7 +287,7 @@ configurable by either admins or users.
 ## SSH
 
 First,
-[configure SSH](../../user-guides/workspace-access/index.md#configure-ssh) on
+[configure SSH](../../user-guides/workspace-access/index#configure-ssh) on
 your local machine. Then, use `ssh` to forward like so:
 
 ```console

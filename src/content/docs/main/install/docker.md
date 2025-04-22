@@ -1,3 +1,9 @@
+---
+title: Install Coder via Docker
+description: You can install and run Coder using the official Docker images published on
+version: main
+audience: infra
+---
 # Install Coder via Docker
 
 You can install and run Coder using the official Docker images published on
@@ -9,7 +15,7 @@ You can install and run Coder using the official Docker images published on
   [official installation documentation](https://docs.docker.com/install/).
 
 - A Linux machine. For macOS devices, start Coder using the
-  [standalone binary](./cli.md).
+  [standalone binary](./cli).
 
 - 2 CPU cores and 4 GB memory free on your machine.
 
@@ -75,7 +81,7 @@ which includes an PostgreSQL container and volume.
    workspace
 
 Coder configuration is defined via environment variables. Learn more about
-Coder's [configuration options](../admin/setup/index.md).
+Coder's [configuration options](../admin/setup/index).
 
 ## Install the preview release
 
@@ -95,7 +101,7 @@ Replace `ghcr.io/coder/coder:latest` in the `docker run` command in the
 ### Docker-based workspace is stuck in "Connecting..."
 
 Ensure you have an externally-reachable `CODER_ACCESS_URL` set. See
-[troubleshooting templates](../admin/templates/troubleshooting.md) for more
+[troubleshooting templates](../admin/templates/troubleshooting) for more
 steps.
 
 ### Permission denied while trying to connect to the Docker daemon socket
@@ -115,10 +121,10 @@ group, the above may not work as-is.
 In order to use cloud-based templates (e.g. Kubernetes, AWS), you must have an
 external URL that users and workspaces will use to connect to Coder. For
 proof-of-concept deployments, you can use
-[Coder's tunnel](../admin/setup/index.md#tunnel). For production deployments, we
-recommend setting an [access URL](../admin/setup/index.md#access-url)
+[Coder's tunnel](../admin/setup/index#tunnel). For production deployments, we
+recommend setting an [access URL](../admin/setup/index#access-url)
 
 ## Next steps
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md#configure-control-plane-access)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index#configure-control-plane-access)

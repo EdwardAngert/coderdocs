@@ -1,3 +1,11 @@
+---
+title: Untitled
+description: >-
+  As the AI landscape is evolving, we are working to ensure Coder remains a
+  secure
+version: main
+audience: all
+---
 > [!NOTE]
 >
 > This functionality is in early access and is evolving rapidly.
@@ -14,10 +22,10 @@ environments.
 
 ## Use Trusted Models
 
-Most [agents](./agents.md) can be configured to either use a local LLM (e.g.
+Most [agents](./agents) can be configured to either use a local LLM (e.g.
 llama3), an agent proxy (e.g. OpenRouter), or a Cloud-Provided LLM (e.g. AWS
 Bedrock). Research which models you are comfortable with and configure your
-[Coder templates](./create-template.md) to use those.
+[Coder templates](./create-template) to use those.
 
 ## Set up Firewalls and Proxies
 
@@ -30,7 +38,7 @@ not access or upload sensitive information.
 Many agents require API keys to access external services. It is recommended to
 create a separate API key for your agent with the minimum permissions required.
 This will likely involve editing your
-[template for Agents](./create-template.md) to set different scopes or tokens
+[template for Agents](./create-template) to set different scopes or tokens
 from the standard one.
 
 Additional guidance and tooling is coming in future releases of Coder.

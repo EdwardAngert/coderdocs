@@ -1,3 +1,9 @@
+---
+title: restart
+description: Restart a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # restart
 

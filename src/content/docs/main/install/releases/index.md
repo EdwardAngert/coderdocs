@@ -1,3 +1,9 @@
+---
+title: Releases
+description: Coder releases are cut directly from main in our
+version: main
+audience: infra
+---
 # Releases
 
 Coder releases are cut directly from main in our
@@ -35,7 +41,7 @@ only for security issues or CVEs.
 - In-product security vulnerabilities and CVEs are supported
 
 For more information on feature rollout, see our
-[feature stages documentation](../releases/feature-stages.md).
+[feature stages documentation](../releases/feature-stages).
 
 ## Installing stable
 
@@ -49,7 +55,7 @@ latest stable release:
 curl -fsSL https://coder.com/install.sh | sh -s -- --stable
 ```
 
-Best practices for installing Coder can be found on our [install](../index.md)
+Best practices for installing Coder can be found on our [install](../index)
 pages.
 
 ## Release schedule

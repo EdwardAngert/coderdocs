@@ -1,3 +1,9 @@
+---
+title: groups edit
+description: Edit a user group
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # groups edit
 

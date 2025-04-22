@@ -1,3 +1,9 @@
+---
+title: templates versions
+description: Manage different versions of the specified template
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates versions
 
@@ -25,7 +31,7 @@ coder templates versions
 
 | Name                                                        | Purpose                                         |
 |-------------------------------------------------------------|-------------------------------------------------|
-| [<code>list</code>](./templates_versions_list.md)           | List all the versions of the specified template |
-| [<code>archive</code>](./templates_versions_archive.md)     | Archive a template version(s).                  |
-| [<code>unarchive</code>](./templates_versions_unarchive.md) | Unarchive a template version(s).                |
-| [<code>promote</code>](./templates_versions_promote.md)     | Promote a template version to active.           |
+| [<code>list</code>](./templates_versions_list)           | List all the versions of the specified template |
+| [<code>archive</code>](./templates_versions_archive)     | Archive a template version(s).                  |
+| [<code>unarchive</code>](./templates_versions_unarchive) | Unarchive a template version(s).                |
+| [<code>promote</code>](./templates_versions_promote)     | Promote a template version to active.           |

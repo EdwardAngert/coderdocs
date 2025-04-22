@@ -1,3 +1,9 @@
+---
+title: Dotfiles
+description: <!-- markdown-link-check-disable -->
+version: main
+audience: developer
+---
 # Dotfiles
 
 <!-- markdown-link-check-disable -->
@@ -16,7 +22,7 @@ You can read more on dotfiles best practices [here](https://dotfiles.github.io).
 Templates can prompt users for their dotfiles repo URL, which will personalize
 your workspace automatically.
 
-![Dotfiles in workspace creation](../images/user-guides/dotfiles-module.png)
+![Dotfiles in workspace creation](%images/%images/./images/user-guides/dotfiles-module.png)
 
 > [!NOTE]
 > Template admins: this can be enabled quite easily with a our

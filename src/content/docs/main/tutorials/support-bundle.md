@@ -1,3 +1,9 @@
+---
+title: Generate and upload a Support Bundle to Coder Support
+description: 'When you engage with Coder support to diagnose an issue with your deployment,'
+version: main
+audience: admin
+---
 # Generate and upload a Support Bundle to Coder Support
 
 When you engage with Coder support to diagnose an issue with your deployment,
@@ -39,9 +45,9 @@ A brief overview of all files contained in the bundle is provided below:
 | `agent/prometheus.txt`            | The contents of the agent's Prometheus endpoint.                                                           |
 | `cli_logs.txt`                    | Logs from running the `coder support bundle` command.                                                      |
 | `deployment/buildinfo.json`       | Coder version and build information.                                                                       |
-| `deployment/config.json`          | Deployment [configuration](../reference/api/general.md#get-deployment-config), with secret values removed. |
-| `deployment/experiments.json`     | Any [experiments](../reference/cli/server.md#--experiments) currently enabled for the deployment.          |
-| `deployment/health.json`          | A snapshot of the [health status](../admin/monitoring/health-check.md) of the deployment.                  |
+| `deployment/config.json`          | Deployment [configuration](../reference/api/general#get-deployment-config), with secret values removed. |
+| `deployment/experiments.json`     | Any [experiments](../reference/cli/server#--experiments) currently enabled for the deployment.          |
+| `deployment/health.json`          | A snapshot of the [health status](../admin/monitoring/health-check) of the deployment.                  |
 | `logs.txt`                        | Logs from the `codersdk.Client` used to generate the bundle.                                               |
 | `network/connection_info.json`    | Information used by workspace agents used to connect to Coder (DERP map etc.)                              |
 | `network/coordinator_debug.html`  | Peers currently connected to each Coder instance and the tunnels established between peers.                |
@@ -60,13 +66,13 @@ A brief overview of all files contained in the bundle is provided below:
    requires the Coder deployment to be available.
 
 2. Ensure you have the Coder CLI installed on a local machine. See
-   [installation](../install/index.md) for steps on how to do this.
+   [installation](../install/index) for steps on how to do this.
 
    > [!NOTE]
    > It is recommended to generate a support bundle from a location
    > experiencing workspace connectivity issues.
 
-3. Ensure you are [logged in](../reference/cli/login.md#login) to your Coder
+3. Ensure you are [logged in](../reference/cli/login#login) to your Coder
    deployment as a user with the Owner privilege.
 
 4. Run `coder support bundle [owner/workspace]`, and respond `yes` to the

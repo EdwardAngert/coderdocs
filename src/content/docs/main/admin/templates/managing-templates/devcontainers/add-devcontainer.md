@@ -1,9 +1,15 @@
+---
+title: Add a dev container template to Coder
+description: A Coder administrator adds a dev container-compatible template to Coder
+version: main
+audience: admin
+---
 # Add a dev container template to Coder
 
 A Coder administrator adds a dev container-compatible template to Coder
 (Envbuilder). This allows the template to prompt for the developer for their dev
 container repository's URL as a
-[parameter](../../extending-templates/parameters.md) when they create their
+[parameter](../../extending-templates/parameters) when they create their
 workspace. Envbuilder clones the repo and builds a container from the
 `devcontainer.json` specified in the repo.
 
@@ -42,7 +48,7 @@ choose a template from the
    ```
 
    A list of available templates is shown in the
-   [templates_init](../../../../reference/cli/templates.md) reference.
+   [templates_init](../../../../reference/cli/templates) reference.
 
 1. `cd` into the directory and push the template to your Coder deployment:
 
@@ -84,12 +90,12 @@ choose a template from the
    1. Select **Templates**.
    1. Select **Create Template**, then **Upload template**:
 
-      ![Upload template](../../../../images/templates/upload-create-your-first-template.png)
+      ![Upload template](%images/%images/./../../../images/templates/upload-create-your-first-template.png)
 
    1. Drag the `.zip` file into the **Upload template** section and fill out the
       details, then select **Create template**.
 
-      ![Upload the template files](../../../../images/templates/upload-create-template-form.png)
+      ![Upload the template files](%images/%images/./../../../images/templates/upload-create-template-form.png)
 
 </div>
 
@@ -128,9 +134,9 @@ their development environments:
 | [AWS EC2 dev container](https://github.com/coder/coder/tree/main/examples/templates/aws-devcontainer)               | Runs a development container inside a single EC2 instance. It also mounts the Docker socket from the VM inside the container to enable Docker inside the workspace. |
 
 Your template can prompt the user for a repo URL with
-[parameters](../../extending-templates/parameters.md):
+[parameters](../../extending-templates/parameters):
 
-![Dev container parameter screen](../../../../images/templates/devcontainers.png)
+![Dev container parameter screen](%images/%images/./../../../images/templates/devcontainers.png)
 
 ## Dev container lifecycle scripts
 
@@ -143,4 +149,4 @@ Lifecycle scripts are managed by project developers.
 
 ## Next steps
 
-- [Dev container security and caching](./devcontainer-security-caching.md)
+- [Dev container security and caching](./devcontainer-security-caching)

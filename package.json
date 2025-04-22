@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sync-docs": "node scripts/sync-docs.mjs"
+    "sync-docs": "node scripts/sync-docs.mjs",
+    "transform-docs": "node scripts/transform-docs.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
-    "fs-extra": "^11.3.0"
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.0",
+    "gray-matter": "^4.0.3"
   }
 }

@@ -1,3 +1,9 @@
+---
+title: Audit Logs
+description: Audit Logs allows **Auditors** to monitor user operations in their deployment.
+version: main
+audience: admin
+---
 # Audit Logs
 
 Audit Logs allows **Auditors** to monitor user operations in their deployment.
@@ -75,14 +81,14 @@ audit trails.
 
 Audit logs can be accessed through our REST API. You can find detailed
 information about this in our
-[endpoint documentation](../../reference/api/audit.md#get-audit-logs).
+[endpoint documentation](../../reference/api/audit#get-audit-logs).
 
 ## Service Logs
 
 Audit trails are also dispatched as service logs and can be captured and
 categorized using any log management tool such as [Splunk](https://splunk.com).
 
-Example of a [JSON formatted](../../reference/cli/server.md#--log-json) audit
+Example of a [JSON formatted](../../reference/cli/server#--log-json) audit
 log entry:
 
 ```json
@@ -118,7 +124,7 @@ log entry:
 }
 ```
 
-Example of a [human readable](../../reference/cli/server.md#--log-human) audit
+Example of a [human readable](../../reference/cli/server#--log-human) audit
 log entry:
 
 ```console
@@ -128,4 +134,4 @@ log entry:
 ## Enabling this feature
 
 This feature is only available with a premium license.
-[Learn more](../licensing/index.md)
+[Learn more](../licensing/index)

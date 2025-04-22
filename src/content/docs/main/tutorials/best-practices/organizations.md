@@ -1,8 +1,15 @@
+---
+title: Organizations - best practices
+description: '---'
+version: main
+audience: admin
+tier: premium
+---
 # Organizations - best practices
 
 ---
 
-Coder [Organizations](../../admin/users/organizations.md) allow administrators
+Coder [Organizations](../../admin/users/organizations) allow administrators
 finer control over groups, templates, workspaces, and provisioners within their
 Coder deployment.
 
@@ -23,7 +30,7 @@ Organizations are the hierarchical parent for templates, groups, and
 provisioners. Every new organization must have separate templates, provisioners,
 and groups.
 
-![Organizations architecture](../../images/best-practice/organizations-architecture.png)
+![Organizations architecture](%images/%images/./../images/best-practice/organizations-architecture.png)
 
 Users can belong to multiple organizations while templates and provisioners
 cannot.
@@ -59,8 +66,8 @@ use organizations for several use cases.
 
 Since templates and workspaces cannot be moved nor can they belong to multiple
 organizations, we recommend that you deprecate your template
-[through the API](../../reference/api/templates.md#update-template-metadata-by-id)
-or [through the Coder CLI](../../reference/cli/templates_edit.md#--deprecated).
+[through the API](../../reference/api/templates#update-template-metadata-by-id)
+or [through the Coder CLI](../../reference/cli/templates_edit#--deprecated).
 When a template is deprecated, the admin prevents new workspaces from being
 created and developers are notified with a deprecation message which can link to
 an external wiki page on migration instructions.
@@ -91,7 +98,7 @@ provider such as Okta. A single claim from the identity provider (like
 organization roles.
 
 Regex filters and mapping can be configured to ensure the proper resources are
-allocated in Coder. Learn more about [IDP sync](../../admin/users/idp-sync.md).
+allocated in Coder. Learn more about [IDP sync](../../admin/users/idp-sync).
 
 ## Custom Roles
 

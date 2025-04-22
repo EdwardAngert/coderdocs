@@ -1,3 +1,9 @@
+---
+title: stat mem
+description: 'Show memory usage, in gigabytes.'
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # stat mem
 

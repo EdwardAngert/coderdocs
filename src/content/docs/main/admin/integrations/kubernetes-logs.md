@@ -1,3 +1,9 @@
+---
+title: Kubernetes event logs
+description: 'To stream Kubernetes events into your workspace startup logs, you can use'
+version: main
+audience: admin
+---
 # Kubernetes event logs
 
 To stream Kubernetes events into your workspace startup logs, you can use
@@ -27,19 +33,19 @@ logs:
 
 ### Normal pod deployment
 
-![normal pod deployment](../../images/admin/integrations/coder-logstream-kube-logs-normal.png)
+![normal pod deployment](%images/%images/./../images/admin/integrations/coder-logstream-kube-logs-normal.png)
 
 ### Wrong image
 
-![Wrong image name](../../images/admin/integrations/coder-logstream-kube-logs-wrong-image.png)
+![Wrong image name](%images/%images/./../images/admin/integrations/coder-logstream-kube-logs-wrong-image.png)
 
 ### Kubernetes quota exceeded
 
-![Kubernetes quota exceeded](../../images/admin/integrations/coder-logstream-kube-logs-quota-exceeded.png)
+![Kubernetes quota exceeded](%images/%images/./../images/admin/integrations/coder-logstream-kube-logs-quota-exceeded.png)
 
 ### Pod crash loop
 
-![Pod crash loop](../../images/admin/integrations/coder-logstream-kube-logs-pod-crashed.png)
+![Pod crash loop](%images/%images/./../images/admin/integrations/coder-logstream-kube-logs-pod-crashed.png)
 
 ## How it works
 

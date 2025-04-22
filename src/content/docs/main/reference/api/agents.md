@@ -1,3 +1,9 @@
+---
+title: Agents
+description: '```shell'
+version: main
+audience: developer
+---
 # Agents
 
 ## Get DERP map updates
@@ -18,7 +24,7 @@ curl -X GET http://coder-server:8080/api/v2/derp-map \
 |--------|--------------------------------------------------------------------------|---------------------|--------|
 | 101    | [Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2) | Switching Protocols |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## User-scoped tailnet RPC connection
 
@@ -38,7 +44,7 @@ curl -X GET http://coder-server:8080/api/v2/tailnet \
 |--------|--------------------------------------------------------------------------|---------------------|--------|
 | 101    | [Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2) | Switching Protocols |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Authenticate agent on AWS instance
 
@@ -67,7 +73,7 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/aws-instance-identi
 
 | Name   | In   | Type                                                                             | Required | Description             |
 |--------|------|----------------------------------------------------------------------------------|----------|-------------------------|
-| `body` | body | [agentsdk.AWSInstanceIdentityToken](schemas.md#agentsdkawsinstanceidentitytoken) | true     | Instance identity token |
+| `body` | body | [agentsdk.AWSInstanceIdentityToken](schemas#agentsdkawsinstanceidentitytoken) | true     | Instance identity token |
 
 ### Example responses
 
@@ -83,9 +89,9 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/aws-instance-identi
 
 | Status | Meaning                                                 | Description | Schema                                                                   |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas.md#agentsdkauthenticateresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas#agentsdkauthenticateresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Authenticate agent on Azure instance
 
@@ -114,7 +120,7 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/azure-instance-iden
 
 | Name   | In   | Type                                                                                 | Required | Description             |
 |--------|------|--------------------------------------------------------------------------------------|----------|-------------------------|
-| `body` | body | [agentsdk.AzureInstanceIdentityToken](schemas.md#agentsdkazureinstanceidentitytoken) | true     | Instance identity token |
+| `body` | body | [agentsdk.AzureInstanceIdentityToken](schemas#agentsdkazureinstanceidentitytoken) | true     | Instance identity token |
 
 ### Example responses
 
@@ -130,9 +136,9 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/azure-instance-iden
 
 | Status | Meaning                                                 | Description | Schema                                                                   |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas.md#agentsdkauthenticateresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas#agentsdkauthenticateresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Authenticate agent on Google Cloud instance
 
@@ -160,7 +166,7 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/google-instance-ide
 
 | Name   | In   | Type                                                                                   | Required | Description             |
 |--------|------|----------------------------------------------------------------------------------------|----------|-------------------------|
-| `body` | body | [agentsdk.GoogleInstanceIdentityToken](schemas.md#agentsdkgoogleinstanceidentitytoken) | true     | Instance identity token |
+| `body` | body | [agentsdk.GoogleInstanceIdentityToken](schemas#agentsdkgoogleinstanceidentitytoken) | true     | Instance identity token |
 
 ### Example responses
 
@@ -176,9 +182,9 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/google-instance-ide
 
 | Status | Meaning                                                 | Description | Schema                                                                   |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas.md#agentsdkauthenticateresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.AuthenticateResponse](schemas#agentsdkauthenticateresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Patch workspace agent app status
 
@@ -211,7 +217,7 @@ curl -X PATCH http://coder-server:8080/api/v2/workspaceagents/me/app-status \
 
 | Name   | In   | Type                                                         | Required | Description |
 |--------|------|--------------------------------------------------------------|----------|-------------|
-| `body` | body | [agentsdk.PatchAppStatus](schemas.md#agentsdkpatchappstatus) | true     | app status  |
+| `body` | body | [agentsdk.PatchAppStatus](schemas#agentsdkpatchappstatus) | true     | app status  |
 
 ### Example responses
 
@@ -234,9 +240,9 @@ curl -X PATCH http://coder-server:8080/api/v2/workspaceagents/me/app-status \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get workspace agent external auth
 
@@ -278,9 +284,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/me/external-auth?mat
 
 | Status | Meaning                                                 | Description | Schema                                                                   |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.ExternalAuthResponse](schemas.md#agentsdkexternalauthresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.ExternalAuthResponse](schemas#agentsdkexternalauthresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Removed: Get workspace agent git auth
 
@@ -322,9 +328,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/me/gitauth?match=str
 
 | Status | Meaning                                                 | Description | Schema                                                                   |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.ExternalAuthResponse](schemas.md#agentsdkexternalauthresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.ExternalAuthResponse](schemas#agentsdkexternalauthresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get workspace agent Git SSH key
 
@@ -354,9 +360,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/me/gitsshkey \
 
 | Status | Meaning                                                 | Description | Schema                                             |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.GitSSHKey](schemas.md#agentsdkgitsshkey) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.GitSSHKey](schemas#agentsdkgitsshkey) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Post workspace agent log source
 
@@ -386,7 +392,7 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/me/log-source \
 
 | Name   | In   | Type                                                                     | Required | Description        |
 |--------|------|--------------------------------------------------------------------------|----------|--------------------|
-| `body` | body | [agentsdk.PostLogSourceRequest](schemas.md#agentsdkpostlogsourcerequest) | true     | Log source request |
+| `body` | body | [agentsdk.PostLogSourceRequest](schemas#agentsdkpostlogsourcerequest) | true     | Log source request |
 
 ### Example responses
 
@@ -406,9 +412,9 @@ curl -X POST http://coder-server:8080/api/v2/workspaceagents/me/log-source \
 
 | Status | Meaning                                                 | Description | Schema                                                                         |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentLogSource](schemas.md#codersdkworkspaceagentlogsource) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentLogSource](schemas#codersdkworkspaceagentlogsource) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Patch workspace agent logs
 
@@ -443,7 +449,7 @@ curl -X PATCH http://coder-server:8080/api/v2/workspaceagents/me/logs \
 
 | Name   | In   | Type                                               | Required | Description |
 |--------|------|----------------------------------------------------|----------|-------------|
-| `body` | body | [agentsdk.PatchLogs](schemas.md#agentsdkpatchlogs) | true     | logs        |
+| `body` | body | [agentsdk.PatchLogs](schemas#agentsdkpatchlogs) | true     | logs        |
 
 ### Example responses
 
@@ -466,9 +472,9 @@ curl -X PATCH http://coder-server:8080/api/v2/workspaceagents/me/logs \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get workspace agent by ID
 
@@ -609,9 +615,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent} \
 
 | Status | Meaning                                                 | Description | Schema                                                       |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgent](schemas.md#codersdkworkspaceagent) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgent](schemas#codersdkworkspaceagent) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get connection info for workspace agent
 
@@ -707,9 +713,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/con
 
 | Status | Meaning                                                 | Description | Schema                                                                         |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [workspacesdk.AgentConnectionInfo](schemas.md#workspacesdkagentconnectioninfo) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [workspacesdk.AgentConnectionInfo](schemas#workspacesdkagentconnectioninfo) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get running containers for workspace agent
 
@@ -773,9 +779,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/con
 
 | Status | Meaning                                                 | Description | Schema                                                                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentListContainersResponse](schemas.md#codersdkworkspaceagentlistcontainersresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentListContainersResponse](schemas#codersdkworkspaceagentlistcontainersresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Coordinate workspace agent
 
@@ -801,7 +807,7 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/coo
 |--------|--------------------------------------------------------------------------|---------------------|--------|
 | 101    | [Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2) | Switching Protocols |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get listening ports for workspace agent
 
@@ -842,9 +848,9 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/lis
 
 | Status | Meaning                                                 | Description | Schema                                                                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentListeningPortsResponse](schemas.md#codersdkworkspaceagentlisteningportsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.WorkspaceAgentListeningPortsResponse](schemas#codersdkworkspaceagentlisteningportsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get logs by workspace agent
 
@@ -889,7 +895,7 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/log
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceAgentLog](schemas.md#codersdkworkspaceagentlog) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceAgentLog](schemas#codersdkworkspaceagentlog) |
 
 <h3 id="get-logs-by-workspace-agent-responseschema">Response Schema</h3>
 
@@ -900,7 +906,7 @@ Status Code **200**
 | `[array item]` | array                                            | false    |              |             |
 | `» created_at` | string(date-time)                                | false    |              |             |
 | `» id`         | integer                                          | false    |              |             |
-| `» level`      | [codersdk.LogLevel](schemas.md#codersdkloglevel) | false    |              |             |
+| `» level`      | [codersdk.LogLevel](schemas#codersdkloglevel) | false    |              |             |
 | `» output`     | string                                           | false    |              |             |
 | `» source_id`  | string(uuid)                                     | false    |              |             |
 
@@ -914,7 +920,7 @@ Status Code **200**
 | `level`  | `warn`  |
 | `level`  | `error` |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Open PTY to workspace agent
 
@@ -940,7 +946,7 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/pty
 |--------|--------------------------------------------------------------------------|---------------------|--------|
 | 101    | [Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2) | Switching Protocols |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Removed: Get logs by workspace agent
 
@@ -985,7 +991,7 @@ curl -X GET http://coder-server:8080/api/v2/workspaceagents/{workspaceagent}/sta
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceAgentLog](schemas.md#codersdkworkspaceagentlog) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceAgentLog](schemas#codersdkworkspaceagentlog) |
 
 <h3 id="removed:-get-logs-by-workspace-agent-responseschema">Response Schema</h3>
 
@@ -996,7 +1002,7 @@ Status Code **200**
 | `[array item]` | array                                            | false    |              |             |
 | `» created_at` | string(date-time)                                | false    |              |             |
 | `» id`         | integer                                          | false    |              |             |
-| `» level`      | [codersdk.LogLevel](schemas.md#codersdkloglevel) | false    |              |             |
+| `» level`      | [codersdk.LogLevel](schemas#codersdkloglevel) | false    |              |             |
 | `» output`     | string                                           | false    |              |             |
 | `» source_id`  | string(uuid)                                     | false    |              |             |
 
@@ -1010,4 +1016,4 @@ Status Code **200**
 | `level`  | `warn`  |
 | `level`  | `error` |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

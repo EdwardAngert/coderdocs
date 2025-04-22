@@ -1,3 +1,11 @@
+---
+title: Frontend
+description: >-
+  Welcome to the guide for contributing to the Coder frontend. Whether you’re
+  part
+version: main
+audience: all
+---
 # Frontend
 
 Welcome to the guide for contributing to the Coder frontend. Whether you’re part

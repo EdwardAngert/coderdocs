@@ -1,3 +1,9 @@
+---
+title: Untitled
+description: '- A Coder deployment with v2.21 or later'
+version: main
+audience: all
+---
 > [!NOTE]
 >
 > This functionality is in early access and is evolving rapidly.
@@ -11,19 +17,19 @@
 ## Prerequisites
 
 - A Coder deployment with v2.21 or later
-- A [template configured for AI agents](./create-template.md)
+- A [template configured for AI agents](./create-template)
 
 ## Overview
 
 Once you have an agent running and reporting activity to Coder, you can view
 status and switch between workspaces from the Coder dashboard.
 
-![Coder Dashboard](../images/guides/ai-agents/workspaces-list.png)
+![Coder Dashboard](%images/%images/./images/guides/ai-agents/workspaces-list.png)
 
-![Workspace Details](../images/guides/ai-agents/workspace-details.png)
+![Workspace Details](%images/%images/./images/guides/ai-agents/workspace-details.png)
 
 ## Next Steps
 
-- [Supervise Agents in the IDE](./ide-integration.md)
-- [Supervise Agents Programmatically](./headless.md)
-- [Securing Agents](./securing.md)
+- [Supervise Agents in the IDE](./ide-integration)
+- [Supervise Agents Programmatically](./headless)
+- [Securing Agents](./securing)

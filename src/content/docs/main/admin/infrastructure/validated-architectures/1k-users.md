@@ -1,3 +1,9 @@
+---
+title: 'Reference Architecture: up to 1,000 users'
+description: 'The 1,000 users architecture is designed to cover a wide range of workflows.'
+version: main
+audience: admin
+---
 # Reference Architecture: up to 1,000 users
 
 The 1,000 users architecture is designed to cover a wide range of workflows.

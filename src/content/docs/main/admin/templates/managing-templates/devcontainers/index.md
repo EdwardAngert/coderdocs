@@ -1,3 +1,9 @@
+---
+title: Dev containers
+description: A Development Container is an
+version: main
+audience: admin
+---
 # Dev containers
 
 A Development Container is an
@@ -10,7 +16,7 @@ Coder cloud development environments.
 
 By using dev containers, developers can customize their workspaces with tools
 pre-approved by platform teams in registries like
-[JFrog Artifactory](../../../integrations/jfrog-artifactory.md). This simplifies
+[JFrog Artifactory](../../../integrations/jfrog-artifactory). This simplifies
 workflows, reduces the need for tickets and approvals, and promotes greater
 independence for developers.
 
@@ -119,4 +125,4 @@ of the Coder control plane and even run within a CI/CD pipeline.
 
 ## Next steps
 
-- [Add a dev container template](./add-devcontainer.md)
+- [Add a dev container template](./add-devcontainer)

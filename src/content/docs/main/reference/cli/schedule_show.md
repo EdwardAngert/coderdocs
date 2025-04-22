@@ -1,3 +1,9 @@
+---
+title: schedule show
+description: Show workspace schedules
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # schedule show
 

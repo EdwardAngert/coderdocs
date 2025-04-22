@@ -1,3 +1,9 @@
+---
+title: Uninstall
+description: This article walks you through how to uninstall your Coder server.
+version: main
+audience: infra
+---
 <!-- markdownlint-disable MD024 -->
 # Uninstall
 

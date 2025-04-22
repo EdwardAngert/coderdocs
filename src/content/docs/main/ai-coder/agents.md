@@ -1,3 +1,9 @@
+---
+title: Coding Agents
+description: 'There are several types of coding agents emerging:'
+version: main
+audience: all
+---
 # Coding Agents
 
 > [!NOTE]
@@ -33,7 +39,7 @@ Desktop or Cursor.
 coding agent due to its strong performance on complex programming tasks.
 
 > Note: Any agent can run in a Coder workspace via our
-> [MCP integration](./headless.md).
+> [MCP integration](./headless).
 
 ## In-IDE agents
 
@@ -53,4 +59,4 @@ and report activity to the Coder UI.
 
 ## Next Steps
 
-- [Create a Coder template for agents](./create-template.md)
+- [Create a Coder template for agents](./create-template)

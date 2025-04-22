@@ -1,3 +1,9 @@
+---
+title: Contributor Covenant Code of Conduct
+description: 'In the interest of fostering an open and welcoming environment, we as'
+version: main
+audience: all
+---
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

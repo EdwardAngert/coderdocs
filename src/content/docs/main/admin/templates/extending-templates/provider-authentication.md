@@ -1,3 +1,9 @@
+---
+title: Provider Authentication
+description: The Coder server's
+version: main
+audience: admin
+---
 # Provider Authentication
 
 > [!CAUTION]
@@ -46,7 +52,7 @@ There are two ways to use a remote Docker host for authentication:
 
 - Configure the Docker provider to use a
   [remote host over SSH or TCP](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs#remote-hosts).
-- Run an [external provisioner](../../provisioners/index.md) on the remote docker
+- Run an [external provisioner](../../provisioners/index) on the remote docker
   host.
 
 Other providers might also support authenticated environments. Check the

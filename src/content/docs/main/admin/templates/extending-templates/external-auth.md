@@ -1,3 +1,11 @@
+---
+title: External Authentication
+description: >-
+  Coder integrates with any OpenID Connect provider to automate away the need
+  for
+version: main
+audience: admin
+---
 # External Authentication
 
 Coder integrates with any OpenID Connect provider to automate away the need for
@@ -27,7 +35,7 @@ If your template requires git authentication (e.g. running `git clone` in the
 [startup_script](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent#startup_script)),
 you can require users authenticate via git prior to creating a workspace:
 
-![Git authentication in template](../../../images/admin/git-auth-template.png)
+![Git authentication in template](%images/%images/./../../images/admin/git-auth-template.png)
 
 ### Native git authentication will auto-refresh tokens
 

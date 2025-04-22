@@ -1,3 +1,9 @@
+---
+title: server dbcrypt rotate
+description: Rotate database encryption keys.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # server dbcrypt rotate
 

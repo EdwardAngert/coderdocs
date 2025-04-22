@@ -1,3 +1,11 @@
+---
+title: Emacs TRAMP
+description: >-
+  [Emacs TRAMP](https://www.emacswiki.org/emacs/TrampMode) is a method of
+  running
+version: main
+audience: developer
+---
 # Emacs TRAMP
 
 [Emacs TRAMP](https://www.emacswiki.org/emacs/TrampMode) is a method of running

@@ -1,3 +1,9 @@
+---
+title: update
+description: Will update and start a given workspace if it is out of date
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # update
 

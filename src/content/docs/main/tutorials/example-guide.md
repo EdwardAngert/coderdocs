@@ -1,3 +1,9 @@
+---
+title: Guide Title (Only Visible in GitHub)
+description: <div>
+version: main
+audience: admin
+---
 # Guide Title (Only Visible in GitHub)
 
 <div>
@@ -11,13 +17,13 @@ December 13, 2023
 ---
 
 This is a guide on how to make Coder guides, it is not listed on our
-[official tutorials page](../tutorials/index.md) in the docs. Intended for those
+[official tutorials page](../tutorials/index) in the docs. Intended for those
 who don't frequently contribute documentation changes to the `coder/coder`
 repository.
 
 ## Content
 
-Defer to our [Contributing/Documentation](../contributing/documentation.md) page
+Defer to our [Contributing/Documentation](../contributing/documentation) page
 for rules on technical writing.
 
 ### Adding Photos

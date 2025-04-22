@@ -1,3 +1,9 @@
+---
+title: Templates
+description: '```shell'
+version: main
+audience: developer
+---
 # Templates
 
 ## Get templates by organization
@@ -83,7 +89,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/templat
 
 | Status | Meaning                                                 | Description | Schema                                                    |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Template](schemas#codersdktemplate) |
 
 <h3 id="get-templates-by-organization-responseschema">Response Schema</h3>
 
@@ -98,14 +104,14 @@ Status Code **200**
 | `» allow_user_autostart`             | boolean                                                                                  | false    |              | Allow user autostart and AllowUserAutostop are enterprise-only. Their values are only used if your license is entitled to use the advanced template scheduling feature.    |
 | `» allow_user_autostop`              | boolean                                                                                  | false    |              |                                                                                                                                                                            |
 | `» allow_user_cancel_workspace_jobs` | boolean                                                                                  | false    |              |                                                                                                                                                                            |
-| `» autostart_requirement`            | [codersdk.TemplateAutostartRequirement](schemas.md#codersdktemplateautostartrequirement) | false    |              |                                                                                                                                                                            |
+| `» autostart_requirement`            | [codersdk.TemplateAutostartRequirement](schemas#codersdktemplateautostartrequirement) | false    |              |                                                                                                                                                                            |
 | `»» days_of_week`                    | array                                                                                    | false    |              | Days of week is a list of days of the week in which autostart is allowed to happen. If no days are specified, autostart is not allowed.                                    |
-| `» autostop_requirement`             | [codersdk.TemplateAutostopRequirement](schemas.md#codersdktemplateautostoprequirement)   | false    |              | Autostop requirement and AutostartRequirement are enterprise features. Its value is only used if your license is entitled to use the advanced template scheduling feature. |
+| `» autostop_requirement`             | [codersdk.TemplateAutostopRequirement](schemas#codersdktemplateautostoprequirement)   | false    |              | Autostop requirement and AutostartRequirement are enterprise features. Its value is only used if your license is entitled to use the advanced template scheduling feature. |
 |`»» days_of_week`|array|false||Days of week is a list of days of the week on which restarts are required. Restarts happen within the user's quiet hours (in their configured timezone). If no days are specified, restarts are not required. Weekdays cannot be specified twice.
 Restarts will only happen on weekdays in this list on weeks which line up with Weeks.|
 |`»» weeks`|integer|false||Weeks is the number of weeks between required restarts. Weeks are synced across all workspaces (and Coder deployments) using modulo math on a hardcoded epoch week of January 2nd, 2023 (the first Monday of 2023). Values of 0 or 1 indicate weekly restarts. Values of 2 indicate fortnightly restarts, etc.|
-|`» build_time_stats`|[codersdk.TemplateBuildTimeStats](schemas.md#codersdktemplatebuildtimestats)|false|||
-|`»» [any property]`|[codersdk.TransitionStats](schemas.md#codersdktransitionstats)|false|||
+|`» build_time_stats`|[codersdk.TemplateBuildTimeStats](schemas#codersdktemplatebuildtimestats)|false|||
+|`»» [any property]`|[codersdk.TransitionStats](schemas#codersdktransitionstats)|false|||
 |`»»» p50`|integer|false|||
 |`»»» p95`|integer|false|||
 |`» created_at`|string(date-time)|false|||
@@ -119,7 +125,7 @@ Restarts will only happen on weekdays in this list on weeks which line up with W
 |`» failure_ttl_ms`|integer|false||Failure ttl ms TimeTilDormantMillis, and TimeTilDormantAutoDeleteMillis are enterprise-only. Their values are used if your license is entitled to use the advanced template scheduling feature.|
 |`» icon`|string|false|||
 |`» id`|string(uuid)|false|||
-|`» max_port_share_level`|[codersdk.WorkspaceAgentPortShareLevel](schemas.md#codersdkworkspaceagentportsharelevel)|false|||
+|`» max_port_share_level`|[codersdk.WorkspaceAgentPortShareLevel](schemas#codersdkworkspaceagentportsharelevel)|false|||
 |`» name`|string|false|||
 |`» organization_display_name`|string|false|||
 |`» organization_icon`|string|false|||
@@ -140,7 +146,7 @@ Restarts will only happen on weekdays in this list on weeks which line up with W
 | `max_port_share_level` | `public`        |
 | `provisioner`          | `terraform`     |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Create template by organization
 
@@ -195,7 +201,7 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/templa
 | Name           | In   | Type                                                                       | Required | Description     |
 |----------------|------|----------------------------------------------------------------------------|----------|-----------------|
 | `organization` | path | string                                                                     | true     | Organization ID |
-| `body`         | body | [codersdk.CreateTemplateRequest](schemas.md#codersdkcreatetemplaterequest) | true     | Request body    |
+| `body`         | body | [codersdk.CreateTemplateRequest](schemas#codersdkcreatetemplaterequest) | true     | Request body    |
 
 ### Example responses
 
@@ -259,9 +265,9 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/templa
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas#codersdktemplate) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template examples by organization
 
@@ -306,7 +312,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/templat
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateExample](schemas.md#codersdktemplateexample) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateExample](schemas#codersdktemplateexample) |
 
 <h3 id="get-template-examples-by-organization-responseschema">Response Schema</h3>
 
@@ -323,7 +329,7 @@ Status Code **200**
 | `» tags`        | array        | false    |              |             |
 | `» url`         | string       | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get templates by organization and template name
 
@@ -407,9 +413,9 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/templat
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas#codersdktemplate) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version by organization, template, and name
 
@@ -504,9 +510,9 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/templat
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get previous template version by organization, template, and name
 
@@ -601,9 +607,9 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/templat
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Create template version by organization
 
@@ -648,7 +654,7 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/templa
 | Name           | In   | Type                                                                                     | Required | Description                     |
 |----------------|------|------------------------------------------------------------------------------------------|----------|---------------------------------|
 | `organization` | path | string(uuid)                                                                             | true     | Organization ID                 |
-| `body`         | body | [codersdk.CreateTemplateVersionRequest](schemas.md#codersdkcreatetemplateversionrequest) | true     | Create template version request |
+| `body`         | body | [codersdk.CreateTemplateVersionRequest](schemas#codersdkcreatetemplateversionrequest) | true     | Create template version request |
 
 ### Example responses
 
@@ -722,9 +728,9 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/templa
 
 | Status | Meaning                                                      | Description | Schema                                                         |
 |--------|--------------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get all templates
 
@@ -803,7 +809,7 @@ curl -X GET http://coder-server:8080/api/v2/templates \
 
 | Status | Meaning                                                 | Description | Schema                                                    |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Template](schemas#codersdktemplate) |
 
 <h3 id="get-all-templates-responseschema">Response Schema</h3>
 
@@ -818,14 +824,14 @@ Status Code **200**
 | `» allow_user_autostart`             | boolean                                                                                  | false    |              | Allow user autostart and AllowUserAutostop are enterprise-only. Their values are only used if your license is entitled to use the advanced template scheduling feature.    |
 | `» allow_user_autostop`              | boolean                                                                                  | false    |              |                                                                                                                                                                            |
 | `» allow_user_cancel_workspace_jobs` | boolean                                                                                  | false    |              |                                                                                                                                                                            |
-| `» autostart_requirement`            | [codersdk.TemplateAutostartRequirement](schemas.md#codersdktemplateautostartrequirement) | false    |              |                                                                                                                                                                            |
+| `» autostart_requirement`            | [codersdk.TemplateAutostartRequirement](schemas#codersdktemplateautostartrequirement) | false    |              |                                                                                                                                                                            |
 | `»» days_of_week`                    | array                                                                                    | false    |              | Days of week is a list of days of the week in which autostart is allowed to happen. If no days are specified, autostart is not allowed.                                    |
-| `» autostop_requirement`             | [codersdk.TemplateAutostopRequirement](schemas.md#codersdktemplateautostoprequirement)   | false    |              | Autostop requirement and AutostartRequirement are enterprise features. Its value is only used if your license is entitled to use the advanced template scheduling feature. |
+| `» autostop_requirement`             | [codersdk.TemplateAutostopRequirement](schemas#codersdktemplateautostoprequirement)   | false    |              | Autostop requirement and AutostartRequirement are enterprise features. Its value is only used if your license is entitled to use the advanced template scheduling feature. |
 |`»» days_of_week`|array|false||Days of week is a list of days of the week on which restarts are required. Restarts happen within the user's quiet hours (in their configured timezone). If no days are specified, restarts are not required. Weekdays cannot be specified twice.
 Restarts will only happen on weekdays in this list on weeks which line up with Weeks.|
 |`»» weeks`|integer|false||Weeks is the number of weeks between required restarts. Weeks are synced across all workspaces (and Coder deployments) using modulo math on a hardcoded epoch week of January 2nd, 2023 (the first Monday of 2023). Values of 0 or 1 indicate weekly restarts. Values of 2 indicate fortnightly restarts, etc.|
-|`» build_time_stats`|[codersdk.TemplateBuildTimeStats](schemas.md#codersdktemplatebuildtimestats)|false|||
-|`»» [any property]`|[codersdk.TransitionStats](schemas.md#codersdktransitionstats)|false|||
+|`» build_time_stats`|[codersdk.TemplateBuildTimeStats](schemas#codersdktemplatebuildtimestats)|false|||
+|`»» [any property]`|[codersdk.TransitionStats](schemas#codersdktransitionstats)|false|||
 |`»»» p50`|integer|false|||
 |`»»» p95`|integer|false|||
 |`» created_at`|string(date-time)|false|||
@@ -839,7 +845,7 @@ Restarts will only happen on weekdays in this list on weeks which line up with W
 |`» failure_ttl_ms`|integer|false||Failure ttl ms TimeTilDormantMillis, and TimeTilDormantAutoDeleteMillis are enterprise-only. Their values are used if your license is entitled to use the advanced template scheduling feature.|
 |`» icon`|string|false|||
 |`» id`|string(uuid)|false|||
-|`» max_port_share_level`|[codersdk.WorkspaceAgentPortShareLevel](schemas.md#codersdkworkspaceagentportsharelevel)|false|||
+|`» max_port_share_level`|[codersdk.WorkspaceAgentPortShareLevel](schemas#codersdkworkspaceagentportsharelevel)|false|||
 |`» name`|string|false|||
 |`» organization_display_name`|string|false|||
 |`» organization_icon`|string|false|||
@@ -860,7 +866,7 @@ Restarts will only happen on weekdays in this list on weeks which line up with W
 | `max_port_share_level` | `public`        |
 | `provisioner`          | `terraform`     |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template examples
 
@@ -899,7 +905,7 @@ curl -X GET http://coder-server:8080/api/v2/templates/examples \
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateExample](schemas.md#codersdktemplateexample) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateExample](schemas#codersdktemplateexample) |
 
 <h3 id="get-template-examples-responseschema">Response Schema</h3>
 
@@ -916,7 +922,7 @@ Status Code **200**
 | `» tags`        | array        | false    |              |             |
 | `» url`         | string       | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template metadata by ID
 
@@ -999,9 +1005,9 @@ curl -X GET http://coder-server:8080/api/v2/templates/{template} \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas#codersdktemplate) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Delete template by ID
 
@@ -1043,9 +1049,9 @@ curl -X DELETE http://coder-server:8080/api/v2/templates/{template} \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update template metadata by ID
 
@@ -1128,9 +1134,9 @@ curl -X PATCH http://coder-server:8080/api/v2/templates/{template} \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas.md#codersdktemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Template](schemas#codersdktemplate) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template DAUs by ID
 
@@ -1171,9 +1177,9 @@ curl -X GET http://coder-server:8080/api/v2/templates/{template}/daus \
 
 | Status | Meaning                                                 | Description | Schema                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DAUsResponse](schemas.md#codersdkdausresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DAUsResponse](schemas#codersdkdausresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## List template versions by template ID
 
@@ -1272,7 +1278,7 @@ curl -X GET http://coder-server:8080/api/v2/templates/{template}/versions \
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
 <h3 id="list-template-versions-by-template-id-responseschema">Response Schema</h3>
 
@@ -1283,25 +1289,25 @@ Status Code **200**
 | `[array item]`              | array                                                                        | false    |              |                                                                                                                                                                     |
 | `» archived`                | boolean                                                                      | false    |              |                                                                                                                                                                     |
 | `» created_at`              | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
-| `» created_by`              | [codersdk.MinimalUser](schemas.md#codersdkminimaluser)                       | false    |              |                                                                                                                                                                     |
+| `» created_by`              | [codersdk.MinimalUser](schemas#codersdkminimaluser)                       | false    |              |                                                                                                                                                                     |
 | `»» avatar_url`             | string(uri)                                                                  | false    |              |                                                                                                                                                                     |
 | `»» id`                     | string(uuid)                                                                 | true     |              |                                                                                                                                                                     |
 | `»» username`               | string                                                                       | true     |              |                                                                                                                                                                     |
 | `» id`                      | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `» job`                     | [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob)                 | false    |              |                                                                                                                                                                     |
+| `» job`                     | [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob)                 | false    |              |                                                                                                                                                                     |
 | `»» available_workers`      | array                                                                        | false    |              |                                                                                                                                                                     |
 | `»» canceled_at`            | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» completed_at`           | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» created_at`             | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» error`                  | string                                                                       | false    |              |                                                                                                                                                                     |
-| `»» error_code`             | [codersdk.JobErrorCode](schemas.md#codersdkjoberrorcode)                     | false    |              |                                                                                                                                                                     |
+| `»» error_code`             | [codersdk.JobErrorCode](schemas#codersdkjoberrorcode)                     | false    |              |                                                                                                                                                                     |
 | `»» file_id`                | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
 | `»» id`                     | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `»» input`                  | [codersdk.ProvisionerJobInput](schemas.md#codersdkprovisionerjobinput)       | false    |              |                                                                                                                                                                     |
+| `»» input`                  | [codersdk.ProvisionerJobInput](schemas#codersdkprovisionerjobinput)       | false    |              |                                                                                                                                                                     |
 | `»»» error`                 | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_version_id`   | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
 | `»»» workspace_build_id`    | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `»» metadata`               | [codersdk.ProvisionerJobMetadata](schemas.md#codersdkprovisionerjobmetadata) | false    |              |                                                                                                                                                                     |
+| `»» metadata`               | [codersdk.ProvisionerJobMetadata](schemas#codersdkprovisionerjobmetadata) | false    |              |                                                                                                                                                                     |
 | `»»» template_display_name` | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_icon`         | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_id`           | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
@@ -1313,12 +1319,12 @@ Status Code **200**
 | `»» queue_position`         | integer                                                                      | false    |              |                                                                                                                                                                     |
 | `»» queue_size`             | integer                                                                      | false    |              |                                                                                                                                                                     |
 | `»» started_at`             | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
-| `»» status`                 | [codersdk.ProvisionerJobStatus](schemas.md#codersdkprovisionerjobstatus)     | false    |              |                                                                                                                                                                     |
+| `»» status`                 | [codersdk.ProvisionerJobStatus](schemas#codersdkprovisionerjobstatus)     | false    |              |                                                                                                                                                                     |
 | `»» tags`                   | object                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» [any property]`        | string                                                                       | false    |              |                                                                                                                                                                     |
-| `»» type`                   | [codersdk.ProvisionerJobType](schemas.md#codersdkprovisionerjobtype)         | false    |              |                                                                                                                                                                     |
+| `»» type`                   | [codersdk.ProvisionerJobType](schemas#codersdkprovisionerjobtype)         | false    |              |                                                                                                                                                                     |
 | `»» worker_id`              | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `» matched_provisioners`    | [codersdk.MatchedProvisioners](schemas.md#codersdkmatchedprovisioners)       | false    |              |                                                                                                                                                                     |
+| `» matched_provisioners`    | [codersdk.MatchedProvisioners](schemas#codersdkmatchedprovisioners)       | false    |              |                                                                                                                                                                     |
 | `»» available`              | integer                                                                      | false    |              | Available is the number of provisioner daemons that are available to take jobs. This may be less than the count if some provisioners are busy or have been stopped. |
 | `»» count`                  | integer                                                                      | false    |              | Count is the number of provisioner daemons that matched the given tags. If the count is 0, it means no provisioner daemons matched the requested tags.              |
 | `»» most_recently_seen`     | string(date-time)                                                            | false    |              | Most recently seen is the most recently seen time of the set of matched provisioners. If no provisioners matched, this field will be null.                          |
@@ -1345,7 +1351,7 @@ Status Code **200**
 | `type`       | `workspace_build`             |
 | `type`       | `template_version_dry_run`    |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update active template version by template ID
 
@@ -1374,7 +1380,7 @@ curl -X PATCH http://coder-server:8080/api/v2/templates/{template}/versions \
 | Name       | In   | Type                                                                                   | Required | Description               |
 |------------|------|----------------------------------------------------------------------------------------|----------|---------------------------|
 | `template` | path | string(uuid)                                                                           | true     | Template ID               |
-| `body`     | body | [codersdk.UpdateActiveTemplateVersion](schemas.md#codersdkupdateactivetemplateversion) | true     | Modified template version |
+| `body`     | body | [codersdk.UpdateActiveTemplateVersion](schemas#codersdkupdateactivetemplateversion) | true     | Modified template version |
 
 ### Example responses
 
@@ -1397,9 +1403,9 @@ curl -X PATCH http://coder-server:8080/api/v2/templates/{template}/versions \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Archive template unused versions by template id
 
@@ -1428,7 +1434,7 @@ curl -X POST http://coder-server:8080/api/v2/templates/{template}/versions/archi
 | Name       | In   | Type                                                                                         | Required | Description     |
 |------------|------|----------------------------------------------------------------------------------------------|----------|-----------------|
 | `template` | path | string(uuid)                                                                                 | true     | Template ID     |
-| `body`     | body | [codersdk.ArchiveTemplateVersionsRequest](schemas.md#codersdkarchivetemplateversionsrequest) | true     | Archive request |
+| `body`     | body | [codersdk.ArchiveTemplateVersionsRequest](schemas#codersdkarchivetemplateversionsrequest) | true     | Archive request |
 
 ### Example responses
 
@@ -1451,9 +1457,9 @@ curl -X POST http://coder-server:8080/api/v2/templates/{template}/versions/archi
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version by template ID and name
 
@@ -1549,7 +1555,7 @@ curl -X GET http://coder-server:8080/api/v2/templates/{template}/versions/{templ
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
 <h3 id="get-template-version-by-template-id-and-name-responseschema">Response Schema</h3>
 
@@ -1560,25 +1566,25 @@ Status Code **200**
 | `[array item]`              | array                                                                        | false    |              |                                                                                                                                                                     |
 | `» archived`                | boolean                                                                      | false    |              |                                                                                                                                                                     |
 | `» created_at`              | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
-| `» created_by`              | [codersdk.MinimalUser](schemas.md#codersdkminimaluser)                       | false    |              |                                                                                                                                                                     |
+| `» created_by`              | [codersdk.MinimalUser](schemas#codersdkminimaluser)                       | false    |              |                                                                                                                                                                     |
 | `»» avatar_url`             | string(uri)                                                                  | false    |              |                                                                                                                                                                     |
 | `»» id`                     | string(uuid)                                                                 | true     |              |                                                                                                                                                                     |
 | `»» username`               | string                                                                       | true     |              |                                                                                                                                                                     |
 | `» id`                      | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `» job`                     | [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob)                 | false    |              |                                                                                                                                                                     |
+| `» job`                     | [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob)                 | false    |              |                                                                                                                                                                     |
 | `»» available_workers`      | array                                                                        | false    |              |                                                                                                                                                                     |
 | `»» canceled_at`            | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» completed_at`           | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» created_at`             | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
 | `»» error`                  | string                                                                       | false    |              |                                                                                                                                                                     |
-| `»» error_code`             | [codersdk.JobErrorCode](schemas.md#codersdkjoberrorcode)                     | false    |              |                                                                                                                                                                     |
+| `»» error_code`             | [codersdk.JobErrorCode](schemas#codersdkjoberrorcode)                     | false    |              |                                                                                                                                                                     |
 | `»» file_id`                | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
 | `»» id`                     | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `»» input`                  | [codersdk.ProvisionerJobInput](schemas.md#codersdkprovisionerjobinput)       | false    |              |                                                                                                                                                                     |
+| `»» input`                  | [codersdk.ProvisionerJobInput](schemas#codersdkprovisionerjobinput)       | false    |              |                                                                                                                                                                     |
 | `»»» error`                 | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_version_id`   | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
 | `»»» workspace_build_id`    | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `»» metadata`               | [codersdk.ProvisionerJobMetadata](schemas.md#codersdkprovisionerjobmetadata) | false    |              |                                                                                                                                                                     |
+| `»» metadata`               | [codersdk.ProvisionerJobMetadata](schemas#codersdkprovisionerjobmetadata) | false    |              |                                                                                                                                                                     |
 | `»»» template_display_name` | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_icon`         | string                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» template_id`           | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
@@ -1590,12 +1596,12 @@ Status Code **200**
 | `»» queue_position`         | integer                                                                      | false    |              |                                                                                                                                                                     |
 | `»» queue_size`             | integer                                                                      | false    |              |                                                                                                                                                                     |
 | `»» started_at`             | string(date-time)                                                            | false    |              |                                                                                                                                                                     |
-| `»» status`                 | [codersdk.ProvisionerJobStatus](schemas.md#codersdkprovisionerjobstatus)     | false    |              |                                                                                                                                                                     |
+| `»» status`                 | [codersdk.ProvisionerJobStatus](schemas#codersdkprovisionerjobstatus)     | false    |              |                                                                                                                                                                     |
 | `»» tags`                   | object                                                                       | false    |              |                                                                                                                                                                     |
 | `»»» [any property]`        | string                                                                       | false    |              |                                                                                                                                                                     |
-| `»» type`                   | [codersdk.ProvisionerJobType](schemas.md#codersdkprovisionerjobtype)         | false    |              |                                                                                                                                                                     |
+| `»» type`                   | [codersdk.ProvisionerJobType](schemas#codersdkprovisionerjobtype)         | false    |              |                                                                                                                                                                     |
 | `»» worker_id`              | string(uuid)                                                                 | false    |              |                                                                                                                                                                     |
-| `» matched_provisioners`    | [codersdk.MatchedProvisioners](schemas.md#codersdkmatchedprovisioners)       | false    |              |                                                                                                                                                                     |
+| `» matched_provisioners`    | [codersdk.MatchedProvisioners](schemas#codersdkmatchedprovisioners)       | false    |              |                                                                                                                                                                     |
 | `»» available`              | integer                                                                      | false    |              | Available is the number of provisioner daemons that are available to take jobs. This may be less than the count if some provisioners are busy or have been stopped. |
 | `»» count`                  | integer                                                                      | false    |              | Count is the number of provisioner daemons that matched the given tags. If the count is 0, it means no provisioner daemons matched the requested tags.              |
 | `»» most_recently_seen`     | string(date-time)                                                            | false    |              | Most recently seen is the most recently seen time of the set of matched provisioners. If no provisioners matched, this field will be null.                          |
@@ -1622,7 +1628,7 @@ Status Code **200**
 | `type`       | `workspace_build`             |
 | `type`       | `template_version_dry_run`    |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version by ID
 
@@ -1715,9 +1721,9 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion} \
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Patch template version by ID
 
@@ -1747,7 +1753,7 @@ curl -X PATCH http://coder-server:8080/api/v2/templateversions/{templateversion}
 | Name              | In   | Type                                                                                   | Required | Description                    |
 |-------------------|------|----------------------------------------------------------------------------------------|----------|--------------------------------|
 | `templateversion` | path | string(uuid)                                                                           | true     | Template version ID            |
-| `body`            | body | [codersdk.PatchTemplateVersionRequest](schemas.md#codersdkpatchtemplateversionrequest) | true     | Patch template version request |
+| `body`            | body | [codersdk.PatchTemplateVersionRequest](schemas#codersdkpatchtemplateversionrequest) | true     | Patch template version request |
 
 ### Example responses
 
@@ -1821,9 +1827,9 @@ curl -X PATCH http://coder-server:8080/api/v2/templateversions/{templateversion}
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas.md#codersdktemplateversion) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateVersion](schemas#codersdktemplateversion) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Archive template version
 
@@ -1865,9 +1871,9 @@ curl -X POST http://coder-server:8080/api/v2/templateversions/{templateversion}/
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Cancel template version by ID
 
@@ -1909,9 +1915,9 @@ curl -X PATCH http://coder-server:8080/api/v2/templateversions/{templateversion}
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Create template version dry-run
 
@@ -1952,7 +1958,7 @@ curl -X POST http://coder-server:8080/api/v2/templateversions/{templateversion}/
 | Name              | In   | Type                                                                                                 | Required | Description         |
 |-------------------|------|------------------------------------------------------------------------------------------------------|----------|---------------------|
 | `templateversion` | path | string(uuid)                                                                                         | true     | Template version ID |
-| `body`            | body | [codersdk.CreateTemplateVersionDryRunRequest](schemas.md#codersdkcreatetemplateversiondryrunrequest) | true     | Dry-run request     |
+| `body`            | body | [codersdk.CreateTemplateVersionDryRunRequest](schemas#codersdkcreatetemplateversiondryrunrequest) | true     | Dry-run request     |
 
 ### Example responses
 
@@ -2002,9 +2008,9 @@ curl -X POST http://coder-server:8080/api/v2/templateversions/{templateversion}/
 
 | Status | Meaning                                                      | Description | Schema                                                       |
 |--------|--------------------------------------------------------------|-------------|--------------------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version dry-run by job ID
 
@@ -2074,9 +2080,9 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/d
 
 | Status | Meaning                                                 | Description | Schema                                                       |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Cancel template version dry-run by job ID
 
@@ -2119,9 +2125,9 @@ curl -X PATCH http://coder-server:8080/api/v2/templateversions/{templateversion}
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version dry-run logs by job ID
 
@@ -2167,7 +2173,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/d
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJobLog](schemas.md#codersdkprovisionerjoblog) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJobLog](schemas#codersdkprovisionerjoblog) |
 
 <h3 id="get-template-version-dry-run-logs-by-job-id-responseschema">Response Schema</h3>
 
@@ -2178,8 +2184,8 @@ Status Code **200**
 | `[array item]` | array                                              | false    |              |             |
 | `» created_at` | string(date-time)                                  | false    |              |             |
 | `» id`         | integer                                            | false    |              |             |
-| `» log_level`  | [codersdk.LogLevel](schemas.md#codersdkloglevel)   | false    |              |             |
-| `» log_source` | [codersdk.LogSource](schemas.md#codersdklogsource) | false    |              |             |
+| `» log_level`  | [codersdk.LogLevel](schemas#codersdkloglevel)   | false    |              |             |
+| `» log_source` | [codersdk.LogSource](schemas#codersdklogsource) | false    |              |             |
 | `» output`     | string                                             | false    |              |             |
 | `» stage`      | string                                             | false    |              |             |
 
@@ -2195,7 +2201,7 @@ Status Code **200**
 | `log_source` | `provisioner_daemon` |
 | `log_source` | `provisioner`        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version dry-run matched provisioners
 
@@ -2233,9 +2239,9 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/d
 
 | Status | Meaning                                                 | Description | Schema                                                                 |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.MatchedProvisioners](schemas.md#codersdkmatchedprovisioners) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.MatchedProvisioners](schemas#codersdkmatchedprovisioners) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version dry-run resources by job ID
 
@@ -2399,7 +2405,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/d
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceResource](schemas.md#codersdkworkspaceresource) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceResource](schemas#codersdkworkspaceresource) |
 
 <h3 id="get-template-version-dry-run-resources-by-job-id-responseschema">Response Schema</h3>
 
@@ -2414,16 +2420,16 @@ Status Code **200**
 | `»»» command`                   | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»» display_name`              | string                                                                                                 | false    |              | Display name is a friendly name for the app.                                                                                                                                                                                                   |
 | `»»» external`                  | boolean                                                                                                | false    |              | External specifies whether the URL should be opened externally on the client or not.                                                                                                                                                           |
-| `»»» health`                    | [codersdk.WorkspaceAppHealth](schemas.md#codersdkworkspaceapphealth)                                   | false    |              |                                                                                                                                                                                                                                                |
-| `»»» healthcheck`               | [codersdk.Healthcheck](schemas.md#codersdkhealthcheck)                                                 | false    |              | Healthcheck specifies the configuration for checking app health.                                                                                                                                                                               |
+| `»»» health`                    | [codersdk.WorkspaceAppHealth](schemas#codersdkworkspaceapphealth)                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» healthcheck`               | [codersdk.Healthcheck](schemas#codersdkhealthcheck)                                                 | false    |              | Healthcheck specifies the configuration for checking app health.                                                                                                                                                                               |
 | `»»»» interval`                 | integer                                                                                                | false    |              | Interval specifies the seconds between each health check.                                                                                                                                                                                      |
 | `»»»» threshold`                | integer                                                                                                | false    |              | Threshold specifies the number of consecutive failed health checks before returning "unhealthy".                                                                                                                                               |
 | `»»»» url`                      | string                                                                                                 | false    |              | URL specifies the endpoint to check for the app health.                                                                                                                                                                                        |
 | `»»» hidden`                    | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»»» icon`                      | string                                                                                                 | false    |              | Icon is a relative path or external URL that specifies an icon to be displayed in the dashboard.                                                                                                                                               |
 | `»»» id`                        | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
-| `»»» open_in`                   | [codersdk.WorkspaceAppOpenIn](schemas.md#codersdkworkspaceappopenin)                                   | false    |              |                                                                                                                                                                                                                                                |
-| `»»» sharing_level`             | [codersdk.WorkspaceAppSharingLevel](schemas.md#codersdkworkspaceappsharinglevel)                       | false    |              |                                                                                                                                                                                                                                                |
+| `»»» open_in`                   | [codersdk.WorkspaceAppOpenIn](schemas#codersdkworkspaceappopenin)                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» sharing_level`             | [codersdk.WorkspaceAppSharingLevel](schemas#codersdkworkspaceappsharinglevel)                       | false    |              |                                                                                                                                                                                                                                                |
 | `»»» slug`                      | string                                                                                                 | false    |              | Slug is a unique identifier within the agent.                                                                                                                                                                                                  |
 | `»»» statuses`                  | array                                                                                                  | false    |              | Statuses is a list of statuses for the app.                                                                                                                                                                                                    |
 | `»»»» agent_id`                 | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
@@ -2433,7 +2439,7 @@ Status Code **200**
 | `»»»» id`                       | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» message`                  | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» needs_user_attention`     | boolean                                                                                                | false    |              | Deprecated: This field is unused and will be removed in a future version. NeedsUserAttention specifies whether the status needs user attention.                                                                                                |
-| `»»»» state`                    | [codersdk.WorkspaceAppStatusState](schemas.md#codersdkworkspaceappstatusstate)                         | false    |              |                                                                                                                                                                                                                                                |
+| `»»»» state`                    | [codersdk.WorkspaceAppStatusState](schemas#codersdkworkspaceappstatusstate)                         | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» uri`                      | string                                                                                                 | false    |              | Uri is the URI of the resource that the status is for. e.g. https://github.com/org/repo/pull/123 e.g. file:///path/to/file                                                                                                                     |
 | `»»»» workspace_id`             | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»»» subdomain`                 | boolean                                                                                                | false    |              | Subdomain denotes whether the app should be accessed via a path on the `coder server` or via a hostname-based dev URL. If this is set to true and there is no app wildcard configured on the server, the app will not be accessible in the UI. |
@@ -2449,17 +2455,17 @@ Status Code **200**
 | `»»» [any property]`            | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» expanded_directory`         | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» first_connected_at`         | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
-| `»» health`                     | [codersdk.WorkspaceAgentHealth](schemas.md#codersdkworkspaceagenthealth)                               | false    |              | Health reports the health of the agent.                                                                                                                                                                                                        |
+| `»» health`                     | [codersdk.WorkspaceAgentHealth](schemas#codersdkworkspaceagenthealth)                               | false    |              | Health reports the health of the agent.                                                                                                                                                                                                        |
 | `»»» healthy`                   | boolean                                                                                                | false    |              | Healthy is true if the agent is healthy.                                                                                                                                                                                                       |
 | `»»» reason`                    | string                                                                                                 | false    |              | Reason is a human-readable explanation of the agent's health. It is empty if Healthy is true.                                                                                                                                                  |
 | `»» id`                         | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»» instance_id`                | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» last_connected_at`          | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
 | `»» latency`                    | object                                                                                                 | false    |              | Latency is mapped by region name (e.g. "New York City", "Seattle").                                                                                                                                                                            |
-| `»»» [any property]`            | [codersdk.DERPRegion](schemas.md#codersdkderpregion)                                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» [any property]`            | [codersdk.DERPRegion](schemas#codersdkderpregion)                                                   | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» latency_ms`               | number                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» preferred`                | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
-| `»» lifecycle_state`            | [codersdk.WorkspaceAgentLifecycle](schemas.md#codersdkworkspaceagentlifecycle)                         | false    |              |                                                                                                                                                                                                                                                |
+| `»» lifecycle_state`            | [codersdk.WorkspaceAgentLifecycle](schemas#codersdkworkspaceagentlifecycle)                         | false    |              |                                                                                                                                                                                                                                                |
 | `»» log_sources`                | array                                                                                                  | false    |              |                                                                                                                                                                                                                                                |
 | `»»» created_at`                | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
 | `»»» display_name`              | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
@@ -2484,8 +2490,8 @@ Status Code **200**
 | `»»» start_blocks_login`        | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»»» timeout`                   | integer                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»» started_at`                 | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
-| `»» startup_script_behavior`    | [codersdk.WorkspaceAgentStartupScriptBehavior](schemas.md#codersdkworkspaceagentstartupscriptbehavior) | false    |              | Startup script behavior is a legacy field that is deprecated in favor of the `coder_script` resource. It's only referenced by old clients. Deprecated: Remove in the future!                                                                   |
-| `»» status`                     | [codersdk.WorkspaceAgentStatus](schemas.md#codersdkworkspaceagentstatus)                               | false    |              |                                                                                                                                                                                                                                                |
+| `»» startup_script_behavior`    | [codersdk.WorkspaceAgentStartupScriptBehavior](schemas#codersdkworkspaceagentstartupscriptbehavior) | false    |              | Startup script behavior is a legacy field that is deprecated in favor of the `coder_script` resource. It's only referenced by old clients. Deprecated: Remove in the future!                                                                   |
+| `»» status`                     | [codersdk.WorkspaceAgentStatus](schemas#codersdkworkspaceagentstatus)                               | false    |              |                                                                                                                                                                                                                                                |
 | `»» subsystems`                 | array                                                                                                  | false    |              |                                                                                                                                                                                                                                                |
 | `»» troubleshooting_url`        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» updated_at`                 | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
@@ -2502,7 +2508,7 @@ Status Code **200**
 | `»» value`                      | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `» name`                        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `» type`                        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
-| `» workspace_transition`        | [codersdk.WorkspaceTransition](schemas.md#codersdkworkspacetransition)                                 | false    |              |                                                                                                                                                                                                                                                |
+| `» workspace_transition`        | [codersdk.WorkspaceTransition](schemas#codersdkworkspacetransition)                                 | false    |              |                                                                                                                                                                                                                                                |
 
 #### Enumerated Values
 
@@ -2539,7 +2545,7 @@ Status Code **200**
 | `workspace_transition`    | `stop`             |
 | `workspace_transition`    | `delete`           |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get external auth by template version
 
@@ -2582,7 +2588,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/e
 
 | Status | Meaning                                                 | Description | Schema                                                                                          |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionExternalAuth](schemas.md#codersdktemplateversionexternalauth) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionExternalAuth](schemas#codersdktemplateversionexternalauth) |
 
 <h3 id="get-external-auth-by-template-version-responseschema">Response Schema</h3>
 
@@ -2599,7 +2605,7 @@ Status Code **200**
 | `» optional`         | boolean | false    |              |             |
 | `» type`             | string  | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get logs by template version
 
@@ -2644,7 +2650,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/l
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJobLog](schemas.md#codersdkprovisionerjoblog) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJobLog](schemas#codersdkprovisionerjoblog) |
 
 <h3 id="get-logs-by-template-version-responseschema">Response Schema</h3>
 
@@ -2655,8 +2661,8 @@ Status Code **200**
 | `[array item]` | array                                              | false    |              |             |
 | `» created_at` | string(date-time)                                  | false    |              |             |
 | `» id`         | integer                                            | false    |              |             |
-| `» log_level`  | [codersdk.LogLevel](schemas.md#codersdkloglevel)   | false    |              |             |
-| `» log_source` | [codersdk.LogSource](schemas.md#codersdklogsource) | false    |              |             |
+| `» log_level`  | [codersdk.LogLevel](schemas#codersdkloglevel)   | false    |              |             |
+| `» log_source` | [codersdk.LogSource](schemas#codersdklogsource) | false    |              |             |
 | `» output`     | string                                             | false    |              |             |
 | `» stage`      | string                                             | false    |              |             |
 
@@ -2672,7 +2678,7 @@ Status Code **200**
 | `log_source` | `provisioner_daemon` |
 | `log_source` | `provisioner`        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Removed: Get parameters by template version
 
@@ -2698,7 +2704,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/p
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template version presets
 
@@ -2742,7 +2748,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/p
 
 | Status | Meaning                                                 | Description | Schema                                                |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Preset](schemas.md#codersdkpreset) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Preset](schemas#codersdkpreset) |
 
 <h3 id="get-template-version-presets-responseschema">Response Schema</h3>
 
@@ -2757,7 +2763,7 @@ Status Code **200**
 | `»» name`      | string | false    |              |             |
 | `»» value`     | string | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get resources by template version
 
@@ -2920,7 +2926,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/r
 
 | Status | Meaning                                                 | Description | Schema                                                                      |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceResource](schemas.md#codersdkworkspaceresource) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.WorkspaceResource](schemas#codersdkworkspaceresource) |
 
 <h3 id="get-resources-by-template-version-responseschema">Response Schema</h3>
 
@@ -2935,16 +2941,16 @@ Status Code **200**
 | `»»» command`                   | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»» display_name`              | string                                                                                                 | false    |              | Display name is a friendly name for the app.                                                                                                                                                                                                   |
 | `»»» external`                  | boolean                                                                                                | false    |              | External specifies whether the URL should be opened externally on the client or not.                                                                                                                                                           |
-| `»»» health`                    | [codersdk.WorkspaceAppHealth](schemas.md#codersdkworkspaceapphealth)                                   | false    |              |                                                                                                                                                                                                                                                |
-| `»»» healthcheck`               | [codersdk.Healthcheck](schemas.md#codersdkhealthcheck)                                                 | false    |              | Healthcheck specifies the configuration for checking app health.                                                                                                                                                                               |
+| `»»» health`                    | [codersdk.WorkspaceAppHealth](schemas#codersdkworkspaceapphealth)                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» healthcheck`               | [codersdk.Healthcheck](schemas#codersdkhealthcheck)                                                 | false    |              | Healthcheck specifies the configuration for checking app health.                                                                                                                                                                               |
 | `»»»» interval`                 | integer                                                                                                | false    |              | Interval specifies the seconds between each health check.                                                                                                                                                                                      |
 | `»»»» threshold`                | integer                                                                                                | false    |              | Threshold specifies the number of consecutive failed health checks before returning "unhealthy".                                                                                                                                               |
 | `»»»» url`                      | string                                                                                                 | false    |              | URL specifies the endpoint to check for the app health.                                                                                                                                                                                        |
 | `»»» hidden`                    | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»»» icon`                      | string                                                                                                 | false    |              | Icon is a relative path or external URL that specifies an icon to be displayed in the dashboard.                                                                                                                                               |
 | `»»» id`                        | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
-| `»»» open_in`                   | [codersdk.WorkspaceAppOpenIn](schemas.md#codersdkworkspaceappopenin)                                   | false    |              |                                                                                                                                                                                                                                                |
-| `»»» sharing_level`             | [codersdk.WorkspaceAppSharingLevel](schemas.md#codersdkworkspaceappsharinglevel)                       | false    |              |                                                                                                                                                                                                                                                |
+| `»»» open_in`                   | [codersdk.WorkspaceAppOpenIn](schemas#codersdkworkspaceappopenin)                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» sharing_level`             | [codersdk.WorkspaceAppSharingLevel](schemas#codersdkworkspaceappsharinglevel)                       | false    |              |                                                                                                                                                                                                                                                |
 | `»»» slug`                      | string                                                                                                 | false    |              | Slug is a unique identifier within the agent.                                                                                                                                                                                                  |
 | `»»» statuses`                  | array                                                                                                  | false    |              | Statuses is a list of statuses for the app.                                                                                                                                                                                                    |
 | `»»»» agent_id`                 | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
@@ -2954,7 +2960,7 @@ Status Code **200**
 | `»»»» id`                       | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» message`                  | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» needs_user_attention`     | boolean                                                                                                | false    |              | Deprecated: This field is unused and will be removed in a future version. NeedsUserAttention specifies whether the status needs user attention.                                                                                                |
-| `»»»» state`                    | [codersdk.WorkspaceAppStatusState](schemas.md#codersdkworkspaceappstatusstate)                         | false    |              |                                                                                                                                                                                                                                                |
+| `»»»» state`                    | [codersdk.WorkspaceAppStatusState](schemas#codersdkworkspaceappstatusstate)                         | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» uri`                      | string                                                                                                 | false    |              | Uri is the URI of the resource that the status is for. e.g. https://github.com/org/repo/pull/123 e.g. file:///path/to/file                                                                                                                     |
 | `»»»» workspace_id`             | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»»» subdomain`                 | boolean                                                                                                | false    |              | Subdomain denotes whether the app should be accessed via a path on the `coder server` or via a hostname-based dev URL. If this is set to true and there is no app wildcard configured on the server, the app will not be accessible in the UI. |
@@ -2970,17 +2976,17 @@ Status Code **200**
 | `»»» [any property]`            | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» expanded_directory`         | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» first_connected_at`         | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
-| `»» health`                     | [codersdk.WorkspaceAgentHealth](schemas.md#codersdkworkspaceagenthealth)                               | false    |              | Health reports the health of the agent.                                                                                                                                                                                                        |
+| `»» health`                     | [codersdk.WorkspaceAgentHealth](schemas#codersdkworkspaceagenthealth)                               | false    |              | Health reports the health of the agent.                                                                                                                                                                                                        |
 | `»»» healthy`                   | boolean                                                                                                | false    |              | Healthy is true if the agent is healthy.                                                                                                                                                                                                       |
 | `»»» reason`                    | string                                                                                                 | false    |              | Reason is a human-readable explanation of the agent's health. It is empty if Healthy is true.                                                                                                                                                  |
 | `»» id`                         | string(uuid)                                                                                           | false    |              |                                                                                                                                                                                                                                                |
 | `»» instance_id`                | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» last_connected_at`          | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
 | `»» latency`                    | object                                                                                                 | false    |              | Latency is mapped by region name (e.g. "New York City", "Seattle").                                                                                                                                                                            |
-| `»»» [any property]`            | [codersdk.DERPRegion](schemas.md#codersdkderpregion)                                                   | false    |              |                                                                                                                                                                                                                                                |
+| `»»» [any property]`            | [codersdk.DERPRegion](schemas#codersdkderpregion)                                                   | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» latency_ms`               | number                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»»»» preferred`                | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
-| `»» lifecycle_state`            | [codersdk.WorkspaceAgentLifecycle](schemas.md#codersdkworkspaceagentlifecycle)                         | false    |              |                                                                                                                                                                                                                                                |
+| `»» lifecycle_state`            | [codersdk.WorkspaceAgentLifecycle](schemas#codersdkworkspaceagentlifecycle)                         | false    |              |                                                                                                                                                                                                                                                |
 | `»» log_sources`                | array                                                                                                  | false    |              |                                                                                                                                                                                                                                                |
 | `»»» created_at`                | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
 | `»»» display_name`              | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
@@ -3005,8 +3011,8 @@ Status Code **200**
 | `»»» start_blocks_login`        | boolean                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»»» timeout`                   | integer                                                                                                | false    |              |                                                                                                                                                                                                                                                |
 | `»» started_at`                 | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
-| `»» startup_script_behavior`    | [codersdk.WorkspaceAgentStartupScriptBehavior](schemas.md#codersdkworkspaceagentstartupscriptbehavior) | false    |              | Startup script behavior is a legacy field that is deprecated in favor of the `coder_script` resource. It's only referenced by old clients. Deprecated: Remove in the future!                                                                   |
-| `»» status`                     | [codersdk.WorkspaceAgentStatus](schemas.md#codersdkworkspaceagentstatus)                               | false    |              |                                                                                                                                                                                                                                                |
+| `»» startup_script_behavior`    | [codersdk.WorkspaceAgentStartupScriptBehavior](schemas#codersdkworkspaceagentstartupscriptbehavior) | false    |              | Startup script behavior is a legacy field that is deprecated in favor of the `coder_script` resource. It's only referenced by old clients. Deprecated: Remove in the future!                                                                   |
+| `»» status`                     | [codersdk.WorkspaceAgentStatus](schemas#codersdkworkspaceagentstatus)                               | false    |              |                                                                                                                                                                                                                                                |
 | `»» subsystems`                 | array                                                                                                  | false    |              |                                                                                                                                                                                                                                                |
 | `»» troubleshooting_url`        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `»» updated_at`                 | string(date-time)                                                                                      | false    |              |                                                                                                                                                                                                                                                |
@@ -3023,7 +3029,7 @@ Status Code **200**
 | `»» value`                      | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `» name`                        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
 | `» type`                        | string                                                                                                 | false    |              |                                                                                                                                                                                                                                                |
-| `» workspace_transition`        | [codersdk.WorkspaceTransition](schemas.md#codersdkworkspacetransition)                                 | false    |              |                                                                                                                                                                                                                                                |
+| `» workspace_transition`        | [codersdk.WorkspaceTransition](schemas#codersdkworkspacetransition)                                 | false    |              |                                                                                                                                                                                                                                                |
 
 #### Enumerated Values
 
@@ -3060,7 +3066,7 @@ Status Code **200**
 | `workspace_transition`    | `stop`             |
 | `workspace_transition`    | `delete`           |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get rich parameters by template version
 
@@ -3119,7 +3125,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/r
 
 | Status | Meaning                                                 | Description | Schema                                                                                    |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionParameter](schemas.md#codersdktemplateversionparameter) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionParameter](schemas#codersdktemplateversionparameter) |
 
 <h3 id="get-rich-parameters-by-template-version-responseschema">Response Schema</h3>
 
@@ -3146,7 +3152,7 @@ Status Code **200**
 | `» validation_error`      | string                                                                           | false    |              |             |
 | `» validation_max`        | integer                                                                          | false    |              |             |
 | `» validation_min`        | integer                                                                          | false    |              |             |
-| `» validation_monotonic`  | [codersdk.ValidationMonotonicOrder](schemas.md#codersdkvalidationmonotonicorder) | false    |              |             |
+| `» validation_monotonic`  | [codersdk.ValidationMonotonicOrder](schemas#codersdkvalidationmonotonicorder) | false    |              |             |
 | `» validation_regex`      | string                                                                           | false    |              |             |
 
 #### Enumerated Values
@@ -3160,7 +3166,7 @@ Status Code **200**
 | `validation_monotonic` | `increasing`   |
 | `validation_monotonic` | `decreasing`   |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Removed: Get schema by template version
 
@@ -3186,7 +3192,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/s
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Unarchive template version
 
@@ -3228,9 +3234,9 @@ curl -X POST http://coder-server:8080/api/v2/templateversions/{templateversion}/
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get template variables by template version
 
@@ -3273,7 +3279,7 @@ curl -X GET http://coder-server:8080/api/v2/templateversions/{templateversion}/v
 
 | Status | Meaning                                                 | Description | Schema                                                                                  |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionVariable](schemas.md#codersdktemplateversionvariable) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.TemplateVersionVariable](schemas#codersdktemplateversionvariable) |
 
 <h3 id="get-template-variables-by-template-version-responseschema">Response Schema</h3>
 
@@ -3298,7 +3304,7 @@ Status Code **200**
 | `type`   | `number` |
 | `type`   | `bool`   |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Open dynamic parameters WebSocket by template version
 
@@ -3325,4 +3331,4 @@ curl -X GET http://coder-server:8080/api/v2/users/{user}/templateversions/{templ
 |--------|--------------------------------------------------------------------------|---------------------|--------|
 | 101    | [Switching Protocols](https://tools.ietf.org/html/rfc7231#section-6.2.2) | Switching Protocols |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

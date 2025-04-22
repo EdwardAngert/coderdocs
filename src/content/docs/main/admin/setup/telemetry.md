@@ -1,3 +1,11 @@
+---
+title: Telemetry
+description: >-
+  Coder collects telemetry from all installations by default. We believe our
+  users
+version: main
+audience: admin
+---
 # Telemetry
 
 > [!NOTE]

@@ -1,3 +1,9 @@
+---
+title: delete
+description: Delete a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # delete
 

@@ -1,3 +1,11 @@
+---
+title: GitHub
+description: >-
+  By default, new Coder deployments use a Coder-managed GitHub app to
+  authenticate
+version: main
+audience: admin
+---
 # GitHub
 
 ## Default Configuration
@@ -56,7 +64,7 @@ First,
 GitHub will ask you for the following Coder parameters:
 
 - **Homepage URL**: Set to your Coder deployments
-  [`CODER_ACCESS_URL`](../../reference/cli/server.md#--access-url) (e.g.
+  [`CODER_ACCESS_URL`](../../reference/cli/server#--access-url) (e.g.
   `https://coder.domain.com`)
 - **User Authorization Callback URL**: Set to `https://coder.domain.com`
 

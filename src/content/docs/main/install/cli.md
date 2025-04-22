@@ -1,9 +1,15 @@
+---
+title: Installing Coder
+description: A single CLI (`coder`) is used for both the Coder server and the client.
+version: main
+audience: infra
+---
 # Installing Coder
 
 A single CLI (`coder`) is used for both the Coder server and the client.
 
 We support two release channels: mainline and stable - read the
-[Releases](./releases/index.md) page to learn more about which best suits your team.
+[Releases](./releases/index) page to learn more about which best suits your team.
 
 ## Download the latest release from GitHub
 
@@ -31,7 +37,7 @@ alternate installation methods (e.g. standalone binaries, system packages).
 Use [GitHub releases](https://github.com/coder/coder/releases) to download the
 Windows installer (`.msi`) or standalone binary (`.exe`).
 
-![Windows setup wizard](../images/install/windows-installer.png)
+![Windows setup wizard](%images/%images/./images/install/windows-installer.png)
 
 Alternatively, you can use the
 [`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget)
@@ -49,7 +55,7 @@ To start the Coder server:
 coder server
 ```
 
-![Coder install](../images/screenshots/welcome-create-admin-user.png)
+![Coder install](%images/%images/./images/screenshots/welcome-create-admin-user.png)
 
 To log in to an existing Coder deployment:
 
@@ -77,5 +83,5 @@ This script can be useful when authoring a template for installing the CLI.
 
 ### Next up
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index)

@@ -1,3 +1,9 @@
+---
+title: Sections
+description: <children>
+version: main
+audience: developer
+---
 # Sections
 
 <children>

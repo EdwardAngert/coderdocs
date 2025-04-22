@@ -1,11 +1,17 @@
+---
+title: Workspaces
+description: A workspace is the environment that a developer works in. Developers in a team
+version: main
+audience: developer
+---
 # Workspaces
 
 A workspace is the environment that a developer works in. Developers in a team
 each work from their own workspace and can use
-[multiple IDEs](./workspace-access/index.md).
+[multiple IDEs](./workspace-access/index).
 
 A developer creates a workspace from a
-[shared template](../admin/templates/index.md). This lets an entire team work in
+[shared template](../admin/templates/index). This lets an entire team work in
 environments that are identically configured and provisioned with the same
 resources.
 
@@ -14,7 +20,7 @@ resources.
 You can create a workspace in the UI. Log in to your Coder instance, go to the
 **Templates** tab, find the template you need, and select **Create Workspace**.
 
-![Creating a workspace in the UI](../images/creating-workspace-ui.png)
+![Creating a workspace in the UI](%images/%images/./images/creating-workspace-ui.png)
 
 When you create a workspace, you will be prompted to give it a name. You might
 also be prompted to set some parameters that the template provides.
@@ -24,7 +30,7 @@ You can manage your existing templates in the **Workspaces** tab.
 You can also create a workspace from the command line:
 
 Each Coder user has their own workspaces created from
-[templates](../admin/templates/index.md):
+[templates](../admin/templates/index):
 
 ```shell
 # create a workspace from the template; specify any variables
@@ -74,7 +80,7 @@ The following filters are supported:
 After updating the default version of the template that a workspace was created
 from, you can update the workspace.
 
-![Updating a workspace](../images/workspace-update.png)
+![Updating a workspace](%images/%images/./images/workspace-update.png)
 
 If the workspace is running, Coder stops it, updates it, then starts the
 workspace again.
@@ -97,7 +103,7 @@ Note: If a template is updated such that new parameter inputs are required from
 the user, autostart will be disabled for the workspace until the user has
 manually updated the workspace.
 
-![Automatic Updates](../images/workspace-automatic-updates.png)
+![Automatic Updates](%images/%images/./images/workspace-automatic-updates.png)
 
 ## Bulk operations
 
@@ -114,7 +120,7 @@ The start and stop operations can only be applied to a set of workspaces which
 are all in the same state. For update and delete, the user will be prompted for
 confirmation before any action is taken.
 
-![Bulk workspace actions](../images/user-guides/workspace-bulk-actions.png)
+![Bulk workspace actions](%images/%images/./images/user-guides/workspace-bulk-actions.png)
 
 ## Starting and stopping workspaces
 
@@ -124,24 +130,24 @@ schedule a workspace to start and stop automatically.
 To set a workspace's schedule, go to the workspace, then **Settings** >
 **Schedule**.
 
-![Scheduling UI](../images/schedule.png)
+![Scheduling UI](%images/%images/./images/schedule.png)
 
 Coder might also stop a workspace automatically if there is a
-[template update](../admin/templates/managing-templates/index.md#updating-templates)
+[template update](../admin/templates/managing-templates/index#updating-templates)
 available.
 
-Learn more about [workspace lifecycle](./workspace-lifecycle.md) and our
-[scheduling features](./workspace-scheduling.md).
+Learn more about [workspace lifecycle](./workspace-lifecycle) and our
+[scheduling features](./workspace-scheduling).
 
 ## Workspace resources
 
 Workspaces in Coder are started and stopped, often based on whether there was
-any activity or if there was a [template update](../admin/templates/index.md)
+any activity or if there was a [template update](../admin/templates/index)
 available.
 
 Resources are often destroyed and re-created when a workspace is restarted,
 though the exact behavior depends on the template. For more information, see
-[Resource Persistence](../admin/templates/extending-templates/resource-persistence.md).
+[Resource Persistence](../admin/templates/extending-templates/resource-persistence).
 
 ## Repairing workspaces
 
@@ -162,7 +168,7 @@ Coder's filter query:
 - To find workspaces that are currently running, use the filter
   `status:running`.
 
-![Re-entering template variables](../images/templates/template-variables.png)
+![Re-entering template variables](%images/%images/./images/templates/template-variables.png)
 
 You can also do this in the CLI with the following command:
 

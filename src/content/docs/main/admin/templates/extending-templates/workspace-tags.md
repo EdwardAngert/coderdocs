@@ -1,3 +1,9 @@
+---
+title: Workspace Tags
+description: Template administrators can leverage static template tags to limit workspace
+version: main
+audience: admin
+---
 # Workspace Tags
 
 Template administrators can leverage static template tags to limit workspace

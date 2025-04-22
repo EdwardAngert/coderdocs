@@ -1,3 +1,11 @@
+---
+title: Dev container security and caching
+description: >-
+  Ensure Envbuilder can only pull pre-approved images and artifacts by
+  configuring
+version: main
+audience: admin
+---
 # Dev container security and caching
 
 Ensure Envbuilder can only pull pre-approved images and artifacts by configuring
@@ -7,7 +15,7 @@ it with your existing HTTP proxies, firewalls, and artifact managers.
 
 You may need to authenticate to your container registry, such as Artifactory, or
 Git provider such as GitLab, to use Envbuilder. See the
-[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/container-registry-auth.md)
+[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/container-registry-auth)
 for more information.
 
 ## Layer and image caching
@@ -26,17 +34,17 @@ of caching:
 
   - Caches the entire image, skipping the build process completely (except for
     post-build
-    [lifecycle scripts](./add-devcontainer.md#dev-container-lifecycle-scripts)).
+    [lifecycle scripts](./add-devcontainer#dev-container-lifecycle-scripts)).
 
 Note that caching requires push access to a registry, and may require approval
 from relevant infrastructure team(s).
 
 Refer to the
-[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/caching.md)
+[Envbuilder documentation](https://github.com/coder/envbuilder/blob/main/docs/caching)
 for more information about Envbuilder and caching.
 
 Visit the
-[speed up templates](../../../../tutorials/best-practices/speed-up-templates.md)
+[speed up templates](../../../../tutorials/best-practices/speed-up-templates)
 best practice documentation for more ways that you can speed up build times.
 
 ### Image caching
@@ -62,5 +70,5 @@ You may also wish to consult a
 
 ## Next steps
 
-- [Dev container releases and known issues](./devcontainer-releases-known-issues.md)
-- [Dotfiles](../../../../user-guides/workspace-dotfiles.md)
+- [Dev container releases and known issues](./devcontainer-releases-known-issues)
+- [Dotfiles](../../../../user-guides/workspace-dotfiles)

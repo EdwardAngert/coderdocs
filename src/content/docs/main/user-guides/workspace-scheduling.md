@@ -1,3 +1,9 @@
+---
+title: Managing workspace schedules
+description: Scheduling helps minimize cloud costs without sacrificing the availability of
+version: main
+audience: developer
+---
 # Managing workspace schedules
 
 Scheduling helps minimize cloud costs without sacrificing the availability of
@@ -9,18 +15,18 @@ configured by your template admin, which will stop a workspace when a user's
 absence is detected.
 
 To learn more workspace states and schedule, read the
-[workspace lifecycle](../user-guides/workspace-lifecycle.md) documentation.
+[workspace lifecycle](../user-guides/workspace-lifecycle) documentation.
 
 ## Where to find the schedule settings
 
 Click on any workspace the **Workspaces** tab of the dashboard, then go to
 **Workspace settings** in the top right.
 
-![Workspace settings location](../images/user-guides/workspace-settings-location.png)
+![Workspace settings location](%images/%images/./images/user-guides/workspace-settings-location.png)
 
 Then open the **Schedule** tab to see your workspace scheduling options.
 
-![Workspace schedule settings](../images/user-guides/schedule-settings-workspace.png)
+![Workspace schedule settings](%images/%images/./images/user-guides/schedule-settings-workspace.png)
 
 ## Autostart
 
@@ -30,7 +36,7 @@ Use autostart to start a workspace at a specified time and which days of the
 week. Also, you can choose your preferred timezone. Admins may restrict which
 days of the week your workspace is allowed to autostart.
 
-![Autostart UI](../images/workspaces/autostart.png)
+![Autostart UI](%images/%images/./images/workspaces/autostart.png)
 
 ## Autostop
 
@@ -39,7 +45,7 @@ workspace if you're still using it. It will wait for the user to become inactive
 before checking connections again (1 hour by default). Template admins can
 modify this duration with the **activity bump** template setting.
 
-![Autostop UI](../images/workspaces/autostop.png)
+![Autostop UI](%images/%images/./images/workspaces/autostop.png)
 
 ## Activity detection
 
@@ -94,7 +100,7 @@ User quiet hours can be configured in the user's schedule settings page.
 Workspaces on templates with an autostop requirement will only be forcibly
 stopped due to the policy at the **start** of the user's quiet hours.
 
-![User schedule settings](../images/admin/templates/schedule/user-quiet-hours.png)
+![User schedule settings](%images/%images/./images/admin/templates/schedule/user-quiet-hours.png)
 
 ## Scheduling configuration examples
 

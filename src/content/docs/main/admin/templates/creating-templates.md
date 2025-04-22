@@ -1,3 +1,9 @@
+---
+title: Creating Templates
+description: Users with the `Template Administrator` role or above can create templates
+version: main
+audience: admin
+---
 # Creating Templates
 
 Users with the `Template Administrator` role or above can create templates
@@ -14,26 +20,26 @@ In most cases, it is best to start with a starter template.
 After navigating to the Templates page in the Coder dashboard, choose
 `Create Template > Choose a starter template`.
 
-![Create a template](../../images/admin/templates/create-template.png)
+![Create a template](%images/%images/./../images/admin/templates/create-template.png)
 
 From there, select a starter template for desired underlying infrastructure for
 workspaces.
 
-![Starter templates](../../images/admin/templates/starter-templates.png)
+![Starter templates](%images/%images/./../images/admin/templates/starter-templates.png)
 
 Give your template a name, description, and icon and press `Create template`.
 
-![Name and icon](../../images/admin/templates/import-template.png)
+![Name and icon](%images/%images/./../images/admin/templates/import-template.png)
 
 > [!NOTE]
 > If template creation fails, Coder is likely not authorized to
 > deploy infrastructure in the given location. Learn how to configure
-> [provisioner authentication](./extending-templates/provider-authentication.md).
+> [provisioner authentication](./extending-templates/provider-authentication).
 
 ### CLI
 
-You can the [Coder CLI](../../install/cli.md) to manage templates for Coder.
-After [logging in](../../reference/cli/login.md) to your deployment, create a
+You can the [Coder CLI](../../install/cli) to manage templates for Coder.
+After [logging in](../../reference/cli/login) to your deployment, create a
 folder to store your templates:
 
 ```sh
@@ -42,7 +48,7 @@ mkdir $HOME/coder-templates
 cd $HOME/coder-templates
 ```
 
-Use the [`templates init`](../../reference/cli/templates_init.md) command to
+Use the [`templates init`](../../reference/cli/templates_init) command to
 pull a starter template:
 
 ```sh
@@ -59,7 +65,7 @@ cd universal-template
 ```
 
 Next, push it to Coder with the
-[`templates push`](../../reference/cli/templates_push.md) command:
+[`templates push`](../../reference/cli/templates_push) command:
 
 ```sh
 coder templates push
@@ -68,10 +74,10 @@ coder templates push
 > [!NOTE]
 > If `template push` fails, Coder is likely not authorized to deploy
 > infrastructure in the given location. Learn how to configure
-> [provisioner authentication](../provisioners/index.md).
+> [provisioner authentication](../provisioners/index).
 
 You can edit the metadata of the template such as the display name with the
-[`templates edit`](../../reference/cli/templates_edit.md) command:
+[`templates edit`](../../reference/cli/templates_edit) command:
 
 ```sh
 coder templates edit universal-template \
@@ -82,7 +88,7 @@ coder templates edit universal-template \
 
 ### CI/CD
 
-Follow the [change management](./managing-templates/change-management.md) guide
+Follow the [change management](./managing-templates/change-management) guide
 to manage templates via GitOps.
 
 </div>
@@ -100,16 +106,16 @@ the original template.
 After navigating to the page for a template, use the dropdown menu on the right
 to `Duplicate`.
 
-![Duplicate menu](../../images/admin/templates/duplicate-menu.png)
+![Duplicate menu](%images/%images/./../images/admin/templates/duplicate-menu.png)
 
 Give the new template a name, icon, and description.
 
-![Duplicate page](../../images/admin/templates/duplicate-page.png)
+![Duplicate page](%images/%images/./../images/admin/templates/duplicate-page.png)
 
 Press `Create template`. After the build, you will be taken to the new template
 page.
 
-![New template](../../images/admin/templates/new-duplicate-template.png)
+![New template](%images/%images/./../images/admin/templates/new-duplicate-template.png)
 
 ### CLI
 
@@ -153,8 +159,8 @@ templates for additional clouds (e.g. Hetzner, Alibaba) or orchestrators
 
 Refer to the following resources:
 
-- [Tutorial: Create a template from scratch](../../tutorials/template-from-scratch.md)
-- [Extending templates](./extending-templates/index.md): Features and concepts
+- [Tutorial: Create a template from scratch](../../tutorials/template-from-scratch)
+- [Extending templates](./extending-templates/index): Features and concepts
   around templates (agents, parameters, variables, etc)
 - [Coder Registry](https://registry.coder.com/templates): Official and community
   templates for Coder
@@ -162,5 +168,5 @@ Refer to the following resources:
 
 ### Next steps
 
-- [Extending templates](./extending-templates/index.md)
-- [Managing templates](./managing-templates/index.md)
+- [Extending templates](./extending-templates/index)
+- [Managing templates](./managing-templates/index)

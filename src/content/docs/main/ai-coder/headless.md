@@ -1,3 +1,9 @@
+---
+title: Untitled
+description: '- A Coder deployment with v2.21 or later'
+version: main
+audience: all
+---
 > [!NOTE]
 >
 > This functionality is in early access and is evolving rapidly.
@@ -11,7 +17,7 @@
 ## Prerequisites
 
 - A Coder deployment with v2.21 or later
-- A [template configured for AI agents](./create-template.md)
+- A [template configured for AI agents](./create-template)
 
 ## Overview
 
@@ -28,7 +34,7 @@ or other tools with MCP support to interact with Coder in order to:
 - Run commands on workspaces
 - Check in on agent activity
 
-In this model, an [IDE Agent](./agents.md#in-ide-agents) could interact with a
+In this model, an [IDE Agent](./agents#in-ide-agents) could interact with a
 remote Coder workspace, or Coder can be used in a remote pipeline or a larger
 workflow.
 
@@ -40,18 +46,18 @@ coder exp mcp configure claude-desktop # Configure Claude Desktop to interact wi
 coder exp mcp configure cursor # Configure Cursor to interact with Coder
 ```
 
-> MCP is also used for various agents to report activity back to Coder. Learn more about this in [custom agents](./custom-agents.md).
+> MCP is also used for various agents to report activity back to Coder. Learn more about this in [custom agents](./custom-agents).
 
 ## Coder CLI
 
 Workspaces can be created, started, and stopped via the Coder CLI. See the
-[CLI docs](../reference/cli/index.md) for more information.
+[CLI docs](../reference/cli/index) for more information.
 
 ## REST API
 
 The Coder REST API can be used to manage workspaces and agents. See the
-[API docs](../reference/api/index.md) for more information.
+[API docs](../reference/api/index) for more information.
 
 ## Next Steps
 
-- [Securing Agents](./securing.md)
+- [Securing Agents](./securing)

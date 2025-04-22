@@ -1,3 +1,9 @@
+---
+title: Reference
+description: All actions possible through the Coder dashboard can also be automated. There
+version: main
+audience: developer
+---
 # Reference
 
 ## Automation
@@ -6,10 +12,10 @@ All actions possible through the Coder dashboard can also be automated. There
 are several ways to extend/automate Coder:
 
 - [coderd Terraform Provider](https://registry.terraform.io/providers/coder/coderd/latest)
-- [CLI](../reference/cli/index.md)
-- [REST API](../reference/api/index.md)
+- [CLI](../reference/cli/index)
+- [REST API](../reference/api/index)
 - [Coder SDK](https://pkg.go.dev/github.com/coder/coder/v2/codersdk)
-- [Agent API](../reference/agent-api/index.md)
+- [Agent API](../reference/agent-api/index)
 
 ## Quickstart
 
@@ -35,9 +41,9 @@ curl https://coder.example.com/api/v2/workspaces?q=owner:me \
 
 ## Documentation
 
-We publish an [API reference](../reference/api/index.md) in our documentation.
+We publish an [API reference](../reference/api/index) in our documentation.
 You can also enable a
-[Swagger endpoint](../reference/cli/server.md#--swagger-enable) on your Coder
+[Swagger endpoint](../reference/cli/server#--swagger-enable) on your Coder
 deployment.
 
 ## Use cases
@@ -53,7 +59,7 @@ payloads, we recommend checking the relevant documentation.
 
 ### Templates
 
-- [Manage templates via Terraform or CLI](../admin/templates/managing-templates/change-management.md):
+- [Manage templates via Terraform or CLI](../admin/templates/managing-templates/change-management):
   Store all templates in git and update them in CI/CD pipelines.
 
 ### Workspace agents
@@ -61,7 +67,7 @@ payloads, we recommend checking the relevant documentation.
 Workspace agents have a special token that can send logs, metrics, and workspace
 activity.
 
-- [Custom workspace logs](../reference/api/agents.md#patch-workspace-agent-logs):
+- [Custom workspace logs](../reference/api/agents#patch-workspace-agent-logs):
   Expose messages prior to the Coder init script running (e.g. pulling image, VM
   starting, restoring snapshot).
   [coder-logstream-kube](https://github.com/coder/coder-logstream-kube) uses
@@ -82,7 +88,7 @@ activity.
   }"
   ```
 
-- [Manually send workspace activity](../reference/api/workspaces.md#extend-workspace-deadline-by-id):
+- [Manually send workspace activity](../reference/api/workspaces#extend-workspace-deadline-by-id):
   Keep a workspace "active," even if there is not an open connection (e.g. for a
   long-running machine learning job).
 

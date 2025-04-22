@@ -1,20 +1,26 @@
+---
+title: Deployment Health
+description: Coder includes an operator-friendly deployment health page that provides a
+version: main
+audience: admin
+---
 # Deployment Health
 
 Coder includes an operator-friendly deployment health page that provides a
 number of details about the health of your Coder deployment.
 
-![Health check in Coder Dashboard](../../images/admin/monitoring/health-check.png)
+![Health check in Coder Dashboard](%images/%images/./../images/admin/monitoring/health-check.png)
 
 You can view it at `https://${CODER_URL}/health`, or you can alternatively view
 the
-[JSON response directly](../../reference/api/debug.md#debug-info-deployment-health).
+[JSON response directly](../../reference/api/debug#debug-info-deployment-health).
 
 The deployment health page is broken up into the following sections:
 
 ## Access URL
 
 The Access URL section shows checks related to Coder's
-[access URL](../setup/index.md#access-url).
+[access URL](../setup/index#access-url).
 
 Coder will periodically send a GET request to `${CODER_ACCESS_URL}/healthz` and
 validate that the response is `200 OK`. The expected response body is also the
@@ -28,7 +34,7 @@ If there is an issue, you may see one of the following errors reported:
 
 **Problem:** no access URL has been configured.
 
-**Solution:** configure an [access URL](../setup/index.md#access-url) for Coder.
+**Solution:** configure an [access URL](../setup/index#access-url) for Coder.
 
 ### EACS02
 
@@ -109,7 +115,7 @@ query fails.
 #### Database Latency High
 
 **Problem:** This code is returned if the median latency is higher than the
-[configured threshold](../../reference/cli/server.md#--health-check-threshold-database).
+[configured threshold](../../reference/cli/server#--health-check-threshold-database).
 This may not be an error as such, but is an indication of a potential issue.
 
 **Solution:** Investigate the sizing of the configured database with regard to
@@ -119,9 +125,9 @@ configured threshold to a higher value (this will not address the root cause).
 
 > [!TIP]
 > You can enable
-> [detailed database metrics](../../reference/cli/server.md#--prometheus-collect-db-metrics)
+> [detailed database metrics](../../reference/cli/server#--prometheus-collect-db-metrics)
 > in Coder's Prometheus endpoint. If you have
-> [tracing enabled](../../reference/cli/server.md#--trace), these traces may also
+> [tracing enabled](../../reference/cli/server#--trace), these traces may also
 > contain useful information regarding Coder's database activity.
 
 ## DERP
@@ -129,7 +135,7 @@ configured threshold to a higher value (this will not address the root cause).
 Coder workspace agents may use
 [DERP (Designated Encrypted Relay for Packets)](https://tailscale.com/blog/how-tailscale-works/#encrypted-tcp-relays-derp)
 to communicate with Coder. This requires connectivity to a number of configured
-[DERP servers](../../reference/cli/server.md#--derp-config-path) which are used
+[DERP servers](../../reference/cli/server#--derp-config-path) which are used
 to relay traffic between Coder and workspace agents. Coder periodically queries
 the health of its configured DERP servers and may return one or more of the
 following:
@@ -149,7 +155,7 @@ still be able to reach their workspaces, connection performance may be degraded.
 
 > [!NOTE]
 > This may also be shown if you have
-> [forced websocket connections for DERP](../../reference/cli/server.md#--derp-force-websockets).
+> [forced websocket connections for DERP](../../reference/cli/server#--derp-force-websockets).
 
 **Solution:** ensure that any proxies you use allow connection upgrade with the
 `Upgrade: derp` header.
@@ -178,11 +184,11 @@ curl -v "https://coder.company.com/derp"
 #### No STUN servers available
 
 **Problem:** This is shown if no STUN servers are available. Coder will use STUN
-to establish [direct connections](../networking/stun.md). Without at least one
+to establish [direct connections](../networking/stun). Without at least one
 working STUN server, direct connections may not be possible.
 
 **Solution:** Ensure that the
-[configured STUN severs](../../reference/cli/server.md#--derp-server-stun-addresses)
+[configured STUN severs](../../reference/cli/server#--derp-server-stun-addresses)
 are reachable from Coder and that UDP traffic can be sent/received on the
 configured port.
 
@@ -206,7 +212,7 @@ for long-lived connections:
 - Between users interacting with Coder's Web UI (for example, the built-in
   terminal, or VSCode Web),
 - Between workspace agents and `coderd`,
-- Between Coder [workspace proxies](../networking/workspace-proxies.md) and
+- Between Coder [workspace proxies](../networking/workspace-proxies) and
   `coderd`.
 
 Any issues causing failures to establish WebSocket connections will result in
@@ -252,7 +258,7 @@ to write a message.
 
 ## Workspace Proxy
 
-If you have configured [Workspace Proxies](../networking/workspace-proxies.md),
+If you have configured [Workspace Proxies](../networking/workspace-proxies),
 Coder will periodically query their availability and show their status here.
 
 ### EWP01
@@ -294,9 +300,9 @@ be built until there is at least one provisioner daemon running.
 **Solution:**
 
 If you are using
-[External Provisioner Daemons](../provisioners/index.md#external-provisioners), ensure
+[External Provisioner Daemons](../provisioners/index#external-provisioners), ensure
 that they are able to successfully connect to Coder. Otherwise, ensure
-[`--provisioner-daemons`](../../reference/cli/server.md#--provisioner-daemons)
+[`--provisioner-daemons`](../../reference/cli/server#--provisioner-daemons)
 is set to a value greater than 0.
 
 > [!NOTE]

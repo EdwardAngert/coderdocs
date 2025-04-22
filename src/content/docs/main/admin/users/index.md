@@ -1,3 +1,9 @@
+---
+title: Users
+description: 'By default, Coder is accessible via password authentication. For production'
+version: main
+audience: admin
+---
 # Users
 
 By default, Coder is accessible via password authentication. For production
@@ -7,8 +13,8 @@ enforces MFA correctly.
 
 ## Configuring SSO
 
-- [OpenID Connect](./oidc-auth.md) (e.g. Okta, KeyCloak, PingFederate, Azure AD)
-- [GitHub](./github-auth.md) (or GitHub Enterprise)
+- [OpenID Connect](./oidc-auth) (e.g. Okta, KeyCloak, PingFederate, Azure AD)
+- [GitHub](./github-auth) (or GitHub Enterprise)
 
 ## Groups
 
@@ -16,8 +22,8 @@ Multiple users can be organized into logical groups to control which templates
 they can use. While groups can be manually created in Coder, we recommend
 syncing them from your identity provider.
 
-- [Learn more about Groups](./groups-roles.md)
-- [Group & Role Sync](./idp-sync.md)
+- [Learn more about Groups](./groups-roles)
+- [Group & Role Sync](./idp-sync)
 
 ## Roles
 
@@ -26,8 +32,8 @@ most developers in your organization have the `Member` role, allowing them to
 create workspaces. Other roles have administrative capabilities such as
 auditing, managing users, and managing templates.
 
-- [Learn more about Roles](./groups-roles.md)
-- [Group & Role Sync](./idp-sync.md)
+- [Learn more about Roles](./groups-roles)
+- [Group & Role Sync](./idp-sync)
 
 ## User status
 
@@ -145,7 +151,7 @@ Confirm the user activation by typing **yes** and pressing **enter**.
 
 As of 2.17.0, users can reset their password independently on the login screen
 by clicking "Forgot Password." This feature requires
-[email notifications](../monitoring/notifications/index.md#smtp-email) to be
+[email notifications](../monitoring/notifications/index#smtp-email) to be
 configured on the deployment.
 
 To reset a user's password as an administrator via the web UI:

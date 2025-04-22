@@ -1,3 +1,9 @@
+---
+title: create
+description: Create a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # create
 

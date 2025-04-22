@@ -1,3 +1,9 @@
+---
+title: Create a Coder template for agents
+description: 'Coder has first-class support for managing agents through Github, but can also'
+version: main
+audience: all
+---
 # Create a Coder template for agents
 
 > [!NOTE]
@@ -19,7 +25,7 @@ directly in issues and PRs.
 ## Prerequisites
 
 - A Coder deployment with v2.21 or later
-- A [template configured for AI agents](./create-template.md)
+- A [template configured for AI agents](./create-template)
 
 ## GitHub
 
@@ -29,9 +35,9 @@ The [start-workspace](https://github.com/coder/start-workspace-action) GitHub
 action will create a Coder workspace based on a specific phrase in a comment
 (e.g. `@coder`).
 
-![GitHub Issue](../images/guides/ai-agents/github-action.png)
+![GitHub Issue](%images/%images/./images/guides/ai-agents/github-action.png)
 
-When properly configured with an [AI template](./create-template.md), the agent
+When properly configured with an [AI template](./create-template), the agent
 will begin working on the issue.
 
 ### Pull Request Support (Coming Soon)
@@ -40,22 +46,22 @@ We're working on adding support for an agent automatically creating pull
 requests and responding to your comments. Check back soon or
 [join our Discord](https://discord.gg/coder) to stay updated.
 
-![GitHub Pull Request](../images/guides/ai-agents/github-pr.png)
+![GitHub Pull Request](%images/%images/./images/guides/ai-agents/github-pr.png)
 
 ## Integrating with Other Issue Trackers
 
 While support for other issue trackers is under consideration, you can can use
-the [REST API](../reference/api/index.md) or [CLI](../reference/cli/index.md) to integrate
+the [REST API](../reference/api/index) or [CLI](../reference/cli/index) to integrate
 with other issue trackers or CI pipelines.
 
-In addition, an [Open in Coder](../admin/templates/open-in-coder.md) flow can
+In addition, an [Open in Coder](../admin/templates/open-in-coder) flow can
 be used to generate a URL and/or markdown button in your issue tracker to
 automatically create a workspace with specific parameters.
 
 ## Next Steps
 
-- [Best practices & adding tools via MCP](./best-practices.md)
-- [Supervise Agents in the UI](./coder-dashboard.md)
-- [Supervise Agents in the IDE](./ide-integration.md)
-- [Supervise Agents Programmatically](./headless.md)
-- [Securing Agents with Boundaries](./securing.md)
+- [Best practices & adding tools via MCP](./best-practices)
+- [Supervise Agents in the UI](./coder-dashboard)
+- [Supervise Agents in the IDE](./ide-integration)
+- [Supervise Agents Programmatically](./headless)
+- [Securing Agents with Boundaries](./securing)

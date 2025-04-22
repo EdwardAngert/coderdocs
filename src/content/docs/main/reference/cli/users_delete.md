@@ -1,3 +1,9 @@
+---
+title: users delete
+description: Delete a user by username or user_id.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # users delete
 

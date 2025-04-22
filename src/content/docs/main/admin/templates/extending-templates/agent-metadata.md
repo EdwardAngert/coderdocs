@@ -1,9 +1,15 @@
+---
+title: Agent metadata
+description: '![agent-metadata](../../../images/admin/templates/agent-metadata-ui.png)'
+version: main
+audience: admin
+---
 # Agent metadata
 
-![agent-metadata](../../../images/admin/templates/agent-metadata-ui.png)
+![agent-metadata](%images/%images/./../../images/admin/templates/agent-metadata-ui.png)
 
 You can show live operational metrics to workspace users with agent metadata. It
-is the dynamic complement of [resource metadata](./resource-metadata.md).
+is the dynamic complement of [resource metadata](./resource-metadata).
 
 You specify agent metadata in the
 [`coder_agent`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/agent).
@@ -15,7 +21,7 @@ All of these examples use
 for the script declaration. With heredoc strings, you can script without messy
 escape codes, just as if you were working in your terminal.
 
-Some of the examples use the [`coder stat`](../../../reference/cli/stat.md)
+Some of the examples use the [`coder stat`](../../../reference/cli/stat)
 command. This is useful for determining CPU and memory usage of the VM or
 container that the workspace is running in, which is more accurate than resource
 usage about the workspace's host.
@@ -144,5 +150,5 @@ other to the `NOTIFY` query that enables live stats streaming in the UI.
 
 ## Next Steps
 
-- [Resource metadata](./resource-metadata.md)
-- [Parameters](./parameters.md)
+- [Resource metadata](./resource-metadata)
+- [Parameters](./parameters)

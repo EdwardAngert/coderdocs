@@ -1,3 +1,11 @@
+---
+title: Notifications
+description: >-
+  Notifications are sent by Coder in response to specific internal events, such
+  as
+version: main
+audience: admin
+---
 # Notifications
 
 Notifications are sent by Coder in response to specific internal events, such as
@@ -62,10 +70,10 @@ OOM/OOD notifications can be delivered to users in VS Code.
 You can configure:
 
 - SMTP or webhooks globally with
-[`CODER_NOTIFICATIONS_METHOD`](../../../reference/cli/server.md#--notifications-method)
+[`CODER_NOTIFICATIONS_METHOD`](../../../reference/cli/server#--notifications-method)
 (default: `smtp`).
 - Coder dashboard Inbox with
-[`CODER_NOTIFICATIONS_INBOX_ENABLED`](../../../reference/cli/server.md#--notifications-inbox-enabled)
+[`CODER_NOTIFICATIONS_INBOX_ENABLED`](../../../reference/cli/server#--notifications-inbox-enabled)
 (default: `true`).
 
 Premium customers can configure which method to use for each of the supported
@@ -92,7 +100,7 @@ when they overutilize memory and disk.
 This can help prevent agent disconnects due to OOM/OOD issues.
 
 To enable OOM/OOD notifications on a template, follow the steps in the
-[resource monitoring guide](../../templates/extending-templates/resource-monitoring.md).
+[resource monitoring guide](../../templates/extending-templates/resource-monitoring).
 
 ## SMTP (Email)
 
@@ -245,7 +253,7 @@ All users have the option to opt-out of any notifications. Go to **Account** ->
 **Notifications** to turn notifications on or off. The delivery method for each
 notification is indicated on the right hand side of this table.
 
-![User Notification Preferences](../../../images/admin/monitoring/notifications/user-notification-preferences.png)
+![User Notification Preferences](%images/%images/./../../images/admin/monitoring/notifications/user-notification-preferences.png)
 
 ## Delivery Preferences
 
@@ -256,7 +264,7 @@ notification is indicated on the right hand side of this table.
 Administrators can configure which delivery methods are used for each different
 [event type](#event-types).
 
-![preferences](../../../images/admin/monitoring/notifications/notification-admin-prefs.png)
+![preferences](%images/%images/./../../images/admin/monitoring/notifications/notification-admin-prefs.png)
 
 You can find this page under
 `https://$CODER_ACCESS_URL/deployment/notifications?tab=events`.
@@ -267,10 +275,10 @@ Administrators may wish to stop _all_ notifications across the deployment. We
 support a killswitch in the CLI for these cases.
 
 To pause sending notifications, execute
-[`coder notifications pause`](../../../reference/cli/notifications_pause.md).
+[`coder notifications pause`](../../../reference/cli/notifications_pause).
 
 To resume sending notifications, execute
-[`coder notifications resume`](../../../reference/cli/notifications_resume.md).
+[`coder notifications resume`](../../../reference/cli/notifications_resume).
 
 ## Troubleshooting
 
@@ -285,7 +293,7 @@ troubleshoot:
     `CODER_VERBOSE=true` or `--verbose` to output debug logs.
 1. If you are on version 2.15.x, notifications must be enabled using the
     `notifications`
-    [experiment](../../../install/releases/feature-stages.md#early-access-features).
+    [experiment](../../../install/releases/feature-stages#early-access-features).
 
     Notifications are enabled by default in Coder v2.16.0 and later.
 
@@ -302,7 +310,7 @@ Messages older than seven days are deleted.
 
 ### Message States
 
-![states](../../../images/admin/monitoring/notifications/notification-states.png)
+![states](%images/%images/./../../images/admin/monitoring/notifications/notification-states.png)
 
 _A notifier here refers to a Coder replica which is responsible for dispatching
 the notification. All running replicas act as notifiers to process pending

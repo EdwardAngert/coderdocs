@@ -1,3 +1,9 @@
+---
+title: templates versions list
+description: List all the versions of the specified template
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates versions list
 

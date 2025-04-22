@@ -1,3 +1,9 @@
+---
+title: Networking
+description: 'Coder''s network topology has three types of nodes: workspaces, coder servers,'
+version: main
+audience: admin
+---
 # Networking
 
 Coder's network topology has three types of nodes: workspaces, coder servers,
@@ -38,28 +44,28 @@ In order for clients to be able to establish direct connections:
 > Direct connections via the web browser are not supported. To improve
 > latency for browser-based applications running inside Coder workspaces in
 > regions far from the Coder control plane, consider deploying one or more
-> [workspace proxies](./workspace-proxies.md).
+> [workspace proxies](./workspace-proxies).
 
 - The client is connecting using the CLI (e.g. `coder ssh` or
   `coder port-forward`). Note that the
   [VSCode extension](https://marketplace.visualstudio.com/items?itemName=coder.coder-remote)
   and [JetBrains Plugin](https://plugins.jetbrains.com/plugin/19620-coder/), and
-  [`ssh coder.<workspace>`](../../reference/cli/config-ssh.md) all utilize the
+  [`ssh coder.<workspace>`](../../reference/cli/config-ssh) all utilize the
   CLI to establish a workspace connection.
 - Either the client or workspace agent are able to discover a reachable
   `ip:port` of their counterpart. If the agent and client are able to
   communicate with each other using their locally assigned IP addresses, then a
   direct connection can be established immediately. Otherwise, the client and
   agent will contact
-  [the configured STUN servers](../../reference/cli/server.md#--derp-server-stun-addresses)
+  [the configured STUN servers](../../reference/cli/server#--derp-server-stun-addresses)
   to try and determine which `ip:port` can be used to communicate with their
-  counterpart. See [STUN and NAT](./stun.md) for more details on how this
+  counterpart. See [STUN and NAT](./stun) for more details on how this
   process works.
 - All outbound UDP traffic must be allowed for both the client and the agent on
   **all ports** to each others' respective networks.
   - To establish a direct connection, both agent and client use STUN. This
     involves sending UDP packets outbound on `udp/3478` to the configured
-    [STUN server](../../reference/cli/server.md#--derp-server-stun-addresses).
+    [STUN server](../../reference/cli/server#--derp-server-stun-addresses).
     If either the agent or the client are unable to send and receive UDP packets
     to a STUN server, then direct connections will not be possible.
   - Both agents and clients will then establish a
@@ -70,7 +76,7 @@ In order for clients to be able to establish direct connections:
 ## coder server
 
 Workspaces connect to the coder server via the server's external address, set
-via [`ACCESS_URL`](../../admin/setup/index.md#access-url). There must not be a
+via [`ACCESS_URL`](../../admin/setup/index#access-url). There must not be a
 NAT between workspaces and coder server.
 
 Users connect to the coder server's dashboard and API through its `ACCESS_URL`
@@ -95,7 +101,7 @@ The coder servers relays dashboard-initiated connections between the user and
 the workspace. Web terminal <-> workspace connections are an exception and may
 be direct.
 
-In general, [port forwarded](./port-forwarding.md) web apps are faster than
+In general, [port forwarded](./port-forwarding) web apps are faster than
 dashboard-accessed web apps.
 
 ## 🌎 Geo-distribution
@@ -109,19 +115,19 @@ move the user and workspace closer together.
 Establishing a direct connection can be an involved process because both the
 client and workspace agent will likely be behind at least one level of NAT,
 meaning that we need to use STUN to learn the IP address and port under which
-the client and agent can both contact each other. See [STUN and NAT](./stun.md)
+the client and agent can both contact each other. See [STUN and NAT](./stun)
 for more information on how this process works.
 
 If a direct connection is not available (e.g. client or server is behind NAT),
 Coder will use a relayed connection. By default,
-[Coder uses Google's public STUN server](../../reference/cli/server.md#--derp-server-stun-addresses),
+[Coder uses Google's public STUN server](../../reference/cli/server#--derp-server-stun-addresses),
 but this can be disabled or changed for
-[offline deployments](../../install/offline.md).
+[offline deployments](../../install/offline).
 
 ### Relayed connections
 
 By default, your Coder server also runs a built-in DERP relay which can be used
-for both public and [offline deployments](../../install/offline.md).
+for both public and [offline deployments](../../install/offline).
 
 However, our Wireguard integration through Tailscale has graciously allowed us
 to use
@@ -184,7 +190,7 @@ with security policies. In these cases, pass the `--browser-only` flag to
 
 With browser-only connections, developers can only connect to their workspaces
 via the web terminal and
-[web IDEs](../../user-guides/workspace-access/web-ides.md).
+[web IDEs](../../user-guides/workspace-access/web-ides).
 
 ### Workspace Proxies
 
@@ -195,7 +201,7 @@ via the web terminal and
 Workspace proxies are a Coder Premium feature that allows you to provide
 low-latency browser experiences for geo-distributed teams.
 
-To learn more, see [Workspace Proxies](./workspace-proxies.md).
+To learn more, see [Workspace Proxies](./workspace-proxies).
 
 ## Latency
 
@@ -247,15 +253,15 @@ Latency measurements are color-coded in the dashboard:
 
 To improve latency and user experience:
 
-- **Deploy workspace proxies**: Place [proxies](./workspace-proxies.md) in regions closer to users, connecting back to your single Coder server deployment.
+- **Deploy workspace proxies**: Place [proxies](./workspace-proxies) in regions closer to users, connecting back to your single Coder server deployment.
 - **Use P2P connections**: Ensure network configurations permit direct connections.
 - **Strategic placement**: Deploy your Coder server in a region where most users work.
 - **Network configuration**: Optimize routing between users and workspaces.
 - **Check firewall rules**: Ensure they don't block necessary Coder connections.
 
-For help troubleshooting connection issues, including latency problems, refer to the [networking troubleshooting guide](./troubleshooting.md).
+For help troubleshooting connection issues, including latency problems, refer to the [networking troubleshooting guide](./troubleshooting).
 
 ## Up next
 
-- Learn about [Port Forwarding](./port-forwarding.md)
-- Troubleshoot [Networking Issues](./troubleshooting.md)
+- Learn about [Port Forwarding](./port-forwarding)
+- Troubleshoot [Networking Issues](./troubleshooting)

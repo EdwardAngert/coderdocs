@@ -1,3 +1,9 @@
+---
+title: licenses delete
+description: Delete license by ID
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # licenses delete
 

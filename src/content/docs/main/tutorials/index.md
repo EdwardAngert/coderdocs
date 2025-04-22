@@ -1,3 +1,9 @@
+---
+title: Guides and Tutorials
+description: Here you can find a list of employee-written guides on Coder. These tutorials
+version: main
+audience: admin
+---
 # Guides and Tutorials
 
 Here you can find a list of employee-written guides on Coder. These tutorials

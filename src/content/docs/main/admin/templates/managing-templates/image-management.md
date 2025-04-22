@@ -1,3 +1,9 @@
+---
+title: Image Management
+description: While Coder provides example
+version: main
+audience: admin
+---
 # Image Management
 
 While Coder provides example
@@ -70,4 +76,4 @@ specific tooling for their projects. The [Dev Container](https://containers.dev)
 specification allows developers to define their projects dependencies within a
 `devcontainer.json` in their Git repository.
 
-- [Learn how to integrate Dev Containers with Coder](./devcontainers/index.md)
+- [Learn how to integrate Dev Containers with Coder](./devcontainers/index)

@@ -1,3 +1,9 @@
+---
+title: Members
+description: '```shell'
+version: main
+audience: developer
+---
 # Members
 
 ## List organization members
@@ -56,7 +62,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/members
 
 | Status | Meaning                                                 | Description | Schema                                                                                                |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.OrganizationMemberWithUserData](schemas.md#codersdkorganizationmemberwithuserdata) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.OrganizationMemberWithUserData](schemas#codersdkorganizationmemberwithuserdata) |
 
 <h3 id="list-organization-members-responseschema">Response Schema</h3>
 
@@ -79,7 +85,7 @@ Status Code **200**
 | `» user_id`          | string(uuid)      | false    |              |             |
 | `» username`         | string            | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get member roles by organization
 
@@ -141,7 +147,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/members
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.AssignableRoles](schemas.md#codersdkassignableroles) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.AssignableRoles](schemas#codersdkassignableroles) |
 
 <h3 id="get-member-roles-by-organization-responseschema">Response Schema</h3>
 
@@ -156,9 +162,9 @@ Status Code **200**
 | `» name`                     | string                                                   | false    |              |                                                                                                 |
 | `» organization_id`          | string(uuid)                                             | false    |              |                                                                                                 |
 | `» organization_permissions` | array                                                    | false    |              | Organization permissions are specific for the organization in the field 'OrganizationID' above. |
-| `»» action`                  | [codersdk.RBACAction](schemas.md#codersdkrbacaction)     | false    |              |                                                                                                 |
+| `»» action`                  | [codersdk.RBACAction](schemas#codersdkrbacaction)     | false    |              |                                                                                                 |
 | `»» negate`                  | boolean                                                  | false    |              | Negate makes this a negative permission                                                         |
-| `»» resource_type`           | [codersdk.RBACResource](schemas.md#codersdkrbacresource) | false    |              |                                                                                                 |
+| `»» resource_type`           | [codersdk.RBACResource](schemas#codersdkrbacresource) | false    |              |                                                                                                 |
 | `» site_permissions`         | array                                                    | false    |              |                                                                                                 |
 | `» user_permissions`         | array                                                    | false    |              |                                                                                                 |
 
@@ -217,7 +223,7 @@ Status Code **200**
 | `resource_type` | `workspace_dormant`                |
 | `resource_type` | `workspace_proxy`                  |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Upsert a custom organization role
 
@@ -268,7 +274,7 @@ curl -X PUT http://coder-server:8080/api/v2/organizations/{organization}/members
 | Name           | In   | Type                                                               | Required | Description         |
 |----------------|------|--------------------------------------------------------------------|----------|---------------------|
 | `organization` | path | string(uuid)                                                       | true     | Organization ID     |
-| `body`         | body | [codersdk.CustomRoleRequest](schemas.md#codersdkcustomrolerequest) | true     | Upsert role request |
+| `body`         | body | [codersdk.CustomRoleRequest](schemas#codersdkcustomrolerequest) | true     | Upsert role request |
 
 ### Example responses
 
@@ -309,7 +315,7 @@ curl -X PUT http://coder-server:8080/api/v2/organizations/{organization}/members
 
 | Status | Meaning                                                 | Description | Schema                                            |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas.md#codersdkrole) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas#codersdkrole) |
 
 <h3 id="upsert-a-custom-organization-role-responseschema">Response Schema</h3>
 
@@ -322,9 +328,9 @@ Status Code **200**
 | `» name`                     | string                                                   | false    |              |                                                                                                 |
 | `» organization_id`          | string(uuid)                                             | false    |              |                                                                                                 |
 | `» organization_permissions` | array                                                    | false    |              | Organization permissions are specific for the organization in the field 'OrganizationID' above. |
-| `»» action`                  | [codersdk.RBACAction](schemas.md#codersdkrbacaction)     | false    |              |                                                                                                 |
+| `»» action`                  | [codersdk.RBACAction](schemas#codersdkrbacaction)     | false    |              |                                                                                                 |
 | `»» negate`                  | boolean                                                  | false    |              | Negate makes this a negative permission                                                         |
-| `»» resource_type`           | [codersdk.RBACResource](schemas.md#codersdkrbacresource) | false    |              |                                                                                                 |
+| `»» resource_type`           | [codersdk.RBACResource](schemas#codersdkrbacresource) | false    |              |                                                                                                 |
 | `» site_permissions`         | array                                                    | false    |              |                                                                                                 |
 | `» user_permissions`         | array                                                    | false    |              |                                                                                                 |
 
@@ -383,7 +389,7 @@ Status Code **200**
 | `resource_type` | `workspace_dormant`                |
 | `resource_type` | `workspace_proxy`                  |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Insert a custom organization role
 
@@ -434,7 +440,7 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/member
 | Name           | In   | Type                                                               | Required | Description         |
 |----------------|------|--------------------------------------------------------------------|----------|---------------------|
 | `organization` | path | string(uuid)                                                       | true     | Organization ID     |
-| `body`         | body | [codersdk.CustomRoleRequest](schemas.md#codersdkcustomrolerequest) | true     | Insert role request |
+| `body`         | body | [codersdk.CustomRoleRequest](schemas#codersdkcustomrolerequest) | true     | Insert role request |
 
 ### Example responses
 
@@ -475,7 +481,7 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/member
 
 | Status | Meaning                                                 | Description | Schema                                            |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas.md#codersdkrole) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas#codersdkrole) |
 
 <h3 id="insert-a-custom-organization-role-responseschema">Response Schema</h3>
 
@@ -488,9 +494,9 @@ Status Code **200**
 | `» name`                     | string                                                   | false    |              |                                                                                                 |
 | `» organization_id`          | string(uuid)                                             | false    |              |                                                                                                 |
 | `» organization_permissions` | array                                                    | false    |              | Organization permissions are specific for the organization in the field 'OrganizationID' above. |
-| `»» action`                  | [codersdk.RBACAction](schemas.md#codersdkrbacaction)     | false    |              |                                                                                                 |
+| `»» action`                  | [codersdk.RBACAction](schemas#codersdkrbacaction)     | false    |              |                                                                                                 |
 | `»» negate`                  | boolean                                                  | false    |              | Negate makes this a negative permission                                                         |
-| `»» resource_type`           | [codersdk.RBACResource](schemas.md#codersdkrbacresource) | false    |              |                                                                                                 |
+| `»» resource_type`           | [codersdk.RBACResource](schemas#codersdkrbacresource) | false    |              |                                                                                                 |
 | `» site_permissions`         | array                                                    | false    |              |                                                                                                 |
 | `» user_permissions`         | array                                                    | false    |              |                                                                                                 |
 
@@ -549,7 +555,7 @@ Status Code **200**
 | `resource_type` | `workspace_dormant`                |
 | `resource_type` | `workspace_proxy`                  |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Delete a custom organization role
 
@@ -610,7 +616,7 @@ curl -X DELETE http://coder-server:8080/api/v2/organizations/{organization}/memb
 
 | Status | Meaning                                                 | Description | Schema                                            |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas.md#codersdkrole) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Role](schemas#codersdkrole) |
 
 <h3 id="delete-a-custom-organization-role-responseschema">Response Schema</h3>
 
@@ -623,9 +629,9 @@ Status Code **200**
 | `» name`                     | string                                                   | false    |              |                                                                                                 |
 | `» organization_id`          | string(uuid)                                             | false    |              |                                                                                                 |
 | `» organization_permissions` | array                                                    | false    |              | Organization permissions are specific for the organization in the field 'OrganizationID' above. |
-| `»» action`                  | [codersdk.RBACAction](schemas.md#codersdkrbacaction)     | false    |              |                                                                                                 |
+| `»» action`                  | [codersdk.RBACAction](schemas#codersdkrbacaction)     | false    |              |                                                                                                 |
 | `»» negate`                  | boolean                                                  | false    |              | Negate makes this a negative permission                                                         |
-| `»» resource_type`           | [codersdk.RBACResource](schemas.md#codersdkrbacresource) | false    |              |                                                                                                 |
+| `»» resource_type`           | [codersdk.RBACResource](schemas#codersdkrbacresource) | false    |              |                                                                                                 |
 | `» site_permissions`         | array                                                    | false    |              |                                                                                                 |
 | `» user_permissions`         | array                                                    | false    |              |                                                                                                 |
 
@@ -684,7 +690,7 @@ Status Code **200**
 | `resource_type` | `workspace_dormant`                |
 | `resource_type` | `workspace_proxy`                  |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Add organization member
 
@@ -730,9 +736,9 @@ curl -X POST http://coder-server:8080/api/v2/organizations/{organization}/member
 
 | Status | Meaning                                                 | Description | Schema                                                               |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.OrganizationMember](schemas.md#codersdkorganizationmember) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.OrganizationMember](schemas#codersdkorganizationmember) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Remove organization member
 
@@ -759,7 +765,7 @@ curl -X DELETE http://coder-server:8080/api/v2/organizations/{organization}/memb
 |--------|-----------------------------------------------------------------|-------------|--------|
 | 204    | [No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5) | No Content  |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Assign role to organization member
 
@@ -791,7 +797,7 @@ curl -X PUT http://coder-server:8080/api/v2/organizations/{organization}/members
 |----------------|------|--------------------------------------------------------|----------|----------------------|
 | `organization` | path | string                                                 | true     | Organization ID      |
 | `user`         | path | string                                                 | true     | User ID, name, or me |
-| `body`         | body | [codersdk.UpdateRoles](schemas.md#codersdkupdateroles) | true     | Update roles request |
+| `body`         | body | [codersdk.UpdateRoles](schemas#codersdkupdateroles) | true     | Update roles request |
 
 ### Example responses
 
@@ -817,9 +823,9 @@ curl -X PUT http://coder-server:8080/api/v2/organizations/{organization}/members
 
 | Status | Meaning                                                 | Description | Schema                                                               |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.OrganizationMember](schemas.md#codersdkorganizationmember) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.OrganizationMember](schemas#codersdkorganizationmember) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Paginated organization members
 
@@ -884,7 +890,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/paginat
 
 | Status | Meaning                                                 | Description | Schema                                                                                    |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.PaginatedMembersResponse](schemas.md#codersdkpaginatedmembersresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.PaginatedMembersResponse](schemas#codersdkpaginatedmembersresponse) |
 
 <h3 id="paginated-organization-members-responseschema">Response Schema</h3>
 
@@ -909,7 +915,7 @@ Status Code **200**
 | `»» user_id`          | string(uuid)      | false    |              |             |
 | `»» username`         | string            | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get site member roles
 
@@ -965,7 +971,7 @@ curl -X GET http://coder-server:8080/api/v2/users/roles \
 
 | Status | Meaning                                                 | Description | Schema                                                                  |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.AssignableRoles](schemas.md#codersdkassignableroles) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.AssignableRoles](schemas#codersdkassignableroles) |
 
 <h3 id="get-site-member-roles-responseschema">Response Schema</h3>
 
@@ -980,9 +986,9 @@ Status Code **200**
 | `» name`                     | string                                                   | false    |              |                                                                                                 |
 | `» organization_id`          | string(uuid)                                             | false    |              |                                                                                                 |
 | `» organization_permissions` | array                                                    | false    |              | Organization permissions are specific for the organization in the field 'OrganizationID' above. |
-| `»» action`                  | [codersdk.RBACAction](schemas.md#codersdkrbacaction)     | false    |              |                                                                                                 |
+| `»» action`                  | [codersdk.RBACAction](schemas#codersdkrbacaction)     | false    |              |                                                                                                 |
 | `»» negate`                  | boolean                                                  | false    |              | Negate makes this a negative permission                                                         |
-| `»» resource_type`           | [codersdk.RBACResource](schemas.md#codersdkrbacresource) | false    |              |                                                                                                 |
+| `»» resource_type`           | [codersdk.RBACResource](schemas#codersdkrbacresource) | false    |              |                                                                                                 |
 | `» site_permissions`         | array                                                    | false    |              |                                                                                                 |
 | `» user_permissions`         | array                                                    | false    |              |                                                                                                 |
 
@@ -1041,4 +1047,4 @@ Status Code **200**
 | `resource_type` | `workspace_dormant`                |
 | `resource_type` | `workspace_proxy`                  |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

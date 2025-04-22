@@ -1,8 +1,14 @@
+---
+title: FAQs
+description: Frequently asked questions on Coder OSS and licensed deployments. These FAQs
+version: main
+audience: admin
+---
 # FAQs
 
 Frequently asked questions on Coder OSS and licensed deployments. These FAQs
 come from our community and customers, feel free to
-[contribute to this page](https://github.com/coder/coder/edit/main/docs/tutorials/faqs.md).
+[contribute to this page](https://github.com/coder/coder/edit/main/docs/tutorials/faqs).
 
 For other community resources, see our
 [GitHub discussions](https://github.com/coder/coder/discussions), or join our
@@ -27,17 +33,17 @@ Visit <https://coder.com/trial> or contact
 
 1. Select **Licenses** from the sidebar, then **Add a license**:
 
-   ![Add a license from the licenses screen](../images/admin/licenses/licenses-nolicense.png)
+   ![Add a license from the licenses screen](%images/%images/./images/admin/licenses/licenses-nolicense.png)
 
 1. On the **Add a license** screen, drag your `.jwt` license file into the
    **Upload Your License** section, or paste your license in the
    **Paste Your License** text box, then select **Upload License**:
 
-   ![Add a license screen](../images/admin/licenses/add-license-ui.png)
+   ![Add a license screen](%images/%images/./images/admin/licenses/add-license-ui.png)
 
 ### Coder CLI
 
-1. Ensure you have the [Coder CLI](../install/cli.md) installed.
+1. Ensure you have the [Coder CLI](../install/cli) installed.
 1. Save your license key to disk and make note of the path.
 1. Open a terminal.
 1. Log in to your Coder deployment:
@@ -64,7 +70,7 @@ Visit <https://coder.com/trial> or contact
 
 </details>
 
-Visit the [licensing documentation](../admin/licensing/index.md) for more
+Visit the [licensing documentation](../admin/licensing/index) for more
 information about licenses.
 
 ## I'm experiencing networking issues, so want to disable Tailscale, STUN, Direct connections and force use of websocket
@@ -73,7 +79,7 @@ The primary developer use case is a local IDE connecting over SSH to a Coder
 workspace.
 
 Coder's networking stack has intelligence to attempt a peer-to-peer or
-[Direct connection](../admin/networking/index.md#direct-connections) between the
+[Direct connection](../admin/networking/index#direct-connections) between the
 local IDE and the workspace. However, this requires some additional protocols
 like UDP and being able to reach a STUN server to echo the IP addresses of the
 local IDE machine and workspace, for sharing using a Wireguard Coordination
@@ -90,13 +96,13 @@ troubleshooting.
 
 | Flag                                                                                          | Value       | Meaning                               |
 |-----------------------------------------------------------------------------------------------|-------------|---------------------------------------|
-| [`CODER_BLOCK_DIRECT`](../reference/cli/server.md#--block-direct-connections)                 | `true`      | Blocks direct connections             |
-| [`CODER_DERP_SERVER_STUN_ADDRESSES`](../reference/cli/server.md#--derp-server-stun-addresses) | `"disable"` | Disables STUN                         |
-| [`CODER_DERP_FORCE_WEBSOCKETS`](../reference/cli/server.md#--derp-force-websockets)           | `true`      | Forces websockets over Tailscale DERP |
+| [`CODER_BLOCK_DIRECT`](../reference/cli/server#--block-direct-connections)                 | `true`      | Blocks direct connections             |
+| [`CODER_DERP_SERVER_STUN_ADDRESSES`](../reference/cli/server#--derp-server-stun-addresses) | `"disable"` | Disables STUN                         |
+| [`CODER_DERP_FORCE_WEBSOCKETS`](../reference/cli/server#--derp-force-websockets)           | `true`      | Forces websockets over Tailscale DERP |
 
 ## How do I configure NGINX as the reverse proxy in front of Coder?
 
-[This tutorial](./reverse-proxy-nginx.md) in our docs explains in detail how to
+[This tutorial](./reverse-proxy-nginx) in our docs explains in detail how to
 configure NGINX with Coder so that our Tailscale Wireguard networking functions
 properly.
 
@@ -156,7 +162,7 @@ resource "coder_app" "code-server" {
 An important concept to understand is that Coder creates workspaces which have
 an agent that must be able to reach the `coder server`.
 
-If the [`CODER_ACCESS_URL`](../admin/setup/index.md#access-url) is not
+If the [`CODER_ACCESS_URL`](../admin/setup/index#access-url) is not
 accessible from a workspace, the workspace may build, but the agent cannot reach
 Coder, and thus the missing icons. e.g., Terminal, IDEs, Apps.
 
@@ -186,7 +192,7 @@ of these values can lead to existing workspaces failing to start. This issue
 occurs because the Terraform state will not be in sync with the new template.
 
 However, a lesser-known CLI sub-command,
-[`coder update`](../reference/cli/update.md), can resolve this issue. This
+[`coder update`](../reference/cli/update), can resolve this issue. This
 command re-prompts users to re-enter the input variables, potentially saving the
 workspace from a failed status.
 
@@ -327,12 +333,12 @@ References:
 
 - [Public GitHub Issue 6117](https://github.com/coder/coder/issues/6117)
 - [Public GitHub Issue 5677](https://github.com/coder/coder/issues/5677)
-- [Coder docs: Templates/Change Management](../admin/templates/managing-templates/change-management.md)
+- [Coder docs: Templates/Change Management](../admin/templates/managing-templates/change-management)
 
 ## Can I run Coder in an air-gapped or offline mode? (no Internet)?
 
 Yes, Coder can be deployed in
-[air-gapped or offline mode](../install/offline.md).
+[air-gapped or offline mode](../install/offline).
 
 Our product bundles with the Terraform binary so assume access to terraform.io
 during installation. The docs outline rebuilding the Coder container with

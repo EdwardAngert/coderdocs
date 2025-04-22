@@ -1,3 +1,9 @@
+---
+title: Microsoft Azure
+description: This guide shows you how to set up the Coder server on Azure which will
+version: main
+audience: infra
+---
 # Microsoft Azure
 
 This guide shows you how to set up the Coder server on Azure which will

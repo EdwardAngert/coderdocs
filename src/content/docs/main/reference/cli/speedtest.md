@@ -1,3 +1,9 @@
+---
+title: speedtest
+description: Run upload and download tests from your machine to a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # speedtest
 

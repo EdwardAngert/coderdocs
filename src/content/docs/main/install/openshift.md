@@ -1,3 +1,9 @@
+---
+title: OpenShift
+description: '- OpenShift cluster running K8s 1.19+ (OpenShift 4.7+)'
+version: main
+audience: infra
+---
 # OpenShift
 
 ## Requirements
@@ -5,7 +11,7 @@
 - OpenShift cluster running K8s 1.19+ (OpenShift 4.7+)
 - Helm 3.5+ installed
 - OpenShift CLI (`oc`) installed
-- [Coder CLI](./cli.md) installed
+- [Coder CLI](./cli) installed
 
 ## Install Coder with OpenShift
 
@@ -80,7 +86,7 @@ coder:
 ### 3. Configure the Coder service, connection URLs, and cache values
 
 To establish a connection to PostgreSQL, set the `CODER_PG_CONNECTION_URL`
-value. [See our Helm documentation](./kubernetes.md) on configuring the
+value. [See our Helm documentation](./kubernetes) on configuring the
 PostgreSQL connection URL as a secret. Additionally, if accessing Coder over a
 hostname, set the `CODER_ACCESS_URL` value.
 
@@ -331,5 +337,5 @@ This template should be ready to use straight away.
 
 ## Next steps
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index)

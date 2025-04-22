@@ -1,3 +1,9 @@
+---
+title: Dev container releases and known issues
+description: 'Envbuilder provides two release channels:'
+version: main
+audience: admin
+---
 # Dev container releases and known issues
 
 ## Release channels
@@ -21,5 +27,5 @@ information and to submit feature requests or bug reports.
 ## Known issues
 
 Visit the
-[Envbuilder repository](https://github.com/coder/envbuilder/blob/main/docs/devcontainer-spec-support.md)
+[Envbuilder repository](https://github.com/coder/envbuilder/blob/main/docs/devcontainer-spec-support)
 for a full list of supported features and known issues.

@@ -1,3 +1,9 @@
+---
+title: groups
+description: Manage groups
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # groups
 
@@ -17,7 +23,7 @@ coder groups
 
 | Name                                      | Purpose             |
 |-------------------------------------------|---------------------|
-| [<code>create</code>](./groups_create.md) | Create a user group |
-| [<code>list</code>](./groups_list.md)     | List user groups    |
-| [<code>edit</code>](./groups_edit.md)     | Edit a user group   |
-| [<code>delete</code>](./groups_delete.md) | Delete a user group |
+| [<code>create</code>](./groups_create) | Create a user group |
+| [<code>list</code>](./groups_list)     | List user groups    |
+| [<code>edit</code>](./groups_edit)     | Edit a user group   |
+| [<code>delete</code>](./groups_delete) | Delete a user group |

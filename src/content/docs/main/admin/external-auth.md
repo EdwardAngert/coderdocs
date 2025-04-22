@@ -1,3 +1,11 @@
+---
+title: External Authentication
+description: >-
+  Coder supports external authentication via OAuth2.0. This allows enabling any
+  OAuth provider as well as integrations with Git providers,
+version: main
+audience: admin
+---
 # External Authentication
 
 Coder supports external authentication via OAuth2.0. This allows enabling any OAuth provider as well as integrations with Git providers,
@@ -65,7 +73,7 @@ Reference the documentation for your chosen provider for more information on how
 
 ### Workspace CLI
 
-Use [`external-auth`](../reference/cli/external-auth.md) in the Coder CLI to access a token within the workspace:
+Use [`external-auth`](../reference/cli/external-auth) in the Coder CLI to access a token within the workspace:
 
 ```shell
 coder external-auth access-token <USER_DEFINED_ID>
@@ -242,7 +250,7 @@ Note that the redirect URI must include the value of `CODER_EXTERNAL_AUTH_0_ID` 
 
 ### JFrog Artifactory
 
-Visit the [JFrog Artifactory](../admin/integrations/jfrog-artifactory.md) guide for instructions on how to set up for JFrog Artifactory.
+Visit the [JFrog Artifactory](../admin/integrations/jfrog-artifactory) guide for instructions on how to set up for JFrog Artifactory.
 
 ## Self-managed Git providers
 
@@ -280,13 +288,13 @@ CODER_EXTERNAL_AUTH_0_SCOPES="repo:read repo:write write:gpg_key"
    - Enable fine-grained access to specific repositories or a subset of
      permissions for security.
 
-   ![Register GitHub App](../images/admin/github-app-register.png)
+   ![Register GitHub App](%images/%images/./images/admin/github-app-register.png)
 
 1. Adjust the GitHub app permissions. You can use more or fewer permissions than
    are listed here, this example allows users to clone
    repositories:
 
-   ![Adjust GitHub App Permissions](../images/admin/github-app-permissions.png)
+   ![Adjust GitHub App Permissions](%images/%images/./images/admin/github-app-permissions.png)
 
    | Name          | Permission   | Description                                            |
    |---------------|--------------|--------------------------------------------------------|
@@ -299,7 +307,7 @@ CODER_EXTERNAL_AUTH_0_SCOPES="repo:read repo:write write:gpg_key"
 1. Install the App for your organization. You may select a subset of
    repositories to grant access to.
 
-   ![Install GitHub App](../images/admin/github-app-install.png)
+   ![Install GitHub App](%images/%images/./images/admin/github-app-install.png)
 
 ## Multiple External Providers (Premium)
 

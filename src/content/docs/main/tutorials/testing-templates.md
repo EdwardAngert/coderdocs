@@ -1,3 +1,9 @@
+---
+title: Test and Publish Coder Templates Through CI/CD
+description: <div>
+version: main
+audience: admin
+---
 # Test and Publish Coder Templates Through CI/CD
 
 <div>
@@ -22,8 +28,8 @@ ensures your templates are validated, tested, and promoted seamlessly.
 
 - Install and configure Coder CLI in your environment.
 - Install Terraform CLI in your CI environment.
-- Create a [headless user](../admin/users/headless-auth.md) with the
-  [user roles and permissions](../admin/users/groups-roles.md#roles) to manage
+- Create a [headless user](../admin/users/headless-auth) with the
+  [user roles and permissions](../admin/users/groups-roles#roles) to manage
   templates and run workspaces.
 
 ## Creating the headless user

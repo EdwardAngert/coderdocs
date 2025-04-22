@@ -1,3 +1,9 @@
+---
+title: Prometheus
+description: 'Coder exposes many metrics which can be consumed by a Prometheus server, and'
+version: main
+audience: admin
+---
 # Prometheus
 
 Coder exposes many metrics which can be consumed by a Prometheus server, and

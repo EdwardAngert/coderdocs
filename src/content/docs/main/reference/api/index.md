@@ -1,3 +1,9 @@
+---
+title: API
+description: 'Get started with the Coder API:'
+version: main
+audience: developer
+---
 # API
 
 Get started with the Coder API:
@@ -20,7 +26,7 @@ curl https://coder.example.com/api/v2/workspaces?q=owner:me \
 
 ## Use cases
 
-See some common [use cases](../../reference/index.md#use-cases) for the REST API.
+See some common [use cases](../../reference/index#use-cases) for the REST API.
 
 ## Sections
 

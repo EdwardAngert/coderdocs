@@ -1,3 +1,9 @@
+---
+title: Remote Desktops
+description: Built-in remote desktop is on the roadmap
+version: main
+audience: developer
+---
 # Remote Desktops
 
 Built-in remote desktop is on the roadmap
@@ -7,7 +13,7 @@ Built-in remote desktop is on the roadmap
 
 The common way to use remote desktops with Coder is through VNC.
 
-![VNC Desktop in Coder](../../images/vnc-desktop.png)
+![VNC Desktop in Coder](%images/%images/./../images/vnc-desktop.png)
 
 Workspace requirements:
 
@@ -46,7 +52,7 @@ mstsc /v localhost:3399
 ```
 
 Or use your favorite RDP client to connect to `localhost:3399`.
-![windows-rdp](../../images/ides/windows_rdp_client.png)
+![windows-rdp](%images/%images/./../images/ides/windows_rdp_client.png)
 
 The default username is `Administrator` and password is `coderRDP!`.
 
@@ -57,7 +63,7 @@ Registry adds a one-click button to open an RDP session in the browser. This
 requires just a few lines of Terraform in your template, see the documentation
 on our registry for setup.
 
-![Web RDP Module in a Workspace](../../images/user-guides/web-rdp-demo.png)
+![Web RDP Module in a Workspace](%images/%images/./../images/user-guides/web-rdp-demo.png)
 
 ## Amazon DCV Windows
 
@@ -66,4 +72,4 @@ module adds a one-click button to open an Amazon DCV session in the browser.
 This requires just a few lines of Terraform in your template, see the
 documentation on our registry for setup.
 
-![Amazon DCV Windows Module in a Workspace](../../images/user-guides/amazon-dcv-windows-demo.png)
+![Amazon DCV Windows Module in a Workspace](%images/%images/./../images/user-guides/amazon-dcv-windows-demo.png)

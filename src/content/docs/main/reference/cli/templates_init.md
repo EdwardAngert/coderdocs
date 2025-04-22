@@ -1,3 +1,9 @@
+---
+title: templates init
+description: Get started with a templated template.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates init
 

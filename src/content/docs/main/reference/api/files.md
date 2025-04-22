@@ -1,3 +1,9 @@
+---
+title: Files
+description: '```shell'
+version: main
+audience: developer
+---
 # Files
 
 ## Upload file
@@ -43,9 +49,9 @@ file: string
 
 | Status | Meaning                                                      | Description | Schema                                                       |
 |--------|--------------------------------------------------------------|-------------|--------------------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.UploadResponse](schemas.md#codersdkuploadresponse) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.UploadResponse](schemas#codersdkuploadresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get file by ID
 
@@ -71,4 +77,4 @@ curl -X GET http://coder-server:8080/api/v2/files/{fileID} \
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

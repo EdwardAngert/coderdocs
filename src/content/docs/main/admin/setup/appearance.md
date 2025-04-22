@@ -1,3 +1,9 @@
+---
+title: Appearance
+description: Customize the look of your Coder deployment to meet your enterprise
+version: main
+audience: admin
+---
 # Appearance
 
 > [!NOTE]
@@ -10,7 +16,7 @@ requirements.
 You can access the Appearance settings by navigating to
 `Deployment > Appearance`.
 
-![application name and logo url](../../images/admin/setup/appearance/application-name-logo-url.png)
+![application name and logo url](%images/%images/./../images/admin/setup/appearance/application-name-logo-url.png)
 
 ## Application Name
 
@@ -24,7 +30,7 @@ page and in the top left corner of the dashboard. The default is the Coder logo.
 
 ## Announcement Banners
 
-![announcement banner](../../images/admin/setup/appearance/announcement_banner_settings.png)
+![announcement banner](%images/%images/./../images/admin/setup/appearance/announcement_banner_settings.png)
 
 Announcement Banners let admins post important messages to all site users. Only
 Site Owners may set the announcement banners.
@@ -32,16 +38,16 @@ Site Owners may set the announcement banners.
 Example: Use multiple announcement banners for concurrent deployment-wide
 updates, such as maintenance or new feature rollout.
 
-![Multiple announcements](../../images/admin/setup/appearance/multiple-banners.PNG)
+![Multiple announcements](%images/%images/./../images/admin/setup/appearance/multiple-banners.PNG)
 
 Example: Adhere to government network classification requirements and notify
 users of which network their Coder deployment is on.
 
-![service banner secret](../../images/admin/setup/appearance/service-banner-secret.png)
+![service banner secret](%images/%images/./../images/admin/setup/appearance/service-banner-secret.png)
 
 ## OIDC Login Button Customization
 
-[Use environment variables to customize](../users/oidc-auth.md#oidc-login-customization)
+[Use environment variables to customize](../users/oidc-auth#oidc-login-customization)
 the text and icon on the OIDC button on the Sign In page.
 
 ## Support Links
@@ -51,12 +57,12 @@ referring to internal company resources. The menu section replaces the original
 menu positions: documentation, report a bug to GitHub, or join the Discord
 server.
 
-![support links](../../images/admin/setup/appearance/support-links.png)
+![support links](%images/%images/./../images/admin/setup/appearance/support-links.png)
 
 ### Icons
 
 The link icons are optional, and can be set to any url or
-[builtin icon](../templates/extending-templates/icons.md#bundled-icons),
+[builtin icon](../templates/extending-templates/icons#bundled-icons),
 additionally `bug`, `chat`, and `docs` are available as three special icons.
 
 ### Configuration

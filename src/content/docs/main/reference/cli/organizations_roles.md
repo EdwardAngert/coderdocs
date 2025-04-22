@@ -1,3 +1,10 @@
+---
+title: organizations roles
+description: Manage organization roles.
+version: main
+audience: developer
+tier: premium
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # organizations roles
 
@@ -17,6 +24,6 @@ coder organizations roles
 
 | Name                                                   | Purpose                               |
 |--------------------------------------------------------|---------------------------------------|
-| [<code>show</code>](./organizations_roles_show.md)     | Show role(s)                          |
-| [<code>update</code>](./organizations_roles_update.md) | Update an organization custom role    |
-| [<code>create</code>](./organizations_roles_create.md) | Create a new organization custom role |
+| [<code>show</code>](./organizations_roles_show)     | Show role(s)                          |
+| [<code>update</code>](./organizations_roles_update) | Update an organization custom role    |
+| [<code>create</code>](./organizations_roles_create) | Create a new organization custom role |

@@ -1,3 +1,9 @@
+---
+title: list
+description: List workspaces
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # list
 

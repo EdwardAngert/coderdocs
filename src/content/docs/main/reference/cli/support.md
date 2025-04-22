@@ -1,3 +1,9 @@
+---
+title: support
+description: Commands for troubleshooting issues with a Coder deployment.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # support
 
@@ -13,4 +19,4 @@ coder support
 
 | Name                                       | Purpose                                                                     |
 |--------------------------------------------|-----------------------------------------------------------------------------|
-| [<code>bundle</code>](./support_bundle.md) | Generate a support bundle to troubleshoot issues connecting to a workspace. |
+| [<code>bundle</code>](./support_bundle) | Generate a support bundle to troubleshoot issues connecting to a workspace. |

@@ -1,3 +1,9 @@
+---
+title: schedule start
+description: Edit workspace start schedule
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # schedule start
 

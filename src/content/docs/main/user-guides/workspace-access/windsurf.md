@@ -1,3 +1,11 @@
+---
+title: Windsurf
+description: >-
+  [Windsurf](https://codeium.com/windsurf) is Codeium's code editor designed for
+  AI-assisted
+version: main
+audience: developer
+---
 # Windsurf
 
 [Windsurf](https://codeium.com/windsurf) is Codeium's code editor designed for AI-assisted
@@ -22,7 +30,7 @@ Windsurf can connect to your Coder workspaces via SSH:
 
 ## Install the Coder extension
 
-![Coder extension in Windsurf](../../images/user-guides/ides/windsurf-coder-extension.png)
+![Coder extension in Windsurf](%images/%images/./../images/user-guides/ides/windsurf-coder-extension.png)
 
 1. You can install the Coder extension through the Marketplace built in to Windsurf or manually.
 

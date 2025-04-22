@@ -1,3 +1,9 @@
+---
+title: Your first template
+description: A common way to create a template is to begin with a starter template then
+version: main
+audience: all
+---
 # Your first template
 
 A common way to create a template is to begin with a starter template then
@@ -12,8 +18,8 @@ template.
 
 ## Before you start
 
-Use the [previous section](./local-deploy.md) of this guide to set up
-[Docker](https://docs.docker.com/get-docker/) and [Coder](../install/cli.md) on
+Use the [previous section](./local-deploy) of this guide to set up
+[Docker](https://docs.docker.com/get-docker/) and [Coder](../install/cli) on
 your local machine to continue.
 
 ## 1. Log in to Coder
@@ -26,7 +32,7 @@ setup to log in.
 Select **Templates** to see the **Starter Templates**. Use the **Docker
 Containers** template by pressing **Use Template**.
 
-![Starter Templates UI](../images/start/starter-templates.png)
+![Starter Templates UI](%images/%images/./images/start/starter-templates.png)
 
 You can also a find a comprehensive list of starter templates in **Templates**
 -> **Create Template** -> **Starter Templates**. s
@@ -36,7 +42,7 @@ You can also a find a comprehensive list of starter templates in **Templates**
 In **Create template**, fill in **Name** and **Display name**, then select
 **Create template**.
 
-![Creating a template](../images/start/create-template.png)
+![Creating a template](%images/%images/./images/start/create-template.png)
 
 TODO:
 
@@ -47,18 +53,18 @@ TODO:
 
 When the template is ready, select **Create Workspace**.
 
-![Template Preview](../images/start/template-preview.png)
+![Template Preview](%images/%images/./images/start/template-preview.png)
 
 In **New workspace**, fill in **Name** then scroll down to select **Create
 Workspace**.
 
-![Create Workspace](../images/start/create-workspace.png)
+![Create Workspace](%images/%images/./images/start/create-workspace.png)
 
 Coder starts your new workspace from your template.
 
 After a few seconds, your workspace is ready to use.
 
-![Workspace is ready](../images/templates/workspace-ready.png)
+![Workspace is ready](%images/%images/./images/templates/workspace-ready.png)
 
 ## 5. Try out your new workspace
 
@@ -67,7 +73,7 @@ This starter template lets you connect to your workspace in a few ways:
 - VS Code Desktop: Loads your workspace into
   [VS Code Desktop](https://code.visualstudio.com/Download) installed on your
   local computer.
-- code-server: Opens [browser-based VS Code](../ides/web-ides.md) with your
+- code-server: Opens [browser-based VS Code](../ides/web-ides) with your
   workspace.
 - Terminal: Opens a browser-based terminal with a shell in the workspace's
   Docker instance.
@@ -77,7 +83,7 @@ This starter template lets you connect to your workspace in a few ways:
 
 > [!TIP]
 > You can edit the template to let developers connect to a workspace in
-> [a few more ways](../ides.md).
+> [a few more ways](../ides).
 
 When you're done, you can stop the workspace. -->
 
@@ -91,29 +97,29 @@ web browser.
 
 In the Coder dashboard, select **Templates** then your first template.
 
-![Selecting the first template](../images/templates/select-template.png)
+![Selecting the first template](%images/%images/./images/templates/select-template.png)
 
 In the drop-down menu, select **Edit files**.
 
-![Edit template files](../images/templates/edit-files.png)
+![Edit template files](%images/%images/./images/templates/edit-files.png)
 
 Expand the **build** directory and select **Dockerfile**.
 
-![Selecting source code](../images/templates/source-code.png)
+![Selecting source code](%images/%images/./images/templates/source-code.png)
 
 Edit `build/Dockerfile` to replace `golang` with `python3`.
 
-![Editing source code](../images/templates/edit-source-code.png)
+![Editing source code](%images/%images/./images/templates/edit-source-code.png)
 
 Select **Build template** and wait for Coder to prepare the template for
 workspaces.
 
-![Building a template](../images/templates/build-template.png)
+![Building a template](%images/%images/./images/templates/build-template.png)
 
 Select **Publish version**. In the **Publish new version** dialog, make sure
 **Promote to active version** is checked then select **Publish**.
 
-![Publish a template](../images/templates/publish.png)
+![Publish a template](%images/%images/./images/templates/publish.png)
 
 Now when developers create a new workspace from this template, they can use
 Python 3 instead of Go.
@@ -122,9 +128,9 @@ For developers with workspaces that were created with a previous version of your
 template, Coder will notify them that there's a new version of the template.
 
 You can also handle
-[change management](../admin/templates/managing-templates/change-management.md)
+[change management](../admin/templates/managing-templates/change-management)
 through your own repo and continuous integration.
 
 ## Next steps
 
-- [Setting up templates](../admin/templates/creating-templates.md)
+- [Setting up templates](../admin/templates/creating-templates)

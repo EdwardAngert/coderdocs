@@ -1,3 +1,9 @@
+---
+title: templates edit
+description: Edit the metadata of a template by name.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates edit
 

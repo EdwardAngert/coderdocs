@@ -1,3 +1,9 @@
+---
+title: Configuring Custom Claims/Scopes with Okta for group/role
+description: '<div style="pad: 0px; margin: 0px;">'
+version: main
+audience: admin
+---
 # Configuring Custom Claims/Scopes with Okta for group/role
 
 <div style="pad: 0px; margin: 0px;">
@@ -16,7 +22,7 @@ Sign On (SSO) on Coder.
 
 To configure custom claims in Okta to support syncing roles and groups with
 Coder, you must first have setup an Okta application with
-[OIDC working with Coder](../admin/users/oidc-auth.md).
+[OIDC working with Coder](../admin/users/oidc-auth).
 From here, we will add additional claims for Coder to use for syncing groups and
 roles.
 
@@ -40,9 +46,9 @@ be sent.
 > [!IMPORTANT]
 > If the user does not belong to any groups, the claim will not be sent. Make
 > sure the user authenticating for testing is in at least one group. Defer to
-> [troubleshooting](../admin/users/index.md) with issues.
+> [troubleshooting](../admin/users/index) with issues.
 
-![Okta OpenID Connect ID Token](../images/guides/okta/oidc_id_token.png)
+![Okta OpenID Connect ID Token](%images/%images/./images/guides/okta/oidc_id_token.png)
 
 Configure Coder to use these claims for group sync. These claims are present in
 the `id_token`. See all configuration options for group sync in the
@@ -82,12 +88,12 @@ then add a mapping from the Okta profile to the application.
 Create the attribute for the roles, groups, or both. **Make sure the attribute
 is of type `string array`.**
 
-![Okta Add Attribute view](../images/guides/okta/add_attribute.png)
+![Okta Add Attribute view](%images/%images/./images/guides/okta/add_attribute.png)
 
 On the “Okta User to {Your Application}” tab, map a `roles` or `groups`
 attribute you have configured to the application.
 
-![Okta Add Claim view](../images/guides/okta/add_claim.png)
+![Okta Add Claim view](%images/%images/./images/guides/okta/add_claim.png)
 
 Configure using these new attributes in Coder.
 
@@ -119,7 +125,7 @@ one specifically for your application.
 Authorization servers also give more refined controls over things such as
 token/session lifetimes.
 
-![Okta API view](../images/guides/okta/api_view.png)
+![Okta API view](%images/%images/./images/guides/okta/api_view.png)
 
 To get custom claims working, we should map them to a custom scope. Click the
 authorization server you wish to use (likely just using the default).
@@ -127,7 +133,7 @@ authorization server you wish to use (likely just using the default).
 Go to “Scopes”, and “Add Scope”. Feel free to create one for roles, groups, or
 both.
 
-![Okta Add Scope view](../images/guides/okta/add_scope.png)
+![Okta Add Scope view](%images/%images/./images/guides/okta/add_scope.png)
 
 Now create the claim to go with the said scope. Go to “Claims”, then “Add
 Claim”. Make sure to select **ID Token** for the token type. The **Value**
@@ -136,7 +142,7 @@ Lastly, configure it to only be a claim with the requested scope. This is so if
 other applications exist, we do not send them information they do not care
 about.
 
-![Okta Add Claim with Roles view](../images/guides/okta/add_claim_with_roles.png)
+![Okta Add Claim with Roles view](%images/%images/./images/guides/okta/add_claim_with_roles.png)
 
 Now we have a custom scope + claim configured under an authorization server, we
 need to configure coder to use this.
@@ -157,4 +163,4 @@ CODER_OIDC_USER_ROLE_MAPPING='{"admin-group":["template-admin","user-admin"]}'
 You can use the “Token Preview” page to verify it has been correctly configured
 and verify the `roles` is in the payload.
 
-![Okta Token Preview](../images/guides/okta/token_preview.png)
+![Okta Token Preview](%images/%images/./images/guides/okta/token_preview.png)

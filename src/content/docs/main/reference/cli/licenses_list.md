@@ -1,3 +1,9 @@
+---
+title: licenses list
+description: List licenses (including expired)
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # licenses list
 

@@ -1,10 +1,16 @@
+---
+title: Parameters
+description: A template can prompt the user for additional information when creating
+version: main
+audience: admin
+---
 # Parameters
 
 A template can prompt the user for additional information when creating
 workspaces with
 [_parameters_](https://registry.terraform.io/providers/coder/coder/latest/docs/data-sources/parameter).
 
-![Parameters in Create Workspace screen](../../../images/parameters.png)
+![Parameters in Create Workspace screen](%images/%images/./../../images/parameters.png)
 
 The user can set parameters in the dashboard UI and CLI.
 
@@ -321,7 +327,7 @@ Workspace presets allow you to configure commonly used combinations of parameter
 into a single option, which makes it easier for developers to pick one that fits
 their needs.
 
-![Template with options in the preset dropdown](../../../images/admin/templates/extend-templates/template-preset-dropdown.png)
+![Template with options in the preset dropdown](%images/%images/./../../images/admin/templates/extend-templates/template-preset-dropdown.png)
 
 Use `coder_workspace_preset` to define the preset parameters.
 After you save the template file, the presets will be available for all new

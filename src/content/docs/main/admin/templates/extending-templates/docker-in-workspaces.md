@@ -1,12 +1,18 @@
+---
+title: Docker in Workspaces
+description: There are a few ways to run Docker within container-based Coder workspaces.
+version: main
+audience: admin
+---
 # Docker in Workspaces
 
 There are a few ways to run Docker within container-based Coder workspaces.
 
 | Method                                                     | Description                                                                                                                                                        | Limitations                                                                                                                                                                                                                                        |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Sysbox container runtime](#sysbox-container-runtime)      | Install the Sysbox runtime on your Kubernetes nodes or Docker host(s) for secure docker-in-docker and systemd-in-docker. Works with GKE, EKS, AKS, Docker.         | Requires [compatible nodes](https://github.com/nestybox/sysbox#host-requirements). [Limitations](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/limitations.md)                                                                    |
-| [Envbox](#envbox)                                          | A container image with all the packages necessary to run an inner Sysbox container. Removes the need to setup sysbox-runc on your nodes. Works with GKE, EKS, AKS. | Requires running the outer container as privileged (the inner container that acts as the workspace is locked down). Requires compatible [nodes](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat.md#sysbox-distro-compatibility). |
-| [Rootless Podman](#rootless-podman)                        | Run Podman inside Coder workspaces. Does not require a custom runtime or privileged containers. Works with GKE, EKS, AKS, RKE, OpenShift                           | Requires smarter-device-manager for FUSE mounts. [See all](https://github.com/containers/podman/blob/main/rootless.md#shortcomings-of-rootless-podman)                                                                                             |
+| [Sysbox container runtime](#sysbox-container-runtime)      | Install the Sysbox runtime on your Kubernetes nodes or Docker host(s) for secure docker-in-docker and systemd-in-docker. Works with GKE, EKS, AKS, Docker.         | Requires [compatible nodes](https://github.com/nestybox/sysbox#host-requirements). [Limitations](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/limitations)                                                                    |
+| [Envbox](#envbox)                                          | A container image with all the packages necessary to run an inner Sysbox container. Removes the need to setup sysbox-runc on your nodes. Works with GKE, EKS, AKS. | Requires running the outer container as privileged (the inner container that acts as the workspace is locked down). Requires compatible [nodes](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat#sysbox-distro-compatibility). |
+| [Rootless Podman](#rootless-podman)                        | Run Podman inside Coder workspaces. Does not require a custom runtime or privileged containers. Works with GKE, EKS, AKS, RKE, OpenShift                           | Requires smarter-device-manager for FUSE mounts. [See all](https://github.com/containers/podman/blob/main/rootless#shortcomings-of-rootless-podman)                                                                                             |
 | [Privileged docker sidecar](#privileged-sidecar-container) | Run Docker as a privileged sidecar container.                                                                                                                      | Requires a privileged container. Workspaces can break out to root on the host machine.                                                                                                                                                             |
 
 ## Sysbox container runtime
@@ -14,7 +20,7 @@ There are a few ways to run Docker within container-based Coder workspaces.
 The [Sysbox](https://github.com/nestybox/sysbox) container runtime allows
 unprivileged users to run system-level applications, such as Docker, securely
 from the workspace containers. Sysbox requires a
-[compatible Linux distribution](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat.md)
+[compatible Linux distribution](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat)
 to implement these security features. Sysbox can also be used to run systemd
 inside Coder workspaces. See [Systemd in Docker](#systemd-in-docker).
 
@@ -51,7 +57,7 @@ resource "coder_agent" "main" {
 ### Use Sysbox in Kubernetes-based templates
 
 After
-[installing Sysbox on Kubernetes](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/install-k8s.md),
+[installing Sysbox on Kubernetes](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/install-k8s),
 modify your template to use the sysbox-runc RuntimeClass. This requires the
 Kubernetes Terraform provider version 2.16.0 or greater.
 
@@ -136,7 +142,7 @@ Some drawbacks include:
 - The outer container must be run as privileged
   - Note: the inner container is _not_ privileged. For more information on the
     security of sysbox containers see sysbox's
-    [official documentation](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/security.md).
+    [official documentation](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/security).
 - Initial workspace startup is slower than running `sysbox-runc` directly on the
   nodes. This is due to `envbox` having to pull the image to its own Docker
   cache on its initial startup. Once the image is cached in `envbox`, startup
@@ -144,7 +150,7 @@ Some drawbacks include:
 
 Envbox requires the same kernel requirements as running sysbox directly on the
 nodes. Refer to sysbox's
-[compatibility matrix](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat.md#sysbox-distro-compatibility)
+[compatibility matrix](https://github.com/nestybox/sysbox/blob/master/docs/distro-compat#sysbox-distro-compatibility)
 to ensure your nodes are compliant.
 
 To get started with `envbox` check out the
@@ -195,9 +201,9 @@ Kubernetes pods. No custom RuntimeClass is required.
 
 Before using Podman, please review the following documentation:
 
-- [Basic setup and use of Podman in a rootless environment](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md)
+- [Basic setup and use of Podman in a rootless environment](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial)
 
-- [Shortcomings of Rootless Podman](https://github.com/containers/podman/blob/main/rootless.md#shortcomings-of-rootless-podman)
+- [Shortcomings of Rootless Podman](https://github.com/containers/podman/blob/main/rootless#shortcomings-of-rootless-podman)
 
 1. Enable
    [smart-device-manager](https://gitlab.com/arm-research/smarter/smarter-device-manager#enabling-access)
@@ -383,7 +389,7 @@ Additionally, [Sysbox](https://github.com/nestybox/sysbox) can be used to give
 workspaces full `systemd` capabilities.
 
 After
-[installing Sysbox on Kubernetes](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/install-k8s.md),
+[installing Sysbox on Kubernetes](https://github.com/nestybox/sysbox/blob/master/docs/user-guide/install-k8s),
 modify your template to use the sysbox-runc RuntimeClass. This requires the
 Kubernetes Terraform provider version 2.16.0 or greater.
 

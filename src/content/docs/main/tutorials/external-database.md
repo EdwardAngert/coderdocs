@@ -1,3 +1,9 @@
+---
+title: Using Coder with an external database
+description: 'For production deployments, we recommend using an external'
+version: main
+audience: admin
+---
 # Using Coder with an external database
 
 ## Recommendation
@@ -23,7 +29,7 @@ CREATE DATABASE coder;
 ```
 
 Coder configuration is defined via
-[environment variables](../admin/setup/index.md). The database client requires
+[environment variables](../admin/setup/index). The database client requires
 the connection string provided via the `CODER_PG_CONNECTION_URL` variable.
 
 ```shell

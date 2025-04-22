@@ -1,3 +1,9 @@
+---
+title: Schemas
+description: '```json'
+version: main
+audience: developer
+---
 # Schemas
 
 ## agentsdk.AWSInstanceIdentityToken

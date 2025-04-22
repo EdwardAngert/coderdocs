@@ -1,9 +1,17 @@
+---
+title: Pre-install JetBrains Gateway in a template
+description: >-
+  For a faster JetBrains Gateway experience, pre-install the IDEs backend in
+  your template.
+version: main
+audience: developer
+---
 # Pre-install JetBrains Gateway in a template
 
 For a faster JetBrains Gateway experience, pre-install the IDEs backend in your template.
 
 > [!NOTE]
-> This guide only talks about installing the IDEs backend. For a complete guide on setting up JetBrains Gateway with client IDEs, refer to the [JetBrains Gateway air-gapped guide](./jetbrains-airgapped.md).
+> This guide only talks about installing the IDEs backend. For a complete guide on setting up JetBrains Gateway with client IDEs, refer to the [JetBrains Gateway air-gapped guide](./jetbrains-airgapped).
 
 ## Install the Client Downloader
 
@@ -116,4 +124,4 @@ RUN mkdir -p ~/JetBrains \
 
 ## Next steps
 
-- [Pre install the Client IDEs](./jetbrains-airgapped.md#1-deploy-the-server-and-install-the-client-downloader)
+- [Pre install the Client IDEs](./jetbrains-airgapped#1-deploy-the-server-and-install-the-client-downloader)

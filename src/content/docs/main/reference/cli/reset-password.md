@@ -1,3 +1,9 @@
+---
+title: reset-password
+description: Directly connect to the database to reset a user's password
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # reset-password
 

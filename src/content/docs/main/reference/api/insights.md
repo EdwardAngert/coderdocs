@@ -1,3 +1,9 @@
+---
+title: Insights
+description: '```shell'
+version: main
+audience: developer
+---
 # Insights
 
 ## Get deployment DAUs
@@ -39,9 +45,9 @@ curl -X GET http://coder-server:8080/api/v2/insights/daus?tz_offset=0 \
 
 | Status | Meaning                                                 | Description | Schema                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DAUsResponse](schemas.md#codersdkdausresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DAUsResponse](schemas#codersdkdausresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get insights about templates
 
@@ -142,9 +148,9 @@ curl -X GET http://coder-server:8080/api/v2/insights/templates?start_time=2019-0
 
 | Status | Meaning                                                 | Description | Schema                                                                           |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateInsightsResponse](schemas.md#codersdktemplateinsightsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TemplateInsightsResponse](schemas#codersdktemplateinsightsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get insights about user activity
 
@@ -198,9 +204,9 @@ curl -X GET http://coder-server:8080/api/v2/insights/user-activity?start_time=20
 
 | Status | Meaning                                                 | Description | Schema                                                                                   |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UserActivityInsightsResponse](schemas.md#codersdkuseractivityinsightsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UserActivityInsightsResponse](schemas#codersdkuseractivityinsightsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get insights about user latency
 
@@ -257,9 +263,9 @@ curl -X GET http://coder-server:8080/api/v2/insights/user-latency?start_time=201
 
 | Status | Meaning                                                 | Description | Schema                                                                                 |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UserLatencyInsightsResponse](schemas.md#codersdkuserlatencyinsightsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UserLatencyInsightsResponse](schemas#codersdkuserlatencyinsightsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get insights about user status counts
 
@@ -307,6 +313,6 @@ curl -X GET http://coder-server:8080/api/v2/insights/user-status-counts?tz_offse
 
 | Status | Meaning                                                 | Description | Schema                                                                                 |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.GetUserStatusCountsResponse](schemas.md#codersdkgetuserstatuscountsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.GetUserStatusCountsResponse](schemas#codersdkgetuserstatuscountsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

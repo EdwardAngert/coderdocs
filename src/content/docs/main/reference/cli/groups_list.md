@@ -1,3 +1,9 @@
+---
+title: groups list
+description: List user groups
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # groups list
 

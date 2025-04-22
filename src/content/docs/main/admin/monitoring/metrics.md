@@ -1,3 +1,9 @@
+---
+title: Deployment Metrics
+description: Coder exposes many metrics which give insight into the current state of a live
+version: main
+audience: admin
+---
 # Deployment Metrics
 
 Coder exposes many metrics which give insight into the current state of a live
@@ -11,12 +17,12 @@ guide.
 ## Setting up metrics
 
 To set up metrics monitoring, please read our
-[Prometheus integration guide](../integrations/prometheus.md). The following
+[Prometheus integration guide](../integrations/prometheus). The following
 links point to relevant sections there.
 
-- [Enable Prometheus metrics](../integrations/prometheus.md#enable-prometheus-metrics)
+- [Enable Prometheus metrics](../integrations/prometheus#enable-prometheus-metrics)
   in the control plane
-- [Enable the Prometheus endpoint in Helm](../integrations/prometheus.md#kubernetes-deployment)
+- [Enable the Prometheus endpoint in Helm](../integrations/prometheus#kubernetes-deployment)
   (Kubernetes users only)
-- [Configure Prometheus to scrape Coder metrics](../integrations/prometheus.md#prometheus-configuration)
-- [See the list of available metrics](../integrations/prometheus.md#available-metrics)
+- [Configure Prometheus to scrape Coder metrics](../integrations/prometheus#prometheus-configuration)
+- [See the list of available metrics](../integrations/prometheus#available-metrics)

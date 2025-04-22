@@ -1,3 +1,9 @@
+---
+title: version
+description: Show coder version
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # version
 

@@ -1,9 +1,15 @@
+---
+title: How to use Apache as a reverse-proxy with LetsEncrypt
+description: 1. Start a Coder deployment and be sure to set the following
+version: main
+audience: admin
+---
 # How to use Apache as a reverse-proxy with LetsEncrypt
 
 ## Requirements
 
 1. Start a Coder deployment and be sure to set the following
-   [configuration values](../admin/setup/index.md):
+   [configuration values](../admin/setup/index):
 
    ```env
    CODER_HTTP_ADDRESS=127.0.0.1:3000

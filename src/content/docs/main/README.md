@@ -1,3 +1,11 @@
+---
+title: About
+description: >-
+  <!-- Warning for docs contributors: The first route in manifest.json must be
+  titled "About" for the static landing page to work correctly. -->
+version: main
+audience: all
+---
 # About
 
 <!-- Warning for docs contributors: The first route in manifest.json must be titled "About" for the static landing page to work correctly. -->
@@ -5,7 +13,7 @@
 Coder is a self-hosted, open source, cloud development environment that works
 with any cloud, IDE, OS, Git provider, and IDP.
 
-![Screenshots of Coder workspaces and connections](./images/hero-image.png)_Screenshots of Coder workspaces and connections_
+![Screenshots of Coder workspaces and connections](%images/%images/images/hero-image.png)_Screenshots of Coder workspaces and connections_
 
 Coder is built on common development interfaces and infrastructure tools to
 make the process of provisioning and accessing remote workspaces approachable
@@ -13,7 +21,7 @@ for organizations of various sizes and stages of cloud-native maturity.
 
 ## IDE support
 
-![IDE icons](./images/ide-icons.svg)
+![IDE icons](%images/%images/images/ide-icons.svg)
 
 You can use:
 
@@ -28,7 +36,7 @@ You can use:
 
   - [JetBrains Gateway](https://www.jetbrains.com/remote-development/gateway/)
   - [VS Code Remote](https://code.visualstudio.com/docs/remote/ssh-tutorial)
-  - [Emacs](./user-guides/workspace-access/emacs-tramp.md)
+  - [Emacs](./user-guides/workspace-access/emacs-tramp)
 
 - A file sync such as [Mutagen](https://mutagen.io/)
 
@@ -49,7 +57,7 @@ Remote development offers several benefits for users and administrators, includi
 - **Increased security**
 
   - Centralize source code and other data onto private servers or cloud services instead of local developers' machines.
-  - Manage users and groups with [SSO](./admin/users/oidc-auth.md) and [Role-based access controlled (RBAC)](./admin/users/groups-roles.md#roles).
+  - Manage users and groups with [SSO](./admin/users/oidc-auth) and [Role-based access controlled (RBAC)](./admin/users/groups-roles#roles).
 
 - **Improved compatibility**
 
@@ -97,13 +105,13 @@ Terraform to get started.
 We have a [database of production-ready templates](https://registry.coder.com/templates)
 for use with AWS EC2, Azure, Google Cloud, Kubernetes, and more.
 
-![Providers and compute environments](./images/providers-compute.png)_Providers and compute environments_
+![Providers and compute environments](%images/%images/images/providers-compute.png)_Providers and compute environments_
 
 Coder workspaces can be used for more than just compute.
 You can use Terraform to add storage buckets, secrets, sidecars,
 [and more](https://developer.hashicorp.com/terraform/tutorials).
 
-Visit the [templates documentation](./admin/templates/index.md) to learn more.
+Visit the [templates documentation](./admin/templates/index) to learn more.
 
 ## What Coder is not
 
@@ -141,6 +149,6 @@ or [the v2 migration guide and FAQ](https://coder.com/docs/v1/guides/v2-faq).
 
 ## Up next
 
-- [Template](./admin/templates/index.md)
-- [Installing Coder](./install/index.md)
-- [Quickstart](./tutorials/quickstart.md) to try Coder out for yourself.
+- [Template](./admin/templates/index)
+- [Installing Coder](./install/index)
+- [Quickstart](./tutorials/quickstart) to try Coder out for yourself.

@@ -1,3 +1,9 @@
+---
+title: schedule stop
+description: Edit workspace stop schedule
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # schedule stop
 

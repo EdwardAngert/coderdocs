@@ -1,3 +1,9 @@
+---
+title: schedule
+description: Schedule automated start and stop times for workspaces
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # schedule
 
@@ -13,7 +19,7 @@ coder schedule { show | start | stop | extend } <workspace>
 
 | Name                                        | Purpose                                                         |
 |---------------------------------------------|-----------------------------------------------------------------|
-| [<code>show</code>](./schedule_show.md)     | Show workspace schedules                                        |
-| [<code>start</code>](./schedule_start.md)   | Edit workspace start schedule                                   |
-| [<code>stop</code>](./schedule_stop.md)     | Edit workspace stop schedule                                    |
-| [<code>extend</code>](./schedule_extend.md) | Extend the stop time of a currently running workspace instance. |
+| [<code>show</code>](./schedule_show)     | Show workspace schedules                                        |
+| [<code>start</code>](./schedule_start)   | Edit workspace start schedule                                   |
+| [<code>stop</code>](./schedule_stop)     | Edit workspace stop schedule                                    |
+| [<code>extend</code>](./schedule_extend) | Extend the stop time of a currently running workspace instance. |

@@ -1,3 +1,9 @@
+---
+title: Defining ImagePullSecrets for Coder workspaces
+description: <div>
+version: main
+audience: admin
+---
 # Defining ImagePullSecrets for Coder workspaces
 
 <div>

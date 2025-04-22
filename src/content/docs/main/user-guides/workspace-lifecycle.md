@@ -1,3 +1,11 @@
+---
+title: Workspace lifecycle
+description: >-
+  Workspaces are flexible, reproducible, and isolated units of compute.
+  Workspaces
+version: main
+audience: developer
+---
 # Workspace lifecycle
 
 Workspaces are flexible, reproducible, and isolated units of compute. Workspaces
@@ -6,7 +14,7 @@ through the Coder agent, then stopped and deleted again by Terraform.
 
 This page covers how workspaces move through this lifecycle. To learn about
 automating workspace schedules for cost control, read the
-[workspace scheduling docs](./workspace-scheduling.md).
+[workspace scheduling docs](./workspace-scheduling).
 
 ## Workspace ephemerality
 
@@ -16,7 +24,7 @@ ephemeral resources are destroyed and recreated on restart. All resources are
 destroyed when a workspace is deleted.
 
 Template administrators can learn more about resource configuration in the
-[extending templates docs](../admin/templates/extending-templates/resource-persistence.md).
+[extending templates docs](../admin/templates/extending-templates/resource-persistence).
 
 ## Workspace States
 
@@ -35,18 +43,18 @@ following broken states:
 
 ## Workspace creation
 
-Workspaces are created from [templates](../admin/templates/index.md) via the
+Workspaces are created from [templates](../admin/templates/index) via the
 CLI, API, or dashboard.
 
 By default, there is no limit on the number of workspaces a user may create,
 regardless of the template's resource demands. Enterprise administrators may
 limit the number of workspaces per template, group, and organization using
-[quotas](../admin/users/quotas.md) to prevent over provisioning and control
+[quotas](../admin/users/quotas) to prevent over provisioning and control
 costs.
 
 When a user creates a workspace, they're sending a build request to the control
 plane. Coder takes this and uses [Terraform](https://www.terraform.io/) to
-provision a workspace defined by your [template](../admin/templates/index.md).
+provision a workspace defined by your [template](../admin/templates/index).
 Generally, templates define the resources and environment of a workspace.
 
 The resources that run the agent are described as _computational resources_,
@@ -55,22 +63,22 @@ contain some computational resource to run the Coder agent process.
 
 The provisioned workspace's computational resources start the agent process,
 which opens connections to your workspace via SSH, the terminal, and IDES such
-as [JetBrains](./workspace-access/jetbrains/index.md) or
-[VSCode](./workspace-access/vscode.md).
+as [JetBrains](./workspace-access/jetbrains/index) or
+[VSCode](./workspace-access/vscode).
 
 Once started, the Coder agent is responsible for running your workspace startup
 scripts. These may configure tools, service connections, or personalization with
-[dotfiles](./workspace-dotfiles.md).
+[dotfiles](./workspace-dotfiles).
 
 Once these steps have completed, your workspace will now be in the `Running`
-state. You can access it via any of the [supported methods](./index.md), stop it
+state. You can access it via any of the [supported methods](./index), stop it
 when you're away, or delete it once it's no longer in use.
 
 ## Stopping workspaces
 
 Workspaces may be stopped manually by users and admins in the dashboard, CLI, or
 API. Workspaces may be automatically stopped due to template updates or
-inactivity by [scheduling configuration](./workspace-scheduling.md).
+inactivity by [scheduling configuration](./workspace-scheduling).
 
 Once stopped, a workspace may resume running by starting it manually, or via
 user connection if automatic start is enabled.
@@ -116,14 +124,14 @@ startup process from the dashboard (starting in v2.17). We capture and display
 both time taken to provision the workspace's compute and agent startup steps.
 These include any
 [`coder_script`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/script)s
-such as [dotfiles](./workspace-dotfiles.md) or
+such as [dotfiles](./workspace-dotfiles) or
 [`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 startups.
 
-![Workspace build timings UI](../images/admin/templates/troubleshooting/workspace-build-timings-ui.png)
+![Workspace build timings UI](%images/%images/./images/admin/templates/troubleshooting/workspace-build-timings-ui.png)
 
 ### Next steps
 
-- [Connecting to your workspace](./index.md)
-- [Creating templates](../admin/templates/index.md)
-- [Workspace scheduling](./workspace-scheduling.md)
+- [Connecting to your workspace](./index)
+- [Creating templates](../admin/templates/index)
+- [Workspace scheduling](./workspace-scheduling)

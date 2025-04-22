@@ -1,3 +1,11 @@
+---
+title: UI Resource Ordering
+description: >-
+  In Coder templates, managing the order of UI elements is crucial for a
+  seamless
+version: main
+audience: admin
+---
 # UI Resource Ordering
 
 In Coder templates, managing the order of UI elements is crucial for a seamless

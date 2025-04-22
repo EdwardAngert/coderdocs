@@ -1,3 +1,9 @@
+---
+title: netcheck
+description: Print network debug information for DERP and STUN
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # netcheck
 

@@ -1,3 +1,9 @@
+---
+title: stat cpu
+description: 'Show CPU usage, in cores.'
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # stat cpu
 

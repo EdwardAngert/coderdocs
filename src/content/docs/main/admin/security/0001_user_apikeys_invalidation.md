@@ -1,3 +1,9 @@
+---
+title: API Tokens of deleted users not invalidated
+description: '---'
+version: main
+audience: admin
+---
 # API Tokens of deleted users not invalidated
 
 ---

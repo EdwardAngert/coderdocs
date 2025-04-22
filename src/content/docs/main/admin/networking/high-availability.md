@@ -1,3 +1,9 @@
+---
+title: High Availability
+description: High Availability (HA) mode solves for horizontal scalability and automatic
+version: main
+audience: admin
+---
 # High Availability
 
 High Availability (HA) mode solves for horizontal scalability and automatic
@@ -32,7 +38,7 @@ connect to the same Postgres endpoint.
 HA brings one configuration variable to set in each Coderd node:
 `CODER_DERP_SERVER_RELAY_URL`. The HA nodes use these URLs to communicate with
 each other. Inter-node communication is only required while using the embedded
-relay (default). If you're using [custom relays](./index.md#custom-relays),
+relay (default). If you're using [custom relays](./index#custom-relays),
 Coder ignores `CODER_DERP_SERVER_RELAY_URL` since Postgres is the sole
 rendezvous for the Coder nodes.
 
@@ -50,7 +56,7 @@ Here's an example 3-node network configuration setup:
 ## Kubernetes
 
 If you installed Coder via
-[our Helm Chart](../../install/kubernetes.md#4-install-coder-with-helm), just
+[our Helm Chart](../../install/kubernetes#4-install-coder-with-helm), just
 increase `coder.replicaCount` in `values.yaml`.
 
 If you installed Coder into Kubernetes by some other means, insert the relay URL
@@ -70,5 +76,5 @@ Then, increase the number of pods.
 
 ## Up next
 
-- [Read more on Coder's networking stack](./index.md)
-- [Install on Kubernetes](../../install/kubernetes.md)
+- [Read more on Coder's networking stack](./index)
+- [Install on Kubernetes](../../install/kubernetes)

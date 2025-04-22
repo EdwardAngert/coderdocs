@@ -1,3 +1,9 @@
+---
+title: Resource monitoring
+description: Use the
+version: main
+audience: admin
+---
 # Resource monitoring
 
 Use the
@@ -15,7 +21,7 @@ OOM alerts are reported per-agent.
 ## Prerequisites
 
 Notifications are sent through SMTP.
-Configure Coder to [use an SMTP server](../../monitoring/notifications/index.md#smtp-email).
+Configure Coder to [use an SMTP server](../../monitoring/notifications/index#smtp-email).
 
 ## Example
 

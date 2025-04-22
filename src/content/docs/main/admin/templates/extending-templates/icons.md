@@ -1,3 +1,9 @@
+---
+title: Icons
+description: 'Coder uses icons in several places, including ones that can be configured'
+version: main
+audience: admin
+---
 # Icons
 
 Coder uses icons in several places, including ones that can be configured
@@ -44,7 +50,7 @@ come bundled with your Coder deployment.
     CODER_EXTERNAL_AUTH_1_ICON=/icon/google.svg
     ```
 
-- [**Support Links**](../../setup/appearance.md#support-links):
+- [**Support Links**](../../setup/appearance#support-links):
 
   - Use icons for support links to make them recognizable. You can set the
     `icon` field for each link in `CODER_SUPPORT_LINKS` array.
@@ -61,7 +67,7 @@ You can also view the entire list, with search and previews, by navigating to
 `https://coder.example.com/icons`). This can be particularly useful in airgapped
 deployments.
 
-![The icon gallery](../../../images/icons-gallery.png)
+![The icon gallery](%images/%images/./../../images/icons-gallery.png)
 
 ## External icons
 

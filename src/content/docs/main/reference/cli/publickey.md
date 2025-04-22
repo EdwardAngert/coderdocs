@@ -1,3 +1,9 @@
+---
+title: publickey
+description: Output your Coder public key used for Git operations
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # publickey
 

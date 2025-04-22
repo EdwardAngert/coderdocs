@@ -1,3 +1,9 @@
+---
+title: notifications
+description: Manage Coder notifications
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # notifications
 
@@ -37,6 +43,6 @@ target settings.:
 
 | Name                                             | Purpose                  |
 |--------------------------------------------------|--------------------------|
-| [<code>pause</code>](./notifications_pause.md)   | Pause notifications      |
-| [<code>resume</code>](./notifications_resume.md) | Resume notifications     |
-| [<code>test</code>](./notifications_test.md)     | Send a test notification |
+| [<code>pause</code>](./notifications_pause)   | Pause notifications      |
+| [<code>resume</code>](./notifications_resume) | Resume notifications     |
+| [<code>test</code>](./notifications_test)     | Send a test notification |

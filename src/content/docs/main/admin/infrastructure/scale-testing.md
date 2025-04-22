@@ -1,3 +1,9 @@
+---
+title: Scale Testing
+description: Scaling Coder involves planning and testing to ensure it can handle more load
+version: main
+audience: admin
+---
 # Scale Testing
 
 Scaling Coder involves planning and testing to ensure it can handle more load
@@ -11,9 +17,9 @@ capabilities, allowing Coder to efficiently deploy, scale, and manage workspaces
 across a distributed infrastructure. This ensures high availability, fault
 tolerance, and scalability for Coder deployments. Coder is deployed on this
 cluster using the
-[Helm chart](../../install/kubernetes.md#4-install-coder-with-helm).
+[Helm chart](../../install/kubernetes#4-install-coder-with-helm).
 
-For more information about scaling, see our [Coder scaling best practices](../../tutorials/best-practices/scale-coder.md).
+For more information about scaling, see our [Coder scaling best practices](../../tutorials/best-practices/scale-coder).
 
 ## Methodology
 
@@ -95,11 +101,11 @@ Database:
 
 ## Available reference architectures
 
-- [Up to 1,000 users](./validated-architectures/1k-users.md)
+- [Up to 1,000 users](./validated-architectures/1k-users)
 
-- [Up to 2,000 users](./validated-architectures/2k-users.md)
+- [Up to 2,000 users](./validated-architectures/2k-users)
 
-- [Up to 3,000 users](./validated-architectures/3k-users.md)
+- [Up to 3,000 users](./validated-architectures/3k-users)
 
 ## Hardware recommendation
 
@@ -118,12 +124,12 @@ on the workload size to ensure deployment stability.
 #### CPU and memory usage
 
 Enabling
-[agent stats collection](../../reference/cli/server.md#--prometheus-collect-agent-stats)
+[agent stats collection](../../reference/cli/server#--prometheus-collect-agent-stats)
 (optional) may increase memory consumption.
 
 Enabling direct connections between users and workspace agents (apps or SSH
 traffic) can help prevent an increase in CPU usage. It is recommended to keep
-[this option enabled](../../reference/cli/index.md#--disable-direct-connections)
+[this option enabled](../../reference/cli/index#--disable-direct-connections)
 unless there are compelling reasons to disable it.
 
 Inactive users do not consume Coder resources.
@@ -155,17 +161,17 @@ If the Coder deployment expects traffic from developers spread across the globe,
 be aware that customer-facing latency might be higher because of the distance
 between users and the load balancer. Fortunately, the latency can be improved
 with a deployment of Coder
-[workspace proxies](../networking/workspace-proxies.md).
+[workspace proxies](../networking/workspace-proxies).
 
 #### Node Autoscaling
 
 We recommend disabling the autoscaling for `coderd` nodes. Autoscaling can cause
 interruptions for user connections, see
-[Autoscaling](./scale-utility.md#autoscaling) for more details.
+[Autoscaling](./scale-utility#autoscaling) for more details.
 
 ### Control plane: Workspace Proxies
 
-When scaling [workspace proxies](../networking/workspace-proxies.md), follow the
+When scaling [workspace proxies](../networking/workspace-proxies), follow the
 same guidelines as for `coderd` above:
 
 - `1 vCPU x 2 GB memory` for every 250 users.

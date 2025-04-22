@@ -1,3 +1,11 @@
+---
+title: Provisioning with OpenTofu
+description: >-
+  <!-- Keeping this in as a placeholder for supporting OpenTofu. We should fix
+  support for custom terraform binaries ASAP. -->
+version: main
+audience: admin
+---
 # Provisioning with OpenTofu
 
 <!-- Keeping this in as a placeholder for supporting OpenTofu. We should fix support for custom terraform binaries ASAP. -->

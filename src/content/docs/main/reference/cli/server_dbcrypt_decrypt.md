@@ -1,3 +1,9 @@
+---
+title: server dbcrypt decrypt
+description: Decrypt a previously encrypted database.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # server dbcrypt decrypt
 

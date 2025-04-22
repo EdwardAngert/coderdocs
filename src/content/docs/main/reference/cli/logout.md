@@ -1,3 +1,9 @@
+---
+title: logout
+description: Unauthenticate your local session
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # logout
 

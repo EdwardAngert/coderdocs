@@ -1,3 +1,9 @@
+---
+title: login
+description: Authenticate with Coder deployment
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # login
 

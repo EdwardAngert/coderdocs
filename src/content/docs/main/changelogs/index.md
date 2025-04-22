@@ -1,3 +1,12 @@
+---
+title: Changelogs
+description: >-
+  These are the changelogs used by
+  [generate_release_notes.sh](https://github.com/coder/coder/blob/main/scripts/release/generate_release_notes.sh)
+  for a release.
+version: main
+audience: all
+---
 # Changelogs
 
 These are the changelogs used by [generate_release_notes.sh](https://github.com/coder/coder/blob/main/scripts/release/generate_release_notes.sh) for a release.

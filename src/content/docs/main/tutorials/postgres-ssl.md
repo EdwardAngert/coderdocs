@@ -1,3 +1,9 @@
+---
+title: Configure Coder to connect to PostgreSQL using SSL
+description: <div>
+version: main
+audience: admin
+---
 # Configure Coder to connect to PostgreSQL using SSL
 
 <div>

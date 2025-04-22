@@ -1,3 +1,9 @@
+---
+title: Offline Deployments
+description: All Coder features are supported in offline / behind firewalls / in air-gapped
+version: main
+audience: infra
+---
 # Offline Deployments
 
 All Coder features are supported in offline / behind firewalls / in air-gapped
@@ -10,11 +16,11 @@ offline with Kubernetes or Docker.
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Terraform binary   | By default, Coder downloads Terraform binary from [releases.hashicorp.com](https://releases.hashicorp.com)                                                                                                                                                         | Terraform binary must be included in `PATH` for the VM or container image. [Supported versions](https://github.com/coder/coder/blob/main/provisioner/terraform/install.go#L23-L24)                                                                                                                   |
 | Terraform registry | Coder templates will attempt to download providers from [registry.terraform.io](https://registry.terraform.io) or [custom source addresses](https://developer.hashicorp.com/terraform/language/providers/requirements#source-addresses) specified in each template | [Custom source addresses](https://developer.hashicorp.com/terraform/language/providers/requirements#source-addresses) can be specified in each Coder template, or a custom registry/mirror can be used. More details below                                                                           |
-| STUN               | By default, Coder uses Google's public STUN server for direct workspace connections                                                                                                                                                                                | STUN can be safely [disabled](../reference/cli/server.md#--derp-server-stun-addresses) users can still connect via [relayed connections](../admin/networking/index.md#-geo-distribution). Alternatively, you can set a [custom DERP server](../reference/cli/server.md#--derp-server-stun-addresses) |
-| DERP               | By default, Coder's built-in DERP relay can be used, or [Tailscale's public relays](../admin/networking/index.md#relayed-connections).                                                                                                                             | By default, Coder's built-in DERP relay can be used, or [custom relays](../admin/networking/index.md#custom-relays).                                                                                                                                                                                 |
-| PostgreSQL         | If no [PostgreSQL connection URL](../reference/cli/server.md#--postgres-url) is specified, Coder will download Postgres from [repo1.maven.org](https://repo1.maven.org)                                                                                            | An external database is required, you must specify a [PostgreSQL connection URL](../reference/cli/server.md#--postgres-url)                                                                                                                                                                          |
-| Telemetry          | Telemetry is on by default, and [can be disabled](../reference/cli/server.md#--telemetry)                                                                                                                                                                          | Telemetry [can be disabled](../reference/cli/server.md#--telemetry)                                                                                                                                                                                                                                  |
-| Update check       | By default, Coder checks for updates from [GitHub releases](https://github.com/coder/coder/releases)                                                                                                                                                               | Update checks [can be disabled](../reference/cli/server.md#--update-check)                                                                                                                                                                                                                           |
+| STUN               | By default, Coder uses Google's public STUN server for direct workspace connections                                                                                                                                                                                | STUN can be safely [disabled](../reference/cli/server#--derp-server-stun-addresses) users can still connect via [relayed connections](../admin/networking/index#-geo-distribution). Alternatively, you can set a [custom DERP server](../reference/cli/server#--derp-server-stun-addresses) |
+| DERP               | By default, Coder's built-in DERP relay can be used, or [Tailscale's public relays](../admin/networking/index#relayed-connections).                                                                                                                             | By default, Coder's built-in DERP relay can be used, or [custom relays](../admin/networking/index#custom-relays).                                                                                                                                                                                 |
+| PostgreSQL         | If no [PostgreSQL connection URL](../reference/cli/server#--postgres-url) is specified, Coder will download Postgres from [repo1.maven.org](https://repo1.maven.org)                                                                                            | An external database is required, you must specify a [PostgreSQL connection URL](../reference/cli/server#--postgres-url)                                                                                                                                                                          |
+| Telemetry          | Telemetry is on by default, and [can be disabled](../reference/cli/server#--telemetry)                                                                                                                                                                          | Telemetry [can be disabled](../reference/cli/server#--telemetry)                                                                                                                                                                                                                                  |
+| Update check       | By default, Coder checks for updates from [GitHub releases](https://github.com/coder/coder/releases)                                                                                                                                                               | Update checks [can be disabled](../reference/cli/server#--update-check)                                                                                                                                                                                                                           |
 
 ## Offline container images
 
@@ -140,7 +146,7 @@ provider_installation {
 
 ### Docker
 
-Follow our [docker-compose](./docker.md#install-coder-via-docker-compose)
+Follow our [docker-compose](./docker#install-coder-via-docker-compose)
 documentation and modify the docker-compose file to specify your custom Coder
 image. Additionally, you can add a volume mount to add providers to the
 filesystem mirror without re-building the image.
@@ -184,7 +190,7 @@ This can be uploaded into the `plugins` directory on your offline server.
 
 We publish the Helm chart for download on
 [GitHub Releases](https://github.com/coder/coder/releases/latest). Follow our
-[Kubernetes](./kubernetes.md) documentation and modify the Helm values to
+[Kubernetes](./kubernetes) documentation and modify the Helm values to
 specify your custom Coder image.
 
 ```yaml
@@ -227,7 +233,7 @@ server, as demonstrated in the example below:
 3. Extract the file and move its contents to your server folder.
 4. If you are using NodeJS, you can execute the following command:
    `cd docs && npx http-server .`
-5. Set the [CODER_DOCS_URL](../reference/cli/server.md#--docs-url) environment
+5. Set the [CODER_DOCS_URL](../reference/cli/server#--docs-url) environment
    variable to use the URL of your hosted docs. This way, the Coder UI will
    reference the documentation from your specified URL.
 
@@ -237,7 +243,7 @@ accessible for your team to use.
 ## Coder Modules
 
 To use Coder modules in offline installations please follow the instructions
-[here](../admin/templates/extending-templates/modules.md#offline-installations).
+[here](../admin/templates/extending-templates/modules#offline-installations).
 
 ## Firewall exceptions
 
@@ -253,7 +259,7 @@ Coder is installed.
 ## JetBrains IDEs
 
 Gateway, JetBrains' remote development product that works with Coder,
-[has documented offline deployment steps.](../user-guides/workspace-access/jetbrains/jetbrains-airgapped.md)
+[has documented offline deployment steps.](../user-guides/workspace-access/jetbrains/jetbrains-airgapped)
 
 ## Microsoft VS Code Remote - SSH
 
@@ -268,5 +274,5 @@ local machine has outbound HTTPS (port 443) connectivity to:
 
 ## Next steps
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index)

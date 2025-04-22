@@ -1,3 +1,9 @@
+---
+title: 'Reference Architecture: up to 3,000 users'
+description: 'The 3,000 users architecture targets large-scale enterprises, possibly with'
+version: main
+audience: admin
+---
 # Reference Architecture: up to 3,000 users
 
 The 3,000 users architecture targets large-scale enterprises, possibly with

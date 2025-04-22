@@ -1,3 +1,9 @@
+---
+title: Troubleshooting templates
+description: 'Occasionally, you may run into scenarios where a workspace is created, but the'
+version: main
+audience: admin
+---
 # Troubleshooting templates
 
 Occasionally, you may run into scenarios where a workspace is created, but the
@@ -21,7 +27,7 @@ practices:
 
 - Ensure the resource has `curl` installed (alternatively, `wget` or `busybox`)
 - Ensure the resource can `curl` your Coder
-  [access URL](../../admin/setup/index.md#access-url)
+  [access URL](../../admin/setup/index#access-url)
 - Manually connect to the resource and check the agent logs (e.g.,
   `kubectl exec`, `docker exec` or AWS console)
   - The Coder agent logs are typically stored in `/tmp/coder-agent.log`
@@ -31,7 +37,7 @@ practices:
     `/tmp/coder-shutdown-script.log`
 - This can also happen if the websockets are not being forwarded correctly when
   running Coder behind a reverse proxy.
-  [Read our reverse-proxy docs](../../admin/setup/index.md#tls--reverse-proxy)
+  [Read our reverse-proxy docs](../../admin/setup/index#tls--reverse-proxy)
 
 ## Startup script issues
 
@@ -163,13 +169,13 @@ If your workspaces are taking longer to start than expected, or longer than
 desired, you can diagnose which steps have the highest impact in the workspace
 build timings UI (available in v2.17 and beyond). Admins can can
 programmatically pull startup times for individual workspace builds using our
-[build timings API endpoint](../../reference/api/builds.md#get-workspace-build-timings-by-id).
+[build timings API endpoint](../../reference/api/builds#get-workspace-build-timings-by-id).
 
 See our
-[guide on optimizing workspace build times](../../tutorials/best-practices/speed-up-templates.md)
+[guide on optimizing workspace build times](../../tutorials/best-practices/speed-up-templates)
 to optimize your templates based on this data.
 
-![Workspace build timings UI](../../images/admin/templates/troubleshooting/workspace-build-timings-ui.png)
+![Workspace build timings UI](%images/%images/./../images/admin/templates/troubleshooting/workspace-build-timings-ui.png)
 
 ## Docker Workspaces on Raspberry Pi OS
 

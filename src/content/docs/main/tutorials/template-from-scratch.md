@@ -1,3 +1,9 @@
+---
+title: Write a template from scratch
+description: A template is a common configuration that you use to deploy workspaces.
+version: main
+audience: admin
+---
 # Write a template from scratch
 
 A template is a common configuration that you use to deploy workspaces.
@@ -8,7 +14,7 @@ as a Docker container with Ubuntu.
 ## Before you start
 
 You'll need a computer or cloud computing instance with both
-[Docker](https://docs.docker.com/get-docker/) and [Coder](../install/index.md)
+[Docker](https://docs.docker.com/get-docker/) and [Coder](../install/index)
 installed on it.
 
 ## What's in a template
@@ -28,7 +34,7 @@ started, or stopped.
 Here's a simplified diagram that shows the main parts of the template we'll
 create:
 
-![Template architecture](../images/templates/template-architecture.png)
+![Template architecture](%images/%images/./images/templates/template-architecture.png)
 
 ## 1. Create template files
 
@@ -171,7 +177,7 @@ resource "coder_agent" "main" {
 Because Docker is running locally in the Coder server, there is no need to
 authenticate `coder_agent`. But if your `coder_agent` is running on a remote
 host, your template will need
-[authentication credentials](../admin/external-auth.md).
+[authentication credentials](../admin/external-auth).
 
 This template's agent also runs a startup script, sets environment variables,
 and provides metadata.
@@ -191,7 +197,7 @@ and provides metadata.
     variables based on the workspace's owner. This way, the owner can make git
     commits immediately without any manual configuration.
 
-- [`metadata`](../admin/templates/extending-templates/agent-metadata.md) blocks
+- [`metadata`](../admin/templates/extending-templates/agent-metadata) blocks
 
   - Your template can use metadata to show information to the workspace owner
     Coder displays this metadata in the Coder dashboard.
@@ -204,15 +210,15 @@ A
 [`coder_app`](https://registry.terraform.io/providers/coder/coder/latest/docs/resources/app)
 resource lets a developer use an app from the workspace's Coder dashboard.
 
-![Apps in a Coder workspace](../images/templates/workspace-apps.png)
+![Apps in a Coder workspace](%images/%images/./images/templates/workspace-apps.png)
 
 This is commonly used for
-[web IDEs](../user-guides/workspace-access/web-ides.md) such as
+[web IDEs](../user-guides/workspace-access/web-ides) such as
 [code-server](https://coder.com/docs/code-server), RStudio, and JupyterLab.
 
 We installed code-server in the `startup_script` argument. To add code-server to
 the workspace, make it available in the workspace with a `coder_app` resource.
-See [web IDEs](../user-guides/workspace-access/web-ides.md) for more examples:
+See [web IDEs](../user-guides/workspace-access/web-ides) for more examples:
 
 ```tf
 resource "coder_app" "code-server" {
@@ -276,7 +282,7 @@ resource "docker_volume" "home_volume" {
 ```
 
 For details, see
-[Resource persistence](../admin/templates/extending-templates/resource-persistence.md).
+[Resource persistence](../admin/templates/extending-templates/resource-persistence).
 
 ## 6. Set up the Docker container
 
@@ -397,7 +403,7 @@ through the CLI, or through the Coder dashboard:
 1. Once the upload completes, select **Templates** from the top to deploy it to
    a new workspace.
 
-   ![Your new template, ready to use](../images/templates/template-tour.png)
+   ![Your new template, ready to use](%images/%images/./images/templates/template-tour.png)
 
 #### Dashboard
 
@@ -416,22 +422,22 @@ through the CLI, or through the Coder dashboard:
    Template**.
 1. Select **Upload template**:
 
-   ![Upload your first template](../images/templates/upload-create-your-first-template.png)
+   ![Upload your first template](%images/%images/./images/templates/upload-create-your-first-template.png)
 
 1. Drag the `.zip` file into the **Upload template** section and fill out the
    details, then select **Create template**.
 
-   ![Upload the template files](../images/templates/upload-create-template-form.png)
+   ![Upload the template files](%images/%images/./images/templates/upload-create-template-form.png)
 
 1. Once the upload completes, select **Templates** from the top to deploy it to
    a new workspace.
 
-   ![Your new template, ready to use](../images/templates/template-tour.png)
+   ![Your new template, ready to use](%images/%images/./images/templates/template-tour.png)
 
 </div>
 
 ### Next steps
 
-- [Setting up templates](../admin/templates/index.md)
-- [Customizing templates](../admin/templates/extending-templates/index.md)
-- [Troubleshooting template](../admin/templates/troubleshooting.md)
+- [Setting up templates](../admin/templates/index)
+- [Customizing templates](../admin/templates/extending-templates/index)
+- [Troubleshooting template](../admin/templates/troubleshooting)

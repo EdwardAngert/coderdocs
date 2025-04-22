@@ -1,3 +1,9 @@
+---
+title: server postgres-builtin-url
+description: Output the connection URL for the built-in PostgreSQL deployment.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # server postgres-builtin-url
 

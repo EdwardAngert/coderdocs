@@ -1,3 +1,9 @@
+---
+title: Resource persistence
+description: 'By default, all Coder resources are persistent, but production templates'
+version: main
+audience: admin
+---
 # Resource persistence
 
 By default, all Coder resources are persistent, but production templates

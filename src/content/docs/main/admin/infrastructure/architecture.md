@@ -1,3 +1,9 @@
+---
+title: Architecture
+description: The Coder deployment model is flexible and offers various components that
+version: main
+audience: admin
+---
 # Architecture
 
 The Coder deployment model is flexible and offers various components that
@@ -8,15 +14,15 @@ page describes possible deployments, challenges, and risks associated with them.
 
 ## Community Edition
 
-![Architecture Diagram](../../images/architecture-diagram.png)
+![Architecture Diagram](%images/%images/./../images/architecture-diagram.png)
 
 ## Premium
 
-![Single Region Architecture Diagram](../../images/architecture-single-region.png)
+![Single Region Architecture Diagram](%images/%images/./../images/architecture-single-region.png)
 
 ## Multi-Region Premium
 
-![Multi Region Architecture Diagram](../../images/architecture-multi-region.png)
+![Multi Region Architecture Diagram](%images/%images/./../images/architecture-multi-region.png)
 
 </div>
 
@@ -42,7 +48,7 @@ _provisionerd_ is the execution context for infrastructure modifying providers.
 At the moment, the only provider is Terraform (running `terraform`).
 
 By default, the Coder server runs multiple provisioner daemons.
-[External provisioners](../provisioners/index.md) can be added for security or
+[External provisioners](../provisioners/index) can be added for security or
 scalability purposes.
 
 ### Workspaces
@@ -71,7 +77,7 @@ It offers the following services along with much more:
 - `startup_script` automation
 
 Templates are responsible for
-[creating and running agents](../templates/extending-templates/index.md#workspace-agents)
+[creating and running agents](../templates/extending-templates/index#workspace-agents)
 within workspaces.
 
 ## Service Bundling
@@ -95,12 +101,12 @@ external PostgreSQL 13+ database for production deployments.
 A managed PostgreSQL database, with daily backups, is recommended:
 
 - For AWS: Amazon RDS for PostgreSQL (preferably using
-  [RDS IAM authentication](../../reference/cli/server.md#--postgres-auth)).
+  [RDS IAM authentication](../../reference/cli/server#--postgres-auth)).
 - For Azure: Azure Database for PostgreSQL
 - Flexible Server For GCP: Cloud SQL for PostgreSQL
 
 Learn more about database requirements:
-[Database Health](../monitoring/health-check.md#database)
+[Database Health](../monitoring/health-check#database)
 
 ### Git Providers (Recommended)
 
@@ -108,10 +114,10 @@ Users will likely need to pull source code and other artifacts from a git
 provider. The Coder control plane and workspaces will need network connectivity
 to the git provider.
 
-- [GitHub Enterprise](../external-auth.md#github-enterprise)
-- [GitLab](../external-auth.md#gitlab-self-managed)
-- [BitBucket](../external-auth.md#bitbucket-server)
-- [Other Providers](../external-auth.md#self-managed-git-providers)
+- [GitHub Enterprise](../external-auth#github-enterprise)
+- [GitLab](../external-auth#gitlab-self-managed)
+- [BitBucket](../external-auth#bitbucket-server)
+- [Other Providers](../external-auth#self-managed-git-providers)
 
 ### Artifact Manager (Optional)
 
@@ -119,7 +125,7 @@ Workspaces and templates can pull artifacts from an artifact manager, such as
 JFrog Artifactory. This can be configured on the infrastructure level, or in
 some cases within Coder:
 
-- Tutorial: [JFrog Artifactory and Coder](../integrations/jfrog-artifactory.md)
+- Tutorial: [JFrog Artifactory and Coder](../integrations/jfrog-artifactory)
 
 ### Container Registry (Optional)
 

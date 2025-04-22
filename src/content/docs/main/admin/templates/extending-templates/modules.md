@@ -1,3 +1,9 @@
+---
+title: Reusing template code
+description: 'To reuse code across different Coder templates, such as common scripts or'
+version: main
+audience: admin
+---
 # Reusing template code
 
 To reuse code across different Coder templates, such as common scripts or
@@ -120,7 +126,7 @@ template as the underlying module.
 ### Private git repository
 
 If you are importing a module from a private git repository, the Coder server or
-[provisioner](../../provisioners/index.md) needs git credentials. Since this token
+[provisioner](../../provisioners/index) needs git credentials. Since this token
 will only be used for cloning your repositories with modules, it is best to
 create a token with access limited to the repository and no extra permissions.
 In GitHub, you can generate a
@@ -194,5 +200,5 @@ coder:
 
 - JFrog's
   [Terraform Registry support](https://jfrog.com/help/r/jfrog-artifactory-documentation/terraform-registry)
-- [Configuring the JFrog toolchain inside a workspace](../../integrations/jfrog-artifactory.md)
+- [Configuring the JFrog toolchain inside a workspace](../../integrations/jfrog-artifactory)
 - [Coder Module Registry](https://registry.coder.com/modules)

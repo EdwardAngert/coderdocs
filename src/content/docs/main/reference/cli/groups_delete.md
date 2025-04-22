@@ -1,3 +1,9 @@
+---
+title: groups delete
+description: Delete a user group
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # groups delete
 

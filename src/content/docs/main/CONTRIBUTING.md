@@ -1,3 +1,9 @@
+---
+title: Contributing
+description: <div class="tabs">
+version: main
+audience: all
+---
 # Contributing
 
 ## Requirements
@@ -228,7 +234,7 @@ This helps in naming the dump (e.g. `000069` above).
 
 ### Documentation
 
-Visit our [documentation style guide](./contributing/documentation.md).
+Visit our [documentation style guide](./contributing/documentation).
 
 ### Backend
 
@@ -251,7 +257,7 @@ with a holistic perspective regarding the contribution.
 
 ### Frontend
 
-Our frontend guide can be found [here](./contributing/frontend.md).
+Our frontend guide can be found [here](./contributing/frontend).
 
 ## Reviews
 

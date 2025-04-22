@@ -1,3 +1,9 @@
+---
+title: server
+description: Start a Coder server
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # server
 
@@ -13,10 +19,10 @@ coder server [flags]
 
 | Name                                                                      | Purpose                                                                                                |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| [<code>create-admin-user</code>](./server_create-admin-user.md)           | Create a new admin user with the given username, email and password and adds it to every organization. |
-| [<code>postgres-builtin-url</code>](./server_postgres-builtin-url.md)     | Output the connection URL for the built-in PostgreSQL deployment.                                      |
-| [<code>postgres-builtin-serve</code>](./server_postgres-builtin-serve.md) | Run the built-in PostgreSQL deployment.                                                                |
-| [<code>dbcrypt</code>](./server_dbcrypt.md)                               | Manage database encryption.                                                                            |
+| [<code>create-admin-user</code>](./server_create-admin-user)           | Create a new admin user with the given username, email and password and adds it to every organization. |
+| [<code>postgres-builtin-url</code>](./server_postgres-builtin-url)     | Output the connection URL for the built-in PostgreSQL deployment.                                      |
+| [<code>postgres-builtin-serve</code>](./server_postgres-builtin-serve) | Run the built-in PostgreSQL deployment.                                                                |
+| [<code>dbcrypt</code>](./server_dbcrypt)                               | Manage database encryption.                                                                            |
 
 ## Options
 

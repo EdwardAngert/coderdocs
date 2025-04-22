@@ -1,3 +1,10 @@
+---
+title: Organizations
+description: '```shell'
+version: main
+audience: developer
+tier: premium
+---
 # Organizations
 
 ## Add new license
@@ -26,7 +33,7 @@ curl -X POST http://coder-server:8080/api/v2/licenses \
 
 | Name   | In   | Type                                                               | Required | Description         |
 |--------|------|--------------------------------------------------------------------|----------|---------------------|
-| `body` | body | [codersdk.AddLicenseRequest](schemas.md#codersdkaddlicenserequest) | true     | Add license request |
+| `body` | body | [codersdk.AddLicenseRequest](schemas#codersdkaddlicenserequest) | true     | Add license request |
 
 ### Example responses
 
@@ -45,9 +52,9 @@ curl -X POST http://coder-server:8080/api/v2/licenses \
 
 | Status | Meaning                                                      | Description | Schema                                         |
 |--------|--------------------------------------------------------------|-------------|------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.License](schemas.md#codersdklicense) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.License](schemas#codersdklicense) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update license entitlements
 
@@ -83,9 +90,9 @@ curl -X POST http://coder-server:8080/api/v2/licenses/refresh-entitlements \
 
 | Status | Meaning                                                      | Description | Schema                                           |
 |--------|--------------------------------------------------------------|-------------|--------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.Response](schemas.md#codersdkresponse) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get organizations
 
@@ -123,7 +130,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations \
 
 | Status | Meaning                                                 | Description | Schema                                                            |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Organization](schemas.md#codersdkorganization) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Organization](schemas#codersdkorganization) |
 
 <h3 id="get-organizations-responseschema">Response Schema</h3>
 
@@ -141,7 +148,7 @@ Status Code **200**
 | `» name`         | string            | false    |              |             |
 | `» updated_at`   | string(date-time) | true     |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Create organization
 
@@ -172,7 +179,7 @@ curl -X POST http://coder-server:8080/api/v2/organizations \
 
 | Name   | In   | Type                                                                               | Required | Description                 |
 |--------|------|------------------------------------------------------------------------------------|----------|-----------------------------|
-| `body` | body | [codersdk.CreateOrganizationRequest](schemas.md#codersdkcreateorganizationrequest) | true     | Create organization request |
+| `body` | body | [codersdk.CreateOrganizationRequest](schemas#codersdkcreateorganizationrequest) | true     | Create organization request |
 
 ### Example responses
 
@@ -195,9 +202,9 @@ curl -X POST http://coder-server:8080/api/v2/organizations \
 
 | Status | Meaning                                                      | Description | Schema                                                   |
 |--------|--------------------------------------------------------------|-------------|----------------------------------------------------------|
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.Organization](schemas.md#codersdkorganization) |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [codersdk.Organization](schemas#codersdkorganization) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get organization by ID
 
@@ -239,9 +246,9 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization} \
 
 | Status | Meaning                                                 | Description | Schema                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Organization](schemas.md#codersdkorganization) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Organization](schemas#codersdkorganization) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Delete organization
 
@@ -283,9 +290,9 @@ curl -X DELETE http://coder-server:8080/api/v2/organizations/{organization} \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update organization
 
@@ -317,7 +324,7 @@ curl -X PATCH http://coder-server:8080/api/v2/organizations/{organization} \
 | Name           | In   | Type                                                                               | Required | Description                |
 |----------------|------|------------------------------------------------------------------------------------|----------|----------------------------|
 | `organization` | path | string                                                                             | true     | Organization ID or name    |
-| `body`         | body | [codersdk.UpdateOrganizationRequest](schemas.md#codersdkupdateorganizationrequest) | true     | Patch organization request |
+| `body`         | body | [codersdk.UpdateOrganizationRequest](schemas#codersdkupdateorganizationrequest) | true     | Patch organization request |
 
 ### Example responses
 
@@ -340,9 +347,9 @@ curl -X PATCH http://coder-server:8080/api/v2/organizations/{organization} \
 
 | Status | Meaning                                                 | Description | Schema                                                   |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Organization](schemas.md#codersdkorganization) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Organization](schemas#codersdkorganization) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get provisioner jobs
 
@@ -435,7 +442,7 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/provisi
 
 | Status | Meaning                                                 | Description | Schema                                                                |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob) |
 
 <h3 id="get-provisioner-jobs-responseschema">Response Schema</h3>
 
@@ -449,14 +456,14 @@ Status Code **200**
 | `» completed_at`           | string(date-time)                                                            | false    |              |             |
 | `» created_at`             | string(date-time)                                                            | false    |              |             |
 | `» error`                  | string                                                                       | false    |              |             |
-| `» error_code`             | [codersdk.JobErrorCode](schemas.md#codersdkjoberrorcode)                     | false    |              |             |
+| `» error_code`             | [codersdk.JobErrorCode](schemas#codersdkjoberrorcode)                     | false    |              |             |
 | `» file_id`                | string(uuid)                                                                 | false    |              |             |
 | `» id`                     | string(uuid)                                                                 | false    |              |             |
-| `» input`                  | [codersdk.ProvisionerJobInput](schemas.md#codersdkprovisionerjobinput)       | false    |              |             |
+| `» input`                  | [codersdk.ProvisionerJobInput](schemas#codersdkprovisionerjobinput)       | false    |              |             |
 | `»» error`                 | string                                                                       | false    |              |             |
 | `»» template_version_id`   | string(uuid)                                                                 | false    |              |             |
 | `»» workspace_build_id`    | string(uuid)                                                                 | false    |              |             |
-| `» metadata`               | [codersdk.ProvisionerJobMetadata](schemas.md#codersdkprovisionerjobmetadata) | false    |              |             |
+| `» metadata`               | [codersdk.ProvisionerJobMetadata](schemas#codersdkprovisionerjobmetadata) | false    |              |             |
 | `»» template_display_name` | string                                                                       | false    |              |             |
 | `»» template_icon`         | string                                                                       | false    |              |             |
 | `»» template_id`           | string(uuid)                                                                 | false    |              |             |
@@ -468,10 +475,10 @@ Status Code **200**
 | `» queue_position`         | integer                                                                      | false    |              |             |
 | `» queue_size`             | integer                                                                      | false    |              |             |
 | `» started_at`             | string(date-time)                                                            | false    |              |             |
-| `» status`                 | [codersdk.ProvisionerJobStatus](schemas.md#codersdkprovisionerjobstatus)     | false    |              |             |
+| `» status`                 | [codersdk.ProvisionerJobStatus](schemas#codersdkprovisionerjobstatus)     | false    |              |             |
 | `» tags`                   | object                                                                       | false    |              |             |
 | `»» [any property]`        | string                                                                       | false    |              |             |
-| `» type`                   | [codersdk.ProvisionerJobType](schemas.md#codersdkprovisionerjobtype)         | false    |              |             |
+| `» type`                   | [codersdk.ProvisionerJobType](schemas#codersdkprovisionerjobtype)         | false    |              |             |
 | `» worker_id`              | string(uuid)                                                                 | false    |              |             |
 
 #### Enumerated Values
@@ -489,7 +496,7 @@ Status Code **200**
 | `type`       | `workspace_build`             |
 | `type`       | `template_version_dry_run`    |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get provisioner job
 
@@ -559,6 +566,6 @@ curl -X GET http://coder-server:8080/api/v2/organizations/{organization}/provisi
 
 | Status | Meaning                                                 | Description | Schema                                                       |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ProvisionerJob](schemas.md#codersdkprovisionerjob) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ProvisionerJob](schemas#codersdkprovisionerjob) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

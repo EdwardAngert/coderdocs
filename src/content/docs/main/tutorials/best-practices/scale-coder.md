@@ -1,3 +1,9 @@
+---
+title: Scale Coder
+description: This best practice guide helps you prepare a Coder deployment that you can
+version: main
+audience: admin
+---
 # Scale Coder
 
 This best practice guide helps you prepare a Coder deployment that you can
@@ -10,7 +16,7 @@ Observability is one of the most important aspects to a scalable Coder deploymen
 When you have visibility into performance and usage metrics, you can make informed
 decisions about what changes you should make.
 
-[Monitor your Coder deployment](../../admin/monitoring/index.md) with log output
+[Monitor your Coder deployment](../../admin/monitoring/index) with log output
 and metrics to identify potential bottlenecks before they negatively affect the
 end-user experience and measure the effects of modifications you make to your
 deployment.
@@ -31,7 +37,7 @@ Retain metric time series for at least six months. This allows you to see
 performance trends relative to user growth.
 
 For a more comprehensive overview, integrate metrics with an observability
-dashboard like [Grafana](../../admin/monitoring/index.md).
+dashboard like [Grafana](../../admin/monitoring/index).
 
 ### Observability key metrics
 
@@ -57,7 +63,7 @@ they affect the end-user experience.
 ### How to capture Coder server metrics with Prometheus
 
 Edit your Helm `values.yaml` to capture metrics from Coder Server and external provisioner daemons with
-[Prometheus](../../admin/integrations/prometheus.md):
+[Prometheus](../../admin/integrations/prometheus):
 
 1. Enable Prometheus metrics:
 
@@ -114,7 +120,7 @@ under ten instances, and opt for vertical scale over horizontal scale after
 meeting availability requirements.
 
 Coder's
-[validated architectures](../../admin/infrastructure/validated-architectures/index.md)
+[validated architectures](../../admin/infrastructure/validated-architectures/index)
 give specific sizing recommendations for various user scales. These are a useful
 starting point, but very few deployments will remain stable at a predetermined
 user level over the long term. We recommend monitoring and adjusting resources as needed.
@@ -141,7 +147,7 @@ maintenance window to minimize disruption.
 ### Locality
 
 We recommend that you run one or more
-[provisioner daemon deployments external to Coder Server](../../admin/provisioners/index.md)
+[provisioner daemon deployments external to Coder Server](../../admin/provisioners/index)
 and disable provisioner daemons within your Coder Server.
 This allows you to scale them independently of the Coder Server:
 
@@ -193,7 +199,7 @@ On a virtual machine (VM), you can deploy multiple provisioner daemons, ensuring
 each has a unique `CODER_CACHE_DIRECTORY` value.
 
 Coder's
-[validated architectures](../../admin/infrastructure/validated-architectures/index.md)
+[validated architectures](../../admin/infrastructure/validated-architectures/index)
 give specific sizing recommendations for various user scales. Since the
 complexity of builds varies significantly depending on the workspace template,
 consider this a starting point. Monitor queue times and build times and adjust
@@ -215,7 +221,7 @@ must also be low-latency with respect to one another.
 
 Prefer scaling PostgreSQL vertically rather than horizontally for best
 performance. Coder's
-[validated architectures](../../admin/infrastructure/validated-architectures/index.md)
+[validated architectures](../../admin/infrastructure/validated-architectures/index)
 give specific sizing recommendations for various user scales.
 
 ## Workspace proxies
@@ -318,5 +324,5 @@ workspace proxy instances.
 
 ## Next steps
 
-- [Scale Tests and Utilities](../../admin/infrastructure/scale-utility.md)
-- [Scale Testing](../../admin/infrastructure/scale-testing.md)
+- [Scale Tests and Utilities](../../admin/infrastructure/scale-utility)
+- [Scale Testing](../../admin/infrastructure/scale-testing)

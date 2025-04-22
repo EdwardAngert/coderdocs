@@ -1,3 +1,11 @@
+---
+title: Troubleshooting
+description: >-
+  `coder ping <workspace>` will ping the workspace agent and print diagnostics
+  on
+version: main
+audience: admin
+---
 # Troubleshooting
 
 `coder ping <workspace>` will ping the workspace agent and print diagnostics on
@@ -60,7 +68,7 @@ longer to establish or may not be possible at all.
 `coder ping` will indicate if it's possible the client or agent is behind a hard
 NAT.
 
-Learn more about [STUN and NAT](./stun.md).
+Learn more about [STUN and NAT](./stun).
 
 ### No STUN Servers
 
@@ -84,7 +92,7 @@ firewall, or reconfigure the hard NAT.
 If a VPN is the default route for all IP traffic, it may interfere with the
 ability for clients and agents to form direct connections. This happens if the
 NAT does not permit traffic to be
-['hairpinned'](./stun.md#3-direct-connections-with-vpn-and-nat-hairpinning) from
+['hairpinned'](./stun#3-direct-connections-with-vpn-and-nat-hairpinning) from
 the public IP address of the NAT (determined via STUN) to the internal IP
 address of the agent.
 

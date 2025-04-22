@@ -1,3 +1,9 @@
+---
+title: completion
+description: Install or update shell completion scripts for the detected or chosen shell.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # completion
 

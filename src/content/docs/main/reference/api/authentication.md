@@ -1,3 +1,11 @@
+---
+title: Authentication
+description: >-
+  Long-lived tokens can be generated to perform actions on behalf of your user
+  account:
+version: main
+audience: developer
+---
 # Authentication
 
 Long-lived tokens can be generated to perform actions on behalf of your user account:

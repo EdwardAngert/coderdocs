@@ -1,3 +1,11 @@
+---
+title: JetBrains Gateway in an air-gapped environment
+description: >-
+  In networks that restrict access to the internet, you will need to leverage
+  the
+version: main
+audience: developer
+---
 # JetBrains Gateway in an air-gapped environment
 
 In networks that restrict access to the internet, you will need to leverage the
@@ -138,7 +146,7 @@ HKEY_LOCAL_MACHINE registry
 Additionally, create a string for each setting with its appropriate value in
 `SOFTWARE\JetBrains\RemoteDev`:
 
-![JetBrains offline - Windows](../../../images/gateway/jetbrains-offline-windows.png)
+![JetBrains offline - Windows](%images/%images/./../../images/gateway/jetbrains-offline-windows.png)
 
 </div>
 
@@ -146,14 +154,14 @@ Additionally, create a string for each setting with its appropriate value in
 
 With the server now configured, you can now configure your local machine to use
 Gateway. Here is the documentation to
-[setup SSH config via the Coder CLI](../../../user-guides/workspace-access/index.md#configure-ssh).
+[setup SSH config via the Coder CLI](../../../user-guides/workspace-access/index#configure-ssh).
 On the Gateway side, follow our guide here until step 16.
 
 Instead of downloading from jetbrains.com, we will point Gateway to our server
 endpoint. Select `Installation options...` and select `Use download link`. Note
 that the URL must explicitly reference the archive file:
 
-![Offline Gateway](../../../images/gateway/offline-gateway.png)
+![Offline Gateway](%images/%images/./../../images/gateway/offline-gateway.png)
 
 Click `Download IDE and Connect`. Gateway should now download the backend and
 clients from the server into your remote workspace and local machine,
@@ -161,4 +169,4 @@ respectively.
 
 ## Next steps
 
-- [Pre-install the JetBrains IDEs backend in your workspace](../../../admin/templates/extending-templates/jetbrains-gateway.md)
+- [Pre-install the JetBrains IDEs backend in your workspace](../../../admin/templates/extending-templates/jetbrains-gateway)

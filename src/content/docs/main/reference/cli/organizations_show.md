@@ -1,3 +1,13 @@
+---
+title: organizations show
+description: >-
+  Show the organization. Using "selected" will show the selected organization
+  from the "--org" flag. Using "me" will show all organizations you are a member
+  of.
+version: main
+audience: developer
+tier: premium
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # organizations show
 

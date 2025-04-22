@@ -1,3 +1,9 @@
+---
+title: features
+description: List Enterprise features
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # features
 
@@ -17,4 +23,4 @@ coder features
 
 | Name                                    | Purpose |
 |-----------------------------------------|---------|
-| [<code>list</code>](./features_list.md) |         |
+| [<code>list</code>](./features_list) |         |

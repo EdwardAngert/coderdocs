@@ -1,3 +1,9 @@
+---
+title: provisioner keys create
+description: Create a new provisioner key
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # provisioner keys create
 

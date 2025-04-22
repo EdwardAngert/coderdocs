@@ -1,3 +1,9 @@
+---
+title: Resource Metadata
+description: Expose key workspace information to your users with
+version: main
+audience: admin
+---
 # Resource Metadata
 
 Expose key workspace information to your users with
@@ -8,16 +14,16 @@ You can use `coder_metadata` to show Terraform resource attributes like these:
 
 - Compute resources
 - IP addresses
-- [Secrets](../../security/secrets.md#displaying-secrets)
+- [Secrets](../../security/secrets#displaying-secrets)
 - Important file paths
 
-![ui](../../../images/admin/templates/coder-metadata-ui.png)
+![ui](%images/%images/./../../images/admin/templates/coder-metadata-ui.png)
 
 > [!NOTE]
 > Coder automatically generates the <code>type</code> metadata.
 
 You can also present automatically updating, dynamic values with
-[agent metadata](./agent-metadata.md).
+[agent metadata](./agent-metadata).
 
 ## Example
 
@@ -102,9 +108,9 @@ icons:
 - Database `/icon/database.svg`
 
 We also have other icons related to the IDEs. You can see more information on
-how to use the builtin icons [here](./icons.md).
+how to use the builtin icons [here](./icons).
 
 ## Up next
 
-- [Secrets](../../security/secrets.md)
-- [Agent metadata](./agent-metadata.md)
+- [Secrets](../../security/secrets)
+- [Agent metadata](./agent-metadata)

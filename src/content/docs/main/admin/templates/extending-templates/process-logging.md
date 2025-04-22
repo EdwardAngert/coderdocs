@@ -1,3 +1,10 @@
+---
+title: Workspace Process Logging
+description: The workspace process logging feature allows you to log all system-level
+version: main
+audience: admin
+tier: premium
+---
 # Workspace Process Logging
 
 The workspace process logging feature allows you to log all system-level
@@ -64,7 +71,7 @@ is compatible with our `envbox` template family.
 ## Example templates
 
 We provide working example templates for Kubernetes, and Kubernetes with
-`envbox` (for [Docker support in workspaces](./docker-in-workspaces.md)). You
+`envbox` (for [Docker support in workspaces](./docker-in-workspaces)). You
 can view these templates in the
 [exectrace repo](https://github.com/coder/exectrace/tree/main/enterprise/templates).
 

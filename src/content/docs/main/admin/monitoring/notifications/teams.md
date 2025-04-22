@@ -1,3 +1,9 @@
+---
+title: Microsoft Teams Notifications
+description: '[Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams) is a widely'
+version: main
+audience: admin
+---
 # Microsoft Teams Notifications
 
 [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams) is a widely

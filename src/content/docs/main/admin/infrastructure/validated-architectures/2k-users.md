@@ -1,3 +1,9 @@
+---
+title: 'Reference Architecture: up to 2,000 users'
+description: 'In the 2,000 users architecture, there is a moderate increase in traffic,'
+version: main
+audience: admin
+---
 # Reference Architecture: up to 2,000 users
 
 In the 2,000 users architecture, there is a moderate increase in traffic,

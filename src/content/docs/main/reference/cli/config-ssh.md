@@ -1,3 +1,9 @@
+---
+title: config-ssh
+description: Add an SSH Host entry for your workspaces "ssh coder.workspace"
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # config-ssh
 

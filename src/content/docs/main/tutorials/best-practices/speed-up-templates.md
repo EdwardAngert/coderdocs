@@ -1,3 +1,9 @@
+---
+title: Speed up your Coder templates and workspaces
+description: 'October 31, 2024'
+version: main
+audience: admin
+---
 # Speed up your Coder templates and workspaces
 
 October 31, 2024
@@ -9,7 +15,7 @@ changes to your Coder templates to help speed things up.
 
 ## Monitoring
 
-You can monitor [Coder logs](../../admin/monitoring/logs.md) through the
+You can monitor [Coder logs](../../admin/monitoring/logs) through the
 system-native tools on your deployment platform, or stream logs to tools like
 Splunk, Datadog, Grafana Loki, and others.
 
@@ -19,7 +25,7 @@ Use the **Build timeline** to monitor the time it takes to start specific
 workspaces. Identify long scripts, resources, and other things you can
 potentially optimize within the template.
 
-![Screenshot of a workspace and its build timeline](../../images/best-practice/build-timeline.png)
+![Screenshot of a workspace and its build timeline](%images/%images/./../images/best-practice/build-timeline.png)
 
 You can also retrieve this detail programmatically from the API:
 
@@ -30,7 +36,7 @@ curl -X GET https://coder.example.com/api/v2/workspacebuilds/{workspacebuild}/ti
 ```
 
 Visit the
-[API documentation](../../reference/api/builds.md#get-workspace-build-timings-by-id)
+[API documentation](../../reference/api/builds#get-workspace-build-timings-by-id)
 for more information.
 
 ### Coder Observability Chart
@@ -44,18 +50,18 @@ We recommend that all administrators deploying on Kubernetes or on an existing
 Prometheus or Grafana stack set the observability bundle up with the control
 plane from the start. For installation instructions, visit the
 [observability repository](https://github.com/coder/observability?tab=readme-ov-file#installation),
-or our [Kubernetes installation guide](../../install/kubernetes.md).
+or our [Kubernetes installation guide](../../install/kubernetes).
 
 ### Enable Prometheus metrics for Coder
 
 Coder exposes a variety of
-[application metrics](../../admin/integrations/prometheus.md#available-metrics),
+[application metrics](../../admin/integrations/prometheus#available-metrics),
 such as `coderd_provisionerd_job_timings_seconds` and
 `coderd_agentstats_startup_script_seconds`, which measure how long the
 workspaces take to provision and how long the startup scripts take.
 
 To make use of these metrics, you will need to
-[enable Prometheus metrics](../../admin/integrations/prometheus.md#enable-prometheus-metrics)
+[enable Prometheus metrics](../../admin/integrations/prometheus#enable-prometheus-metrics)
 exposition.
 
 If you are not using the [Observability Chart](#coder-observability-chart), you
@@ -66,7 +72,7 @@ Coder installation.
 
 `coder server` by default provides three built-in provisioner daemons
 (controlled by the
-[`CODER_PROVISIONER_DAEMONS`](../../reference/cli/server.md#--provisioner-daemons)
+[`CODER_PROVISIONER_DAEMONS`](../../reference/cli/server#--provisioner-daemons)
 config option). Each provisioner daemon can handle one single job (such as
 start, stop, or delete) at a time and can be resource intensive. When all
 provisioners are busy, workspaces enter a "pending" state until a provisioner
@@ -77,18 +83,18 @@ becomes available.
 Provisioners are queue-based to reduce unpredictable load to the Coder server.
 If you require a higher bandwidth of provisioner jobs, you can do so by
 increasing the
-[`CODER_PROVISIONER_DAEMONS`](../../reference/cli/server.md#--provisioner-daemons)
+[`CODER_PROVISIONER_DAEMONS`](../../reference/cli/server#--provisioner-daemons)
 config option.
 
 You risk overloading Coder if you use too many built-in provisioners, so we
 recommend a maximum of five built-in provisioners per `coderd` replica. For more
 than five provisioners, we recommend that you move to
-[External Provisioners](../../admin/provisioners/index.md) and also consider
-[High Availability](../../admin/networking/high-availability.md) to run multiple
+[External Provisioners](../../admin/provisioners/index) and also consider
+[High Availability](../../admin/networking/high-availability) to run multiple
 `coderd` replicas.
 
 Visit the
-[CLI documentation](../../reference/cli/server.md#--provisioner-daemons) for
+[CLI documentation](../../reference/cli/server#--provisioner-daemons) for
 more information about increasing provisioner daemons, configuring external
 provisioners, and other options.
 
@@ -115,7 +121,7 @@ Adjust the CPU and memory values as shown in
 ```
 
 Visit the
-[validated architecture documentation](../../admin/infrastructure/validated-architectures/index.md#workspace-nodes)
+[validated architecture documentation](../../admin/infrastructure/validated-architectures/index#workspace-nodes)
 for more information.
 
 ## Set up Terraform provider caching
@@ -160,9 +166,9 @@ provider versions.
 ### Cache directory
 
 Coder will instruct Terraform to cache its downloaded providers in the
-configured [`CODER_CACHE_DIRECTORY`](../../reference/cli/server.md#--cache-dir)
+configured [`CODER_CACHE_DIRECTORY`](../../reference/cli/server#--cache-dir)
 directory.
 
 Ensure that this directory is set to a location on disk which will persist
 across restarts of Coder or
-[external provisioners](../../admin/provisioners/index.md), if you're using them.
+[external provisioners](../../admin/provisioners/index), if you're using them.

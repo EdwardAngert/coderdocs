@@ -1,3 +1,10 @@
+---
+title: IdP Sync
+description: IdP (Identity provider) sync allows you to use OpenID Connect (OIDC) to
+version: main
+audience: admin
+tier: premium
+---
 <!-- markdownlint-disable MD024 -->
 # IdP Sync
 
@@ -37,14 +44,14 @@ If your OpenID Connect provider supports group claims, you can configure Coder
 to synchronize groups in your auth provider to groups within Coder. To enable
 group sync, ensure that the `groups` claim is being sent by your OpenID
 provider. You might need to request an additional
-[scope](../../reference/cli/server.md#--oidc-scopes) or additional configuration
+[scope](../../reference/cli/server#--oidc-scopes) or additional configuration
 on the OpenID provider side.
 
 If group sync is enabled, the user's groups will be controlled by the OIDC
 provider. This means manual group additions/removals will be overwritten on the
 next user login.
 
-For deployments with multiple [organizations](./organizations.md), configure
+For deployments with multiple [organizations](./organizations), configure
 group sync for each organization.
 
 <div class="tabs">
@@ -60,7 +67,7 @@ group sync for each organization.
 1. As an Owner or Organization Admin, go to **Admin settings**, select
    **Organizations**, then **IdP Sync**:
 
-   ![IdP Sync - Group sync settings](../../images/admin/users/organizations/group-sync-empty.png)
+   ![IdP Sync - Group sync settings](%images/%images/./../images/admin/users/organizations/group-sync-empty.png)
 
 1. Enter the **Group sync field** and an optional **Regex filter**, then select
    **Save**.
@@ -72,7 +79,7 @@ group sync for each organization.
 
 ### CLI
 
-1. Confirm you have the [Coder CLI](../../install/index.md) installed and are
+1. Confirm you have the [Coder CLI](../../install/index) installed and are
    logged in with a user who is an Owner or has an Organization Admin role.
 
 1. To fetch the current group sync settings for an organization, run the
@@ -141,7 +148,7 @@ coder organizations settings set group-sync \
 
 Visit the Coder UI to confirm these changes:
 
-![IdP Sync](../../images/admin/users/organizations/group-sync.png)
+![IdP Sync](%images/%images/./../images/admin/users/organizations/group-sync.png)
 
 ### Server Flags
 
@@ -150,7 +157,7 @@ Visit the Coder UI to confirm these changes:
 > You can use the dashboard to configure group sync instead.
 
 1. Configure the Coder server to read groups from the claim name with the
-   [OIDC group field](../../reference/cli/server.md#--oidc-group-field) server
+   [OIDC group field](../../reference/cli/server#--oidc-group-field) server
    flag:
 
    - Environment variable:
@@ -171,7 +178,7 @@ Visit the Coder UI to confirm these changes:
 1. For cases when an OIDC provider only returns group IDs or you want to have
    different group names in Coder than in your OIDC provider, you can configure
    mapping between the two with the
-   [OIDC group mapping](../../reference/cli/server.md#--oidc-group-mapping) server
+   [OIDC group mapping](../../reference/cli/server#--oidc-group-mapping) server
    flag:
 
    - Environment variable:
@@ -214,7 +221,7 @@ Users who are not in a matching group will see the following error:
 If your OpenID Connect provider supports roles claims, you can configure Coder
 to synchronize roles in your auth provider to roles within Coder.
 
-For deployments with multiple [organizations](./organizations.md), configure
+For deployments with multiple [organizations](./organizations), configure
 role sync at the organization level.
 
 <div class="tabs">
@@ -226,7 +233,7 @@ role sync at the organization level.
 
 1. Select the **Role sync settings** tab:
 
-   ![IdP Sync - Role sync settings](../../images/admin/users/organizations/role-sync-empty.png)
+   ![IdP Sync - Role sync settings](%images/%images/./../images/admin/users/organizations/role-sync-empty.png)
 
 1. Enter the **Role sync field**, then select **Save**.
 
@@ -235,11 +242,11 @@ role sync at the organization level.
    To add a new custom role, select **Roles** from the sidebar, then
    **Create custom role**.
 
-   Visit the [groups and roles documentation](./groups-roles.md) for more information.
+   Visit the [groups and roles documentation](./groups-roles) for more information.
 
 ### CLI
 
-1. Confirm you have the [Coder CLI](../../install/index.md) installed and are
+1. Confirm you have the [Coder CLI](../../install/index) installed and are
    logged in with a user who is an Owner or has an Organization Admin role.
 
 1. To fetch the current group sync settings for an organization, run the
@@ -288,7 +295,7 @@ coder organizations settings set role-sync \
 
 Visit the Coder UI to confirm these changes:
 
-![IdP Sync](../../images/admin/users/organizations/role-sync.png)
+![IdP Sync](%images/%images/./../images/admin/users/organizations/role-sync.png)
 
 ### Server Flags
 
@@ -297,10 +304,10 @@ Visit the Coder UI to confirm these changes:
 > You can use the dashboard to configure role sync instead.
 
 1. Configure the Coder server to read groups from the claim name with the
-   [OIDC role field](../../reference/cli/server.md#--oidc-user-role-field)
+   [OIDC role field](../../reference/cli/server#--oidc-user-role-field)
    server flag:
 
-1. Set the following in your Coder server [configuration](../setup/index.md).
+1. Set the following in your Coder server [configuration](../setup/index).
 
    ```env
     # Depending on your identity provider configuration, you may need to explicitly request a "roles" scope
@@ -354,7 +361,7 @@ You can initiate an organization sync through the Coder dashboard or CLI:
 1. Enter an IdP organization name and Coder organization(s), then select **Add
    IdP organization**:
 
-   ![IdP organization sync](../../images/admin/users/organizations/idp-org-sync.png)
+   ![IdP organization sync](%images/%images/./../images/admin/users/organizations/idp-org-sync.png)
 
 ### CLI
 
@@ -415,7 +422,7 @@ Some common issues when enabling group, role, or organization sync.
 If you are running into issues with a sync:
 
 1. View your Coder server logs and enable
-   [verbose mode](../../reference/cli/index.md#-v---verbose).
+   [verbose mode](../../reference/cli/index#-v---verbose).
 
 1. To reduce noise, you can filter for only logs related to group/role sync:
 

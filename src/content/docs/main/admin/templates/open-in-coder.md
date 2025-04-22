@@ -1,3 +1,11 @@
+---
+title: Open in Coder
+description: >-
+  You can embed an "Open in Coder" button into your git repos or internal wikis
+  to
+version: main
+audience: admin
+---
 # Open in Coder
 
 You can embed an "Open in Coder" button into your git repos or internal wikis to
@@ -15,7 +23,7 @@ approach for "Open in Coder" flows.
 
 ### 1. Set up git authentication
 
-See [External Authentication](../external-auth.md) to set up git authentication
+See [External Authentication](../external-auth) to set up git authentication
 in your Coder deployment.
 
 ### 2. Modify your template to auto-clone repos
@@ -54,7 +62,7 @@ resource "coder_agent" "dev" {
 > - `coder` (relative to the home directory)
 
 If you want the template to support any repository via
-[parameters](./extending-templates/parameters.md)
+[parameters](./extending-templates/parameters)
 
 ```hcl
 # Require external authentication to use this template
@@ -105,7 +113,7 @@ This can be used to pre-fill the git repo URL, disk size, image, etc.
 [![Open in Coder](https://YOUR_ACCESS_URL/open-in-coder.svg)](https://YOUR_ACCESS_URL/templates/YOUR_TEMPLATE/workspace?param.git_repo=https://github.com/coder/slog&param.home_disk_size%20%28GB%29=20)
 ```
 
-![Pre-filled parameters](../../images/templates/pre-filled-parameters.png)
+![Pre-filled parameters](%images/%images/./../images/templates/pre-filled-parameters.png)
 
 ### 5. Optional: disable specific parameter fields by including their names as
 

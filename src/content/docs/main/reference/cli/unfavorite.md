@@ -1,3 +1,9 @@
+---
+title: unfavorite
+description: Remove a workspace from your favorites
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # unfavorite
 

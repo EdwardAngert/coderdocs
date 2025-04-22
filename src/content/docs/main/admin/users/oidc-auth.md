@@ -1,3 +1,11 @@
+---
+title: OpenID Connect
+description: >-
+  The following steps through how to integrate any OpenID Connect provider
+  (Okta,
+version: main
+audience: admin
+---
 # OpenID Connect
 
 The following steps through how to integrate any OpenID Connect provider (Okta,
@@ -90,7 +98,7 @@ CODER_OIDC_ICON_URL=https://gitea.io/images/gitea.png
 ```
 
 To change the icon and text above the OpenID Connect button, see application
-name and logo url in [appearance](../setup/appearance.md) settings.
+name and logo url in [appearance](../setup/appearance) settings.
 
 ## Disable Built-in Authentication
 
@@ -109,8 +117,8 @@ CODER_DISABLE_PASSWORD_AUTH=true
 
 Coder supports user provisioning and deprovisioning via SCIM 2.0 with header
 authentication. Upon deactivation, users are
-[suspended](./index.md#suspend-a-user) and are not deleted.
-[Configure](../setup/index.md) your SCIM application with an auth key and supply
+[suspended](./index#suspend-a-user) and are not deleted.
+[Configure](../setup/index) your SCIM application with an auth key and supply
 it the Coder server.
 
 ```env
@@ -129,5 +137,5 @@ CODER_TLS_CLIENT_KEY_FILE=/path/to/key.pem
 
 ### Next steps
 
-- [Group Sync](./idp-sync.md)
-- [Groups & Roles](./groups-roles.md)
+- [Group Sync](./idp-sync)
+- [Groups & Roles](./groups-roles)

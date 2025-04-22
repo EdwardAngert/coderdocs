@@ -1,3 +1,11 @@
+---
+title: Zed
+description: >-
+  [Zed](https://zed.dev/) is an
+  [open-source](https://github.com/zed-industries/zed)
+version: main
+audience: developer
+---
 # Zed
 
 [Zed](https://zed.dev/) is an [open-source](https://github.com/zed-industries/zed)
@@ -30,7 +38,7 @@ Use the Coder CLI to log in and configure SSH, then connect to your workspace wi
    Use [GitHub releases](https://github.com/coder/coder/releases) to download the
    Windows installer (`.msi`) or standalone binary (`.exe`).
 
-   ![Windows setup wizard](../../images/install/windows-installer.png)
+   ![Windows setup wizard](%images/%images/./../images/install/windows-installer.png)
 
    Alternatively, you can use the
    [`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget)
@@ -42,7 +50,7 @@ Use the Coder CLI to log in and configure SSH, then connect to your workspace wi
 
    </div>
 
-   Consult the [Coder CLI documentation](../../install/cli.md) for more options.
+   Consult the [Coder CLI documentation](../../install/cli) for more options.
 
 1. Log in to your Coder deployment and authenticate when prompted:
 
@@ -64,7 +72,7 @@ Use the Coder CLI to log in and configure SSH, then connect to your workspace wi
 
    Or use Zed's [Remote Development](https://zed.dev/docs/remote-development#setup) to connect to the workspace:
 
-   ![Zed open remote project](../../images/zed/zed-ssh-open-remote.png)
+   ![Zed open remote project](%images/%images/./../images/zed/zed-ssh-open-remote.png)
 
 > [!NOTE]
 > If you have any suggestions or experience any issues, please

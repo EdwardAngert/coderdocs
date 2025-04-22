@@ -1,3 +1,9 @@
+---
+title: groups create
+description: Create a user group
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # groups create
 

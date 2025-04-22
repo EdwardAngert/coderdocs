@@ -1,27 +1,33 @@
+---
+title: Administration
+description: '![Admin settings general page](../images/admin/admin-settings-general.png)'
+version: main
+audience: admin
+---
 # Administration
 
-![Admin settings general page](../images/admin/admin-settings-general.png)
+![Admin settings general page](%images/%images/./images/admin/admin-settings-general.png)
 
 These guides contain information on managing the Coder control plane and
-[authoring templates](./templates/index.md).
+[authoring templates](./templates/index).
 
 First time viewers looking to set up control plane access can start with the
-[configuration guide](./setup/index.md). If you're a team lead looking to design
+[configuration guide](./setup/index). If you're a team lead looking to design
 environments for your developers, check out our
-[templates guides](./templates/index.md). If you are a developer using Coder, we
-recommend the [user guides](../user-guides/index.md).
+[templates guides](./templates/index). If you are a developer using Coder, we
+recommend the [user guides](../user-guides/index).
 
-For automation and scripting workflows, see our [CLI](../reference/cli/index.md)
-and [API](../reference/api/index.md) docs.
+For automation and scripting workflows, see our [CLI](../reference/cli/index)
+and [API](../reference/api/index) docs.
 
 For any information not strictly contained in these sections, check out our
-[Tutorials](../tutorials/index.md) and [FAQs](../tutorials/faqs.md).
+[Tutorials](../tutorials/index) and [FAQs](../tutorials/faqs).
 
 ## What is an image, template, dev container, or workspace
 
 ### Image
 
-- A [base image](./templates/managing-templates/image-management.md) contains
+- A [base image](./templates/managing-templates/image-management) contains
   OS-level packages and utilities that the Coder workspace is built on. It can
   be an [example image](https://github.com/coder/images), custom image in your
   registry, or one from [Docker Hub](https://hub.docker.com/search). It is
@@ -30,7 +36,7 @@ For any information not strictly contained in these sections, check out our
 
 ### Template
 
-- [Templates](./templates/index.md) include infrastructure-level dependencies
+- [Templates](./templates/index) include infrastructure-level dependencies
   for the workspace. For example, a template can include Kubernetes
   PersistentVolumeClaims, Docker containers, or EC2 VMs.
 - Managed by: Template administrators from within the Coder deployment.
@@ -44,15 +50,15 @@ For any information not strictly contained in these sections, check out our
 
 ### Workspace
 
-- A [workspace](../user-guides/workspace-management.md) is the environment that
+- A [workspace](../user-guides/workspace-management) is the environment that
   a developer works in. Developers on a team each work from their own workspace
-  and can use [multiple IDEs](../user-guides/workspace-access/index.md).
+  and can use [multiple IDEs](../user-guides/workspace-access/index).
 - Managed by: Developers
 
 ### Development containers (dev containers)
 
 - A
-  [Development Container](./templates/managing-templates/devcontainers/index.md)
+  [Development Container](./templates/managing-templates/devcontainers/index)
   is an open-source specification for defining development environments (called
   dev containers). It is generally stored in VCS alongside associated source
   code. It can reference an existing base image, or a custom Dockerfile that
@@ -63,7 +69,7 @@ For any information not strictly contained in these sections, check out our
 
 - Users may have their own specific preferences relating to shell prompt, custom
   keybindings, color schemes, and more. Users can leverage Coder's
-  [dotfiles support](../user-guides/workspace-dotfiles.md) or create their own
+  [dotfiles support](../user-guides/workspace-dotfiles) or create their own
   script to personalize their workspace. Be aware that users with root
   permissions in their workspace can override almost all of the previous
   configuration.

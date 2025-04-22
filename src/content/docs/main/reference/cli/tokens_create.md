@@ -1,3 +1,9 @@
+---
+title: tokens create
+description: Create a token
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # tokens create
 

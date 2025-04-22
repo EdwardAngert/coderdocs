@@ -1,3 +1,12 @@
+---
+title: Quotas
+description: >-
+  Quotas are a mechanism for controlling spend by associating costs with
+  workspace
+version: main
+audience: admin
+tier: premium
+---
 # Quotas
 
 Quotas are a mechanism for controlling spend by associating costs with workspace
@@ -9,8 +18,8 @@ For example: A template is configured with a cost of 5 credits per day, and the
 user is granted 15 credits, which can be consumed by both started and stopped
 workspaces. This budget limits the user to 3 concurrent workspaces.
 
-Quotas are scoped to [Groups](./groups-roles.md) in Enterprise and
-[organizations](./organizations.md) in Premium.
+Quotas are scoped to [Groups](./groups-roles) in Enterprise and
+[organizations](./organizations) in Premium.
 
 ## Definitions
 
@@ -71,7 +80,7 @@ unused workspaces and freeing up compute in the cluster.
 Each group has a configurable Quota Allowance. A user's budget is calculated as
 the sum of their allowances.
 
-![group-settings](../../images/admin/users/quotas/quota-groups.png)
+![group-settings](%images/%images/./../images/admin/users/quotas/quota-groups.png)
 
 For example:
 
@@ -99,9 +108,9 @@ process dynamically calculates costs, so quota violation fails builds as opposed
 to failing the build-triggering operation. For example, the Workspace Create
 Form will never get held up by quota enforcement.
 
-![build-log](../../images/admin/quota-buildlog.png)
+![build-log](%images/%images/./../images/admin/quota-buildlog.png)
 
 ## Up next
 
-- [Group Sync](./idp-sync.md)
-- [Control plane configuration](../setup/index.md)
+- [Group Sync](./idp-sync)
+- [Control plane configuration](../setup/index)

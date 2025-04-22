@@ -1,3 +1,9 @@
+---
+title: templates list
+description: List all the templates available for the organization
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates list
 

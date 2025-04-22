@@ -1,3 +1,9 @@
+---
+title: Headless Authentication
+description: Headless user accounts that cannot use the web UI to log in to Coder. This is
+version: main
+audience: admin
+---
 # Headless Authentication
 
 Headless user accounts that cannot use the web UI to log in to Coder. This is
@@ -23,9 +29,9 @@ coder users create \
 
 Navigate to the `Users` > `Create user` in the topbar
 
-![Create a user via the UI](../../images/admin/users/headless-user.png)
+![Create a user via the UI](%images/%images/./../images/admin/users/headless-user.png)
 
 </div>
 
 To make API or CLI requests on behalf of the headless user, learn how to
-[generate API tokens on behalf of a user](./sessions-tokens.md#generate-a-long-lived-api-token-on-behalf-of-another-user).
+[generate API tokens on behalf of a user](./sessions-tokens#generate-a-long-lived-api-token-on-behalf-of-another-user).

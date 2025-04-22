@@ -1,17 +1,23 @@
+---
+title: Installing Coder
+description: A single CLI (`coder`) is used for both the Coder server and the client.
+version: main
+audience: infra
+---
 # Installing Coder
 
 A single CLI (`coder`) is used for both the Coder server and the client.
 
 We support two release channels: mainline and stable - read the
-[Releases](./releases/index.md) page to learn more about which best suits your team.
+[Releases](./releases/index) page to learn more about which best suits your team.
 
 There are several ways to install Coder. Follow the steps on this page for a
 minimal installation of Coder, or for a step-by-step guide on how to install and
 configure your first Coder deployment, follow the
-[quickstart guide](../tutorials/quickstart.md).
+[quickstart guide](../tutorials/quickstart).
 
 For production deployments with 50+ users, we recommend
-[installing on Kubernetes](./kubernetes.md). Otherwise, you can install Coder on
+[installing on Kubernetes](./kubernetes). Otherwise, you can install Coder on
 your local machine or on a VM:
 
 <div class="tabs">
@@ -38,7 +44,7 @@ alternate installation methods (e.g. standalone binaries, system packages).
 Use [GitHub releases](https://github.com/coder/coder/releases) to download the
 Windows installer (`.msi`) or standalone binary (`.exe`).
 
-![Windows setup wizard](../images/install/windows-installer.png)
+![Windows setup wizard](%images/%images/./images/install/windows-installer.png)
 
 Alternatively, you can use the
 [`winget`](https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget)
@@ -60,7 +66,7 @@ To start the Coder server:
 coder server
 ```
 
-![Coder install](../images/screenshots/welcome-create-admin-user.png)
+![Coder install](%images/%images/./images/screenshots/welcome-create-admin-user.png)
 
 To log in to an existing Coder deployment:
 
@@ -70,5 +76,5 @@ coder login https://coder.example.com
 
 ## Next steps
 
-- [Quickstart](../tutorials/quickstart.md)
-- [Configure Control Plane Access](../admin/setup/index.md)
+- [Quickstart](../tutorials/quickstart)
+- [Configure Control Plane Access](../admin/setup/index)

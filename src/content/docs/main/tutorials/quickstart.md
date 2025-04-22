@@ -1,3 +1,9 @@
+---
+title: Quickstart
+description: Follow the steps in this guide to install Coder locally or on a cloud-hosting
+version: main
+audience: admin
+---
 # Quickstart
 
 Follow the steps in this guide to install Coder locally or on a cloud-hosting
@@ -99,7 +105,7 @@ persistent environment from your main device, a tablet, or your phone.
    You can also enter an email and password to create a new admin account on
    the Coder deployment:
 
-   ![Welcome to Coder - Create admin user](../images/screenshots/welcome-create-admin-user.png)_Welcome
+   ![Welcome to Coder - Create admin user](%images/%images/./images/screenshots/welcome-create-admin-user.png)_Welcome
    to Coder - Create admin user_
 
 1. On the **Workspaces** page, select **Go to templates** to create a new
@@ -114,7 +120,7 @@ persistent environment from your main device, a tablet, or your phone.
    The rest of the template details are optional, but will be helpful when you
    have more templates.
 
-   ![Create template](../images/screenshots/create-template.png)_Create
+   ![Create template](%images/%images/./images/screenshots/create-template.png)_Create
    template_
 
 1. Select **Create template**.
@@ -125,7 +131,7 @@ persistent environment from your main device, a tablet, or your phone.
 
 1. Coder starts your new workspace:
 
-   ![getting-started-workspace is running](../images/screenshots/workspace-running-with-topbar.png)_Workspace
+   ![getting-started-workspace is running](%images/%images/./images/screenshots/workspace-running-with-topbar.png)_Workspace
    is running_
 
 1. Select **VS Code Desktop** to install the Coder extension and connect to your
@@ -165,9 +171,9 @@ Go to **Templates** and select **Create Workspace** and continue from Step 7 in
 
 After that, you can try to:
 
-- [Customize templates](../admin/templates/extending-templates/index.md)
-- [Enable Prometheus metrics](../admin/integrations/prometheus.md)
-- [Deploy to Google Cloud Platform (GCP)](../install/cloud/compute-engine.md)
+- [Customize templates](../admin/templates/extending-templates/index)
+- [Enable Prometheus metrics](../admin/integrations/prometheus)
+- [Deploy to Google Cloud Platform (GCP)](../install/cloud/compute-engine)
 
 ## Troubleshooting
 

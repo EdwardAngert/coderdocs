@@ -1,3 +1,9 @@
+---
+title: Deploy Coder on Rancher
+description: You can deploy Coder on Rancher as a
+version: main
+audience: infra
+---
 # Deploy Coder on Rancher
 
 You can deploy Coder on Rancher as a
@@ -87,7 +93,7 @@ kubectl create secret generic coder-db-url -n coder \
 
 ## Install Coder through the Rancher UI
 
-![Coder installed on Rancher](../images/install/coder-rancher.png)
+![Coder installed on Rancher](%images/%images/./images/install/coder-rancher.png)
 
 1. In the Rancher Manager console, select your target Kubernetes cluster for Coder.
 
@@ -136,7 +142,7 @@ kubectl create secret generic coder-db-url -n coder \
    - **Mainline**: `2.20.x`
    - **Stable**: `2.19.x`
 
-   Learn more about release channels in the [Releases documentation](./releases/index.md).
+   Learn more about release channels in the [Releases documentation](./releases/index).
 
 1. Select **Next** when your configuration is complete.
 
@@ -157,5 +163,5 @@ To update or manage your Coder deployment later:
 
 ## Next steps
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index)

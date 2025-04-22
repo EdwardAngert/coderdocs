@@ -1,7 +1,15 @@
+---
+title: Install Coder on Kubernetes
+description: >-
+  You can install Coder on Kubernetes (K8s) using Helm. We run on most
+  Kubernetes
+version: main
+audience: infra
+---
 # Install Coder on Kubernetes
 
 You can install Coder on Kubernetes (K8s) using Helm. We run on most Kubernetes
-distributions, including [OpenShift](./openshift.md).
+distributions, including [OpenShift](./openshift).
 
 ## Requirements
 
@@ -123,7 +131,7 @@ details on the values that are available, or you can view the
 file directly.
 
 We support two release channels: mainline and stable - read the
-[Releases](./releases/index.md) page to learn more about which best suits your team.
+[Releases](./releases/index) page to learn more about which best suits your team.
 
 - **Mainline** Coder release:
 
@@ -303,10 +311,10 @@ Ensure you have an externally-reachable `CODER_ACCESS_URL` set in your helm
 chart. If you do not have a domain set up, this should be the IP address of
 Coder's LoadBalancer (`kubectl get svc -n coder`).
 
-See [troubleshooting templates](../admin/templates/troubleshooting.md) for more
+See [troubleshooting templates](../admin/templates/troubleshooting) for more
 steps.
 
 ## Next steps
 
-- [Create your first template](../tutorials/template-from-scratch.md)
-- [Control plane configuration](../admin/setup/index.md)
+- [Create your first template](../tutorials/template-from-scratch)
+- [Control plane configuration](../admin/setup/index)

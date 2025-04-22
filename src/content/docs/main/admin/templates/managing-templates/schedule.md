@@ -1,20 +1,28 @@
+---
+title: Workspace Scheduling
+description: >-
+  You can configure a template to control how workspaces are started and
+  stopped.
+version: main
+audience: admin
+---
 # Workspace Scheduling
 
 You can configure a template to control how workspaces are started and stopped.
 You can also manage the lifecycle of failed or inactive workspaces.
 
-![Schedule screen](../../../images/admin/templates/schedule/template-schedule-settings.png)
+![Schedule screen](%images/%images/./../../images/admin/templates/schedule/template-schedule-settings.png)
 
 ## Schedule
 
-Template [admins](../../users/index.md) may define these default values:
+Template [admins](../../users/index) may define these default values:
 
-- [**Default autostop**](../../../user-guides/workspace-scheduling.md#autostop):
+- [**Default autostop**](../../../user-guides/workspace-scheduling#autostop):
   How long a workspace runs without user activity before Coder automatically
   stops it.
 - [**Autostop requirement**](#autostop-requirement): Enforce mandatory workspace
   restarts to apply template updates regardless of user activity.
-- **Activity bump**: The duration by which to extend a workspace's deadline when activity is detected (default: 1 hour). The workspace will be considered inactive when no sessions are detected (VSCode, JetBrains, Terminal, or SSH). For details on what counts as activity, see the [user guide on activity detection](../../../user-guides/workspace-scheduling.md#activity-detection).
+- **Activity bump**: The duration by which to extend a workspace's deadline when activity is detected (default: 1 hour). The workspace will be considered inactive when no sessions are detected (VSCode, JetBrains, Terminal, or SSH). For details on what counts as activity, see the [user guide on activity detection](../../../user-guides/workspace-scheduling#activity-detection).
 - **Dormancy**: This allows automatic deletion of unused workspaces to reduce
   spend on idle resources.
 
@@ -103,10 +111,10 @@ User quiet hours can be configured in the user's schedule settings page.
 Workspaces on templates with an autostop requirement will only be forcibly
 stopped due to the policy at the start of the user's quiet hours.
 
-![User schedule settings](../../../images/admin/templates/schedule/user-quiet-hours.png)
+![User schedule settings](%images/%images/./../../images/admin/templates/schedule/user-quiet-hours.png)
 
 Admins can define the default quiet hours for all users with the
-[CODER_QUIET_HOURS_DEFAULT_SCHEDULE](../../../reference/cli/server.md#--default-quiet-hours-schedule)
+[CODER_QUIET_HOURS_DEFAULT_SCHEDULE](../../../reference/cli/server#--default-quiet-hours-schedule)
 environment variable. The value should be a cron expression such as
 `CRON_TZ=America/Chicago 30 2 * * *` which would set the default quiet hours to
 2:30 AM in the America/Chicago timezone. The cron schedule can only have a
@@ -115,7 +123,7 @@ to set the default quiet hours to a time when most users are not expected to be
 using Coder.
 
 Admins can force users to use the default quiet hours with the
-[CODER_ALLOW_CUSTOM_QUIET_HOURS](../../../reference/cli/server.md#--allow-custom-quiet-hours)
+[CODER_ALLOW_CUSTOM_QUIET_HOURS](../../../reference/cli/server#--allow-custom-quiet-hours)
 environment variable. Users will still be able to see the page, but will be
 unable to set a custom time or timezone. If users have already set a custom
 quiet hours schedule, it will be ignored and the default will be used instead.

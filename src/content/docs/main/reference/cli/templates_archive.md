@@ -1,3 +1,9 @@
+---
+title: templates archive
+description: Archive unused or failed template versions from a given template(s)
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates archive
 

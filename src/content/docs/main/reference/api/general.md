@@ -1,3 +1,9 @@
+---
+title: General
+description: '```shell'
+version: main
+audience: developer
+---
 # General
 
 ## API root handler
@@ -33,7 +39,7 @@ curl -X GET http://coder-server:8080/api/v2/ \
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
 ## Build info
 
@@ -70,7 +76,7 @@ curl -X GET http://coder-server:8080/api/v2/buildinfo \
 
 | Status | Meaning                                                 | Description | Schema                                                             |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.BuildInfoResponse](schemas.md#codersdkbuildinforesponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.BuildInfoResponse](schemas#codersdkbuildinforesponse) |
 
 ## Report CSP violations
 
@@ -97,7 +103,7 @@ curl -X POST http://coder-server:8080/api/v2/csp/reports \
 
 | Name   | In   | Type                                                 | Required | Description      |
 |--------|------|------------------------------------------------------|----------|------------------|
-| `body` | body | [coderd.cspViolation](schemas.md#coderdcspviolation) | true     | Violation report |
+| `body` | body | [coderd.cspViolation](schemas#coderdcspviolation) | true     | Violation report |
 
 ### Responses
 
@@ -105,7 +111,7 @@ curl -X POST http://coder-server:8080/api/v2/csp/reports \
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get deployment config
 
@@ -561,9 +567,9 @@ curl -X GET http://coder-server:8080/api/v2/deployment/config \
 
 | Status | Meaning                                                 | Description | Schema                                                           |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DeploymentConfig](schemas.md#codersdkdeploymentconfig) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DeploymentConfig](schemas#codersdkdeploymentconfig) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## SSH Config
 
@@ -597,9 +603,9 @@ curl -X GET http://coder-server:8080/api/v2/deployment/ssh \
 
 | Status | Meaning                                                 | Description | Schema                                                             |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.SSHConfigResponse](schemas.md#codersdksshconfigresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.SSHConfigResponse](schemas#codersdksshconfigresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get deployment stats
 
@@ -649,9 +655,9 @@ curl -X GET http://coder-server:8080/api/v2/deployment/stats \
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DeploymentStats](schemas.md#codersdkdeploymentstats) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.DeploymentStats](schemas#codersdkdeploymentstats) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get enabled experiments
 
@@ -680,7 +686,7 @@ curl -X GET http://coder-server:8080/api/v2/experiments \
 
 | Status | Meaning                                                 | Description | Schema                                                        |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Experiment](schemas.md#codersdkexperiment) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Experiment](schemas#codersdkexperiment) |
 
 <h3 id="get-enabled-experiments-responseschema">Response Schema</h3>
 
@@ -690,7 +696,7 @@ Status Code **200**
 |----------------|-------|----------|--------------|-------------|
 | `[array item]` | array | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get safe experiments
 
@@ -719,7 +725,7 @@ curl -X GET http://coder-server:8080/api/v2/experiments/available \
 
 | Status | Meaning                                                 | Description | Schema                                                        |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Experiment](schemas.md#codersdkexperiment) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.Experiment](schemas#codersdkexperiment) |
 
 <h3 id="get-safe-experiments-responseschema">Response Schema</h3>
 
@@ -729,7 +735,7 @@ Status Code **200**
 |----------------|-------|----------|--------------|-------------|
 | `[array item]` | array | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update check
 
@@ -759,7 +765,7 @@ curl -X GET http://coder-server:8080/api/v2/updatecheck \
 
 | Status | Meaning                                                 | Description | Schema                                                                 |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UpdateCheckResponse](schemas.md#codersdkupdatecheckresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.UpdateCheckResponse](schemas#codersdkupdatecheckresponse) |
 
 ## Get token config
 
@@ -794,6 +800,6 @@ curl -X GET http://coder-server:8080/api/v2/users/{user}/keys/tokens/tokenconfig
 
 | Status | Meaning                                                 | Description | Schema                                                 |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TokenConfig](schemas.md#codersdktokenconfig) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.TokenConfig](schemas#codersdktokenconfig) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

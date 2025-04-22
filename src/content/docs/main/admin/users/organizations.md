@@ -1,3 +1,10 @@
+---
+title: Organizations (Premium)
+description: Organizations can be used to segment and isolate resources inside a Coder
+version: main
+audience: admin
+tier: premium
+---
 # Organizations (Premium)
 
 > [!NOTE]
@@ -13,10 +20,10 @@ deployment for different user groups or projects.
 Here is an example of how one could use organizations to run a Coder deployment
 with multiple platform teams, all with unique resources:
 
-![Organizations Example](../../images/admin/users/organizations/diagram.png)
+![Organizations Example](%images/%images/./../images/admin/users/organizations/diagram.png)
 
 For more information about how to use organizations, visit the
-[organizations best practices](../../tutorials/best-practices/organizations.md)
+[organizations best practices](../../tutorials/best-practices/organizations)
 guide.
 
 ## The default organization
@@ -31,16 +38,16 @@ To edit the organization details, select **Admin settings** from the top bar, th
 
 From there, you can manage the name, icon, description, users, and groups:
 
-![Organization Settings](../../images/admin/users/organizations/default-organization-settings.png)
+![Organization Settings](%images/%images/./../images/admin/users/organizations/default-organization-settings.png)
 
 ## Additional organizations
 
 Any additional organizations have unique admins, users, templates, provisioners,
 groups, and workspaces. Each organization must have at least one dedicated
-[provisioner](../provisioners/index.md) since the built-in provisioners only apply to
+[provisioner](../provisioners/index) since the built-in provisioners only apply to
 the default organization.
 
-You can configure [organization/role/group sync](./idp-sync.md) from your
+You can configure [organization/role/group sync](./idp-sync) from your
 identity provider to avoid manually assigning users to organizations.
 
 ## How to create an organization
@@ -71,7 +78,7 @@ Next deploy a provisioner and template for this organization.
 
 ### 2. Deploy a provisioner
 
-[Provisioners](../provisioners/index.md) are organization-scoped and are responsible
+[Provisioners](../provisioners/index) are organization-scoped and are responsible
 for executing Terraform/OpenTofu to provision the infrastructure for workspaces
 and testing templates. Before creating templates, we must deploy at least one
 provisioner as the built-in provisioners are scoped to the default organization.
@@ -90,7 +97,7 @@ provisioner as the built-in provisioners are scoped to the default organization.
 
    In this example, start the provisioner using the Coder CLI on a host with
    Docker. For instructions on using other platforms like Kubernetes, see our
-   [provisioner documentation](../provisioners/index.md).
+   [provisioner documentation](../provisioners/index).
 
    ```sh
    export CODER_URL=https://<your-coder-url>
@@ -103,7 +110,7 @@ provisioner as the built-in provisioners are scoped to the default organization.
 Once you've started a provisioner, you can create a template. You'll notice the
 **Create Template** screen now has an organization dropdown:
 
-![Template Org Picker](../../images/admin/users/organizations/template-org-picker.png)
+![Template Org Picker](%images/%images/./../images/admin/users/organizations/template-org-picker.png)
 
 ### 4. Add members
 
@@ -118,8 +125,8 @@ organization-specific templates.
 Now, users in the data platform organization will see the templates related to
 their organization. Users can be in multiple organizations.
 
-![Workspace List](../../images/admin/users/organizations/workspace-list.png)
+![Workspace List](%images/%images/./../images/admin/users/organizations/workspace-list.png)
 
 ## Next steps
 
-- [Organizations - best practices](../../tutorials/best-practices/organizations.md)
+- [Organizations - best practices](../../tutorials/best-practices/organizations)

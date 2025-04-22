@@ -1,3 +1,9 @@
+---
+title: Debug
+description: '```shell'
+version: main
+audience: developer
+---
 # Debug
 
 ## Debug Info Wireguard Coordinator
@@ -18,7 +24,7 @@ curl -X GET http://coder-server:8080/api/v2/debug/coordinator \
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Debug Info Deployment Health
 
@@ -419,9 +425,9 @@ curl -X GET http://coder-server:8080/api/v2/debug/health \
 
 | Status | Meaning                                                 | Description | Schema                                                               |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.HealthcheckReport](schemas.md#healthsdkhealthcheckreport) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.HealthcheckReport](schemas#healthsdkhealthcheckreport) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get health settings
 
@@ -452,9 +458,9 @@ curl -X GET http://coder-server:8080/api/v2/debug/health/settings \
 
 | Status | Meaning                                                 | Description | Schema                                                         |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.HealthSettings](schemas.md#healthsdkhealthsettings) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.HealthSettings](schemas#healthsdkhealthsettings) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update health settings
 
@@ -484,7 +490,7 @@ curl -X PUT http://coder-server:8080/api/v2/debug/health/settings \
 
 | Name   | In   | Type                                                                       | Required | Description            |
 |--------|------|----------------------------------------------------------------------------|----------|------------------------|
-| `body` | body | [healthsdk.UpdateHealthSettings](schemas.md#healthsdkupdatehealthsettings) | true     | Update health settings |
+| `body` | body | [healthsdk.UpdateHealthSettings](schemas#healthsdkupdatehealthsettings) | true     | Update health settings |
 
 ### Example responses
 
@@ -502,9 +508,9 @@ curl -X PUT http://coder-server:8080/api/v2/debug/health/settings \
 
 | Status | Meaning                                                 | Description | Schema                                                                     |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.UpdateHealthSettings](schemas.md#healthsdkupdatehealthsettings) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [healthsdk.UpdateHealthSettings](schemas#healthsdkupdatehealthsettings) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Debug Info Tailnet
 
@@ -524,4 +530,4 @@ curl -X GET http://coder-server:8080/api/v2/debug/tailnet \
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

@@ -1,3 +1,9 @@
+---
+title: Documentation
+description: This style guide is primarily for use with authoring documentation.
+version: main
+audience: all
+---
 # Documentation
 
 This style guide is primarily for use with authoring documentation.

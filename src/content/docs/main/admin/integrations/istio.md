@@ -1,3 +1,9 @@
+---
+title: Integrate Coder with Istio
+description: Use Istio service mesh for your Coder workspace traffic to implement access
+version: main
+audience: admin
+---
 # Integrate Coder with Istio
 
 Use Istio service mesh for your Coder workspace traffic to implement access

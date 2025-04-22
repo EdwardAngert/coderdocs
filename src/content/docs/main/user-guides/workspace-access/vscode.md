@@ -1,3 +1,9 @@
+---
+title: Visual Studio Code
+description: You can develop in your Coder workspace remotely with
+version: main
+audience: developer
+---
 # Visual Studio Code
 
 You can develop in your Coder workspace remotely with
@@ -17,7 +23,7 @@ extension, authenticates with Coder, and connects to the workspace.
 
 > [!NOTE]
 > The `VS Code Desktop` button can be hidden by enabling
-> [Browser-only connections](../../admin/networking/index.md#browser-only-connections).
+> [Browser-only connections](../../admin/networking/index#browser-only-connections).
 
 ### Manual Installation
 
@@ -51,7 +57,7 @@ You can manually add an extension while you're working in the Code Web IDE. The
 extensions can be from Coder's public marketplace, Eclipse Open VSX's public
 marketplace, or the Eclipse Open VSX _local_ marketplace.
 
-![Code Web Extensions](../../images/ides/code-web-extensions.png)
+![Code Web Extensions](%images/%images/./../images/ides/code-web-extensions.png)
 
 > [!NOTE]
 > Microsoft does not allow any unofficial VS Code IDE to connect to the
@@ -64,7 +70,7 @@ Web or using the workspace's terminal.
 
 1. Download the extension(s) from the Microsoft public marketplace.
 
-   ![Code Web Extensions](../../images/ides/copilot.png)
+   ![Code Web Extensions](%images/%images/./../images/ides/copilot.png)
 
 1. Add the `vsix` extension files to the same folder as your Dockerfile.
 

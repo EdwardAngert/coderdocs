@@ -1,3 +1,11 @@
+---
+title: users suspend
+description: >-
+  Update a user's status to 'suspended'. A suspended user cannot log into the
+  platform
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # users suspend
 

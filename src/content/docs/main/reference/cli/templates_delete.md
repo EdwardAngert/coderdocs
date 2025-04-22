@@ -1,3 +1,9 @@
+---
+title: templates delete
+description: Delete templates
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates delete
 

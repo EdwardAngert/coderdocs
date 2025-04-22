@@ -1,3 +1,9 @@
+---
+title: Federating a Google Cloud service account to AWS
+description: <div>
+version: main
+audience: admin
+---
 # Federating a Google Cloud service account to AWS
 
 <div>
@@ -32,7 +38,7 @@ Optionally: If you do not yet have a service account, use the
 Create an AWS role that is configured for Web Identity Federation, with Google
 as the identity provider, as shown below:
 
-![AWS Create Role](../images/guides/gcp-to-aws/aws-create-role.png)
+![AWS Create Role](%images/%images/./images/guides/gcp-to-aws/aws-create-role.png)
 
 Once created, edit the **Trust Relationship** section to look like the
 following:

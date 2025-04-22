@@ -1,3 +1,9 @@
+---
+title: WorkspaceProxies
+description: '```shell'
+version: main
+audience: developer
+---
 # WorkspaceProxies
 
 ## Get site-wide regions for workspace connections
@@ -37,6 +43,6 @@ curl -X GET http://coder-server:8080/api/v2/regions \
 
 | Status | Meaning                                                 | Description | Schema                                                                                         |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.RegionsResponse-codersdk_Region](schemas.md#codersdkregionsresponse-codersdk_region) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.RegionsResponse-codersdk_Region](schemas#codersdkregionsresponse-codersdk_region) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

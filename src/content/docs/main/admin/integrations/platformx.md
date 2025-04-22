@@ -1,3 +1,11 @@
+---
+title: DX PlatformX
+description: >-
+  [DX](https://getdx.com) is a developer intelligence platform used by
+  engineering
+version: main
+audience: admin
+---
 # DX PlatformX
 
 [DX](https://getdx.com) is a developer intelligence platform used by engineering
@@ -6,7 +14,7 @@ leaders and platform engineers. Coder notifications can be transformed to
 measure activity and send pulse surveys to subsets of Coder users to understand
 their experience.
 
-![PlatformX Events in Coder](../../images/integrations/platformx-screenshot.png)
+![PlatformX Events in Coder](%images/%images/./../images/integrations/platformx-screenshot.png)
 
 ## Requirements
 
@@ -23,7 +31,7 @@ You'll need:
 
 ## coder-platformx-events-middleware
 
-Coder sends [notifications](../monitoring/notifications/index.md) via webhooks
+Coder sends [notifications](../monitoring/notifications/index) via webhooks
 to coder-platformx-events-middleware, which processes and reformats the payload
 into a structure compatible with [PlatformX by DX](https://help.getdx.com/en/articles/7880779-getting-started).
 
@@ -34,7 +42,7 @@ repository.
 
 ### Supported Notification Types
 
-coder-platformx-events-middleware supports the following [Coder notifications](../monitoring/notifications/index.md):
+coder-platformx-events-middleware supports the following [Coder notifications](../monitoring/notifications/index):
 
 - Workspace Created
 - Workspace Manually Updated

@@ -1,3 +1,9 @@
+---
+title: Debug
+description: '```shell'
+version: main
+audience: developer
+---
 # Debug
 
 ## Get debug logs
@@ -73,4 +79,4 @@ Get the manifest the agent fetched from `coderd` upon startup.
 
 | Status | Meaning                                                 | Description | Schema                                             |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.Manifest](./schemas.md#agentsdkmanifest) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [agentsdk.Manifest](./schemas#agentsdkmanifest) |

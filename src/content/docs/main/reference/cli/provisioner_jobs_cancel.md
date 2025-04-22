@@ -1,3 +1,9 @@
+---
+title: provisioner jobs cancel
+description: Cancel a provisioner job
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # provisioner jobs cancel
 

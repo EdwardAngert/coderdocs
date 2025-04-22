@@ -1,3 +1,9 @@
+---
+title: open app
+description: Open a workspace application.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # open app
 

@@ -1,3 +1,9 @@
+---
+title: Integrating JFrog Xray with Coder Kubernetes Workspaces
+description: <div>
+version: main
+audience: admin
+---
 # Integrating JFrog Xray with Coder Kubernetes Workspaces
 
 <div>
@@ -24,7 +30,7 @@ workspaces using Coder's [JFrog Xray Integration](https://github.com/coder/coder
 1. Create a JFrog Platform [Access Token](https://jfrog.com/help/r/jfrog-platform-administration-documentation/access-tokens) with a user that has the `read` [permission](https://jfrog.com/help/r/jfrog-platform-administration-documentation/permissions)
    for the repositories you want to scan.
 
-1. Create a Coder [token](../../reference/cli/tokens_create.md#tokens-create) with a user that has the [`owner`](../users/index.md#roles) role.
+1. Create a Coder [token](../../reference/cli/tokens_create#tokens-create) with a user that has the [`owner`](../users/index#roles) role.
 
 1. Create Kubernetes secrets for the JFrog Xray and Coder tokens.
 
@@ -60,7 +66,7 @@ workspaces using Coder's [JFrog Xray Integration](https://github.com/coder/coder
 > To authenticate with the Artifactory registry, you may need to
 > create a [Docker config](https://jfrog.com/help/r/jfrog-artifactory-documentation/docker-advanced-topics) and use it in the
 > `imagePullSecrets` field of the Kubernetes Pod.
-> See the [Defining ImagePullSecrets for Coder workspaces](../../tutorials/image-pull-secret.md) guide for more information.
+> See the [Defining ImagePullSecrets for Coder workspaces](../../tutorials/image-pull-secret) guide for more information.
 
 ## Validate your installation
 

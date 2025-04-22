@@ -1,3 +1,9 @@
+---
+title: state pull
+description: Pull a Terraform state file from a workspace.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # state pull
 

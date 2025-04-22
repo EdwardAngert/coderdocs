@@ -1,3 +1,9 @@
+---
+title: Web IDEs
+description: 'In Coder, web IDEs are defined as'
+version: main
+audience: admin
+---
 # Web IDEs
 
 In Coder, web IDEs are defined as
@@ -93,7 +99,7 @@ resource "coder_app" "code-server" {
 }
 ```
 
-![code-server in a workspace](../../../images/code-server-ide.png)
+![code-server in a workspace](%images/%images/./../../images/code-server-ide.png)
 
 ## VS Code Web
 
@@ -164,7 +170,7 @@ module "jupyter-notebook" {
 }
 ```
 
-![Jupyter Notebook in Coder](../../../images/jupyter-notebook.png)
+![Jupyter Notebook in Coder](%images/%images/./../../images/jupyter-notebook.png)
 
 ## JupyterLab
 
@@ -212,13 +218,13 @@ module "jupyter" {
 ```
 
 If you cannot enable a
-[wildcard subdomain](../../../admin/setup/index.md#wildcard-access-url), you can
+[wildcard subdomain](../../../admin/setup/index#wildcard-access-url), you can
 configure the template to run Jupyter on a path. There is however
-[security risk](../../../reference/cli/server.md#--dangerous-allow-path-app-sharing)
+[security risk](../../../reference/cli/server#--dangerous-allow-path-app-sharing)
 running an app on a path and the template code is more complicated with coder
 value substitution to recreate the path structure.
 
-![JupyterLab in Coder](../../../images/jupyter.png)
+![JupyterLab in Coder](%images/%images/./../../images/jupyter.png)
 
 ## RStudio
 
@@ -265,7 +271,7 @@ value substitution to recreate the path structure.
 [This](https://github.com/sempie/coder-templates/tree/main/rstudio) is a
 community template example.
 
-![RStudio in Coder](../../../images/rstudio-port-forward.png)
+![RStudio in Coder](%images/%images/./../../images/rstudio-port-forward.png)
 
 ## Airflow
 
@@ -313,7 +319,7 @@ module "airflow" {
 }
 ```
 
-![Airflow in Coder](../../../images/airflow-port-forward.png)
+![Airflow in Coder](%images/%images/./../../images/airflow-port-forward.png)
 
 ## File Browser
 
@@ -366,11 +372,11 @@ module "filebrowser" {
 }
 ```
 
-![File Browser](../../../images/file-browser.png)
+![File Browser](%images/%images/./../../images/file-browser.png)
 
 ## SSH Fallback
 
 If you prefer to run web IDEs in localhost, you can port forward using
-[SSH](../../../user-guides/workspace-access/index.md#ssh) or the Coder CLI
+[SSH](../../../user-guides/workspace-access/index#ssh) or the Coder CLI
 `port-forward` sub-command. Some web IDEs may not support URL base path
 adjustment so port forwarding is the only approach.

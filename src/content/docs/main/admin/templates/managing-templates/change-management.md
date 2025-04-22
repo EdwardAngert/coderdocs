@@ -1,3 +1,11 @@
+---
+title: Template Change Management
+description: >-
+  We recommend source-controlling your templates as you would other any code,
+  and
+version: main
+audience: admin
+---
 # Template Change Management
 
 We recommend source-controlling your templates as you would other any code, and
@@ -5,7 +13,7 @@ automating the creation of new versions in CI/CD pipelines.
 
 These pipelines will require tokens for your deployment. To cap token lifetime
 on creation,
-[configure Coder server to set a shorter max token lifetime](../../../reference/cli/server.md#--max-token-lifetime).
+[configure Coder server to set a shorter max token lifetime](../../../reference/cli/server#--max-token-lifetime).
 
 ## coderd Terraform Provider
 
@@ -62,7 +70,7 @@ For an example, see how we push our development image and template
 
 ## Coder CLI
 
-You can [install Coder](../../../install/cli.md) CLI to automate pushing new
+You can [install Coder](../../../install/cli) CLI to automate pushing new
 template versions in CI/CD pipelines. For GitHub Actions, see our
 [setup-coder](https://github.com/coder/setup-coder) action.
 
@@ -91,11 +99,11 @@ coder templates push --yes $CODER_TEMPLATE_NAME \
 
 ## Testing and Publishing Coder Templates in CI/CD
 
-See our [testing templates](../../../tutorials/testing-templates.md) tutorial
+See our [testing templates](../../../tutorials/testing-templates) tutorial
 for an example of how to test and publish Coder templates in a CI/CD pipeline.
 
 ### Next steps
 
-- [Coder CLI Reference](../../../reference/cli/templates.md)
+- [Coder CLI Reference](../../../reference/cli/templates)
 - [Coderd Terraform Provider Reference](https://registry.terraform.io/providers/coder/coderd/latest/docs)
-- [Coderd API Reference](../../../reference/index.md)
+- [Coderd API Reference](../../../reference/index)

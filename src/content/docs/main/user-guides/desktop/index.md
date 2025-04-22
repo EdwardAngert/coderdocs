@@ -1,3 +1,9 @@
+---
+title: Coder Desktop (Early Access)
+description: 'Use Coder Desktop to work on your workspaces as though they''re on your LAN, no'
+version: main
+audience: developer
+---
 # Coder Desktop (Early Access)
 
 Use Coder Desktop to work on your workspaces as though they're on your LAN, no
@@ -89,9 +95,9 @@ Before you can use Coder Desktop, you will need to sign in.
 
 1. In the **Sign In** window, enter your Coder deployment's URL and select **Next**:
 
-   ![Coder Desktop sign in](../../images/user-guides/desktop/coder-desktop-sign-in.png)
+   ![Coder Desktop sign in](%images/%images/./../images/user-guides/desktop/coder-desktop-sign-in.png)
 
-1. macOS: Select the link to your deployment's `/cli-auth` page to generate a [session token](../../admin/users/sessions-tokens.md).
+1. macOS: Select the link to your deployment's `/cli-auth` page to generate a [session token](../../admin/users/sessions-tokens).
 
    Windows: Select **Generate a token via the Web UI**.
 
@@ -105,7 +111,7 @@ Before you can use Coder Desktop, you will need to sign in.
 
 1. Paste the token in the **Session Token** field of the **Sign In** screen, then select **Sign In**:
 
-   ![Paste the session token in to sign in](../../images/user-guides/desktop/coder-desktop-session-token.png)
+   ![Paste the session token in to sign in](%images/%images/./../images/user-guides/desktop/coder-desktop-session-token.png)
 
 1. macOS: Allow the VPN configuration for Coder Desktop if you are prompted.
 
@@ -113,7 +119,7 @@ Before you can use Coder Desktop, you will need to sign in.
 
 1. Select the Coder icon in the menu bar (macOS) or system tray (Windows), and click the **Coder Connect** toggle to enable the connection.
 
-   ![Coder Desktop on Windows - enable Coder Connect](../../images/user-guides/desktop/coder-desktop-win-enable-coder-connect.png)
+   ![Coder Desktop on Windows - enable Coder Connect](%images/%images/./../images/user-guides/desktop/coder-desktop-win-enable-coder-connect.png)
 
    This may take a few moments, as Coder Desktop will download the necessary components from the Coder server if they have been updated.
 
@@ -125,7 +131,7 @@ Before you can use Coder Desktop, you will need to sign in.
 
 While active, Coder Connect will list the workspaces you own and will configure your system to connect to them over private IPv6 addresses and custom hostnames ending in `.coder`.
 
-![Coder Desktop list of workspaces](../../images/user-guides/desktop/coder-desktop-workspaces.png)
+![Coder Desktop list of workspaces](%images/%images/./../images/user-guides/desktop/coder-desktop-workspaces.png)
 
 To copy the `.coder` hostname of a workspace agent, you can click the copy icon beside it.
 
@@ -176,7 +182,7 @@ We are planning some changes to Coder Desktop that will make accessing secure co
 
    If you need to enter multiple URLs, use a comma to separate them.
 
-   ![Google Chrome insecure origin settings](../../images/user-guides/desktop/chrome-insecure-origin.png)
+   ![Google Chrome insecure origin settings](%images/%images/./../images/user-guides/desktop/chrome-insecure-origin.png)
 
 1. Ensure that the dropdown to the right of the text field is set to **Enabled**.
 
@@ -200,7 +206,7 @@ We are planning some changes to Coder Desktop that will make accessing secure co
 
    If you need to enter multiple URLs, use a comma to separate them.
 
-   ![Firefox insecure origin settings](../../images/user-guides/desktop/firefox-insecure-origin.png)
+   ![Firefox insecure origin settings](%images/%images/./../images/user-guides/desktop/firefox-insecure-origin.png)
 
 1. Web apps accessed on the configured hostnames will now function correctly in a secure context without requiring a restart.
 

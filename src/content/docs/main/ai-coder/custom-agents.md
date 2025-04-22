@@ -1,3 +1,12 @@
+---
+title: Custom Agents
+description: >-
+  Custom agents beyond the ones listed in the [Coder
+  registry](https://registry.coder.com/modules?tag=agent) can be used with
+  Coder.
+version: main
+audience: all
+---
 # Custom Agents
 
 > [!NOTE]
@@ -15,7 +24,7 @@ Custom agents beyond the ones listed in the [Coder registry](https://registry.co
 ## Prerequisites
 
 - A Coder deployment with v2.21 or later
-- A [Coder workspace / template](./create-template.md)
+- A [Coder workspace / template](./create-template)
 - A custom agent that supports Model Context Protocol (MCP)
 
 ## Getting Started
@@ -46,4 +55,4 @@ This will start the MCP server and report activity back to the Coder control pla
 
 We welcome contributions for various agents via the [Coder registry](https://registry.coder.com/modules?tag=agent)!
 
-See our [contributing guide](https://github.com/coder/modules/blob/main/CONTRIBUTING.md) for more information.
+See our [contributing guide](https://github.com/coder/modules/blob/main/CONTRIBUTING) for more information.

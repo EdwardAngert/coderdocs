@@ -1,3 +1,11 @@
+---
+title: templates create
+description: >-
+  DEPRECATED: Create a template from the current directory or as specified by
+  flag
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # templates create
 

@@ -1,13 +1,21 @@
+---
+title: Manage provisioner jobs
+description: >-
+  [Provisioners](./index.md) start and run provisioner jobs to create or delete
+  workspaces.
+version: main
+audience: admin
+---
 # Manage provisioner jobs
 
-[Provisioners](./index.md) start and run provisioner jobs to create or delete workspaces.
+[Provisioners](./index) start and run provisioner jobs to create or delete workspaces.
 Each time a workspace is built, rebuilt, or destroyed, it generates a new job and assigns
 the job to an available provisioner daemon for execution.
 
 While most jobs complete smoothly, issues with templates, cloud resources, or misconfigured
 provisioners can cause jobs to fail or hang indefinitely (these are in a `Pending` state).
 
-![Provisioner jobs in the dashboard](../../images/admin/provisioners/provisioner-jobs.png)
+![Provisioner jobs in the dashboard](%images/%images/./../images/admin/provisioners/provisioner-jobs.png)
 
 ## How to find provisioner jobs
 
@@ -71,7 +79,7 @@ Follow these steps to identify problematic jobs or daemons:
    coder provisioner jobs list -s pending
    ```
 
-1. Look for daemons with multiple failed jobs and for template [tag mismatches](./index.md#provisioner-tags).
+1. Look for daemons with multiple failed jobs and for template [tag mismatches](./index#provisioner-tags).
 
 1. Cancel the job through the dashboard, or use the CLI:
 

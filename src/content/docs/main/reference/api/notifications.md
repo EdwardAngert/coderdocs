@@ -1,3 +1,9 @@
+---
+title: Notifications
+description: '```shell'
+version: main
+audience: developer
+---
 # Notifications
 
 ## Get notification dispatch methods
@@ -32,7 +38,7 @@ curl -X GET http://coder-server:8080/api/v2/notifications/dispatch-methods \
 
 | Status | Meaning                                                 | Description | Schema                                                                                          |
 |--------|---------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationMethodsResponse](schemas.md#codersdknotificationmethodsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationMethodsResponse](schemas#codersdknotificationmethodsresponse) |
 
 <h3 id="get-notification-dispatch-methods-responseschema">Response Schema</h3>
 
@@ -44,7 +50,7 @@ Status Code **200**
 | `» available`  | array  | false    |              |             |
 | `» default`    | string | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## List inbox notifications
 
@@ -103,9 +109,9 @@ curl -X GET http://coder-server:8080/api/v2/notifications/inbox \
 
 | Status | Meaning                                                 | Description | Schema                                                                                       |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ListInboxNotificationsResponse](schemas.md#codersdklistinboxnotificationsresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.ListInboxNotificationsResponse](schemas#codersdklistinboxnotificationsresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Mark all unread notifications as read
 
@@ -125,7 +131,7 @@ curl -X PUT http://coder-server:8080/api/v2/notifications/inbox/mark-all-as-read
 |--------|-----------------------------------------------------------------|-------------|--------|
 | 204    | [No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5) | No Content  |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Watch for new inbox notifications
 
@@ -189,9 +195,9 @@ curl -X GET http://coder-server:8080/api/v2/notifications/inbox/watch \
 
 | Status | Meaning                                                 | Description | Schema                                                                                   |
 |--------|---------------------------------------------------------|-------------|------------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.GetInboxNotificationResponse](schemas.md#codersdkgetinboxnotificationresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.GetInboxNotificationResponse](schemas#codersdkgetinboxnotificationresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update read status of a notification
 
@@ -233,9 +239,9 @@ curl -X PUT http://coder-server:8080/api/v2/notifications/inbox/{id}/read-status
 
 | Status | Meaning                                                 | Description | Schema                                           |
 |--------|---------------------------------------------------------|-------------|--------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas.md#codersdkresponse) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.Response](schemas#codersdkresponse) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get notifications settings
 
@@ -264,9 +270,9 @@ curl -X GET http://coder-server:8080/api/v2/notifications/settings \
 
 | Status | Meaning                                                 | Description | Schema                                                                     |
 |--------|---------------------------------------------------------|-------------|----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.NotificationsSettings](schemas.md#codersdknotificationssettings) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [codersdk.NotificationsSettings](schemas#codersdknotificationssettings) |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update notifications settings
 
@@ -294,7 +300,7 @@ curl -X PUT http://coder-server:8080/api/v2/notifications/settings \
 
 | Name   | In   | Type                                                                       | Required | Description                    |
 |--------|------|----------------------------------------------------------------------------|----------|--------------------------------|
-| `body` | body | [codersdk.NotificationsSettings](schemas.md#codersdknotificationssettings) | true     | Notifications settings request |
+| `body` | body | [codersdk.NotificationsSettings](schemas#codersdknotificationssettings) | true     | Notifications settings request |
 
 ### Example responses
 
@@ -310,10 +316,10 @@ curl -X PUT http://coder-server:8080/api/v2/notifications/settings \
 
 | Status | Meaning                                                         | Description  | Schema                                                                     |
 |--------|-----------------------------------------------------------------|--------------|----------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)         | OK           | [codersdk.NotificationsSettings](schemas.md#codersdknotificationssettings) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)         | OK           | [codersdk.NotificationsSettings](schemas#codersdknotificationssettings) |
 | 304    | [Not Modified](https://tools.ietf.org/html/rfc7232#section-4.1) | Not Modified |                                                                            |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get system notification templates
 
@@ -352,7 +358,7 @@ curl -X GET http://coder-server:8080/api/v2/notifications/templates/system \
 
 | Status | Meaning                                                 | Description | Schema                                                                            |
 |--------|---------------------------------------------------------|-------------|-----------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationTemplate](schemas.md#codersdknotificationtemplate) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationTemplate](schemas#codersdknotificationtemplate) |
 
 <h3 id="get-system-notification-templates-responseschema">Response Schema</h3>
 
@@ -371,7 +377,7 @@ Status Code **200**
 | `» name`               | string       | false    |              |             |
 | `» title_template`     | string       | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Send a test notification
 
@@ -391,7 +397,7 @@ curl -X POST http://coder-server:8080/api/v2/notifications/test \
 |--------|---------------------------------------------------------|-------------|--------|
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          |        |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Get user notification preferences
 
@@ -430,7 +436,7 @@ curl -X GET http://coder-server:8080/api/v2/users/{user}/notifications/preferenc
 
 | Status | Meaning                                                 | Description | Schema                                                                                |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationPreference](schemas.md#codersdknotificationpreference) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationPreference](schemas#codersdknotificationpreference) |
 
 <h3 id="get-user-notification-preferences-responseschema">Response Schema</h3>
 
@@ -443,7 +449,7 @@ Status Code **200**
 | `» id`         | string(uuid)      | false    |              |             |
 | `» updated_at` | string(date-time) | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).
 
 ## Update user notification preferences
 
@@ -475,7 +481,7 @@ curl -X PUT http://coder-server:8080/api/v2/users/{user}/notifications/preferenc
 | Name   | In   | Type                                                                                               | Required | Description          |
 |--------|------|----------------------------------------------------------------------------------------------------|----------|----------------------|
 | `user` | path | string                                                                                             | true     | User ID, name, or me |
-| `body` | body | [codersdk.UpdateUserNotificationPreferences](schemas.md#codersdkupdateusernotificationpreferences) | true     | Preferences          |
+| `body` | body | [codersdk.UpdateUserNotificationPreferences](schemas#codersdkupdateusernotificationpreferences) | true     | Preferences          |
 
 ### Example responses
 
@@ -495,7 +501,7 @@ curl -X PUT http://coder-server:8080/api/v2/users/{user}/notifications/preferenc
 
 | Status | Meaning                                                 | Description | Schema                                                                                |
 |--------|---------------------------------------------------------|-------------|---------------------------------------------------------------------------------------|
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationPreference](schemas.md#codersdknotificationpreference) |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | array of [codersdk.NotificationPreference](schemas#codersdknotificationpreference) |
 
 <h3 id="update-user-notification-preferences-responseschema">Response Schema</h3>
 
@@ -508,4 +514,4 @@ Status Code **200**
 | `» id`         | string(uuid)      | false    |              |             |
 | `» updated_at` | string(date-time) | false    |              |             |
 
-To perform this operation, you must be authenticated. [Learn more](authentication.md).
+To perform this operation, you must be authenticated. [Learn more](authentication).

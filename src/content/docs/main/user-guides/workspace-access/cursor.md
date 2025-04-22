@@ -1,3 +1,11 @@
+---
+title: Cursor
+description: >-
+  [Cursor](https://cursor.sh/) is a modern IDE built on top of VS Code with
+  enhanced AI capabilities.
+version: main
+audience: developer
+---
 # Cursor
 
 [Cursor](https://cursor.sh/) is a modern IDE built on top of VS Code with enhanced AI capabilities.

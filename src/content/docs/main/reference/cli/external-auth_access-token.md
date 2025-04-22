@@ -1,3 +1,9 @@
+---
+title: external-auth access-token
+description: Print auth for an external provider
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # external-auth access-token
 

@@ -1,3 +1,9 @@
+---
+title: Additional clusters
+description: 'With Coder, you can deploy workspaces in additional Kubernetes clusters using'
+version: main
+audience: admin
+---
 # Additional clusters
 
 With Coder, you can deploy workspaces in additional Kubernetes clusters using
@@ -5,7 +11,7 @@ different
 [authentication methods](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs#authentication)
 in the Terraform provider.
 
-![Region picker in "Create Workspace" screen](../../images/admin/integrations/kube-region-picker.png)
+![Region picker in "Create Workspace" screen](%images/%images/./../images/admin/integrations/kube-region-picker.png)
 
 ## Option 1) Kubernetes contexts and kubeconfig
 
@@ -46,7 +52,7 @@ coder:
       readOnly: true
 ```
 
-[Upgrade Coder](../../install/kubernetes.md#upgrading-coder-via-helm) with these
+[Upgrade Coder](../../install/kubernetes#upgrading-coder-via-helm) with these
 new values.
 
 ### VM control plane
@@ -59,7 +65,7 @@ If you deployed Coder on a VM, copy the kubeconfig file to
 You can start from our
 [example template](https://github.com/coder/coder/tree/main/examples/templates/kubernetes).
 From there, add
-[template parameters](../templates/extending-templates/parameters.md) to allow
+[template parameters](../templates/extending-templates/parameters) to allow
 developers to pick their desired cluster.
 
 ```tf
@@ -92,7 +98,7 @@ provider "kubernetes" {
 
 Alternatively, you can authenticate with remote clusters with ServiceAccount
 tokens. Coder can store these secrets on your behalf with
-[managed Terraform variables](../templates/extending-templates/variables.md).
+[managed Terraform variables](../templates/extending-templates/variables).
 
 Alternatively, these could also be fetched from Kubernetes secrets or even
 [Hashicorp Vault](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/data-sources/generic_secret).

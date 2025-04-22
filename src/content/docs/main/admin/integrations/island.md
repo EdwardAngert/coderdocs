@@ -1,3 +1,9 @@
+---
+title: Island Browser Integration
+description: <div>
+version: main
+audience: admin
+---
 # Island Browser Integration
 
 <div>

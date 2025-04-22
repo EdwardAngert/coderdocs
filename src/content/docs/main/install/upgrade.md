@@ -1,3 +1,9 @@
+---
+title: Upgrade
+description: This article describes how to upgrade your Coder server.
+version: main
+audience: infra
+---
 # Upgrade
 
 This article describes how to upgrade your Coder server.
@@ -43,7 +49,7 @@ docker-compose pull coder && docker-compose up -d coder
 ### Kubernetes
 
 See
-[Upgrading Coder via Helm](../install/kubernetes.md#upgrading-coder-via-helm).
+[Upgrading Coder via Helm](../install/kubernetes#upgrading-coder-via-helm).
 
 ### Coder AMI on AWS
 

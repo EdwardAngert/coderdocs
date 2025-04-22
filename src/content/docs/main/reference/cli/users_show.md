@@ -1,3 +1,9 @@
+---
+title: users show
+description: Show a single user. Use 'me' to indicate the currently authenticated user.
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # users show
 

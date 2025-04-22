@@ -1,3 +1,9 @@
+---
+title: Slack Notifications
+description: '[Slack](https://slack.com/) is a popular messaging platform designed for teams'
+version: main
+audience: admin
+---
 # Slack Notifications
 
 [Slack](https://slack.com/) is a popular messaging platform designed for teams

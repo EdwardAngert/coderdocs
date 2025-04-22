@@ -1,3 +1,9 @@
+---
+title: Federating Coder's control plane to Azure
+description: <div>
+version: main
+audience: admin
+---
 # Federating Coder's control plane to Azure
 
 <div>

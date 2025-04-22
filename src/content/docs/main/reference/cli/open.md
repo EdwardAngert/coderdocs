@@ -1,3 +1,9 @@
+---
+title: open
+description: Open a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # open
 
@@ -13,5 +19,5 @@ coder open
 
 | Name                                    | Purpose                             |
 |-----------------------------------------|-------------------------------------|
-| [<code>vscode</code>](./open_vscode.md) | Open a workspace in VS Code Desktop |
-| [<code>app</code>](./open_app.md)       | Open a workspace application.       |
+| [<code>vscode</code>](./open_vscode) | Open a workspace in VS Code Desktop |
+| [<code>app</code>](./open_app)       | Open a workspace application.       |

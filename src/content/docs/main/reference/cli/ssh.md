@@ -1,3 +1,9 @@
+---
+title: ssh
+description: Start a shell into a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # ssh
 

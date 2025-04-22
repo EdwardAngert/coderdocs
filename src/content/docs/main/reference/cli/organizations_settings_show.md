@@ -1,3 +1,10 @@
+---
+title: organizations settings show
+description: Outputs specified organization setting.
+version: main
+audience: developer
+tier: premium
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # organizations settings show
 
@@ -21,6 +28,6 @@ coder organizations settings show
 
 | Name                                                                                 | Purpose                                                                  |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [<code>group-sync</code>](./organizations_settings_show_group-sync.md)               | Group sync settings to sync groups from an IdP.                          |
-| [<code>role-sync</code>](./organizations_settings_show_role-sync.md)                 | Role sync settings to sync organization roles from an IdP.               |
-| [<code>organization-sync</code>](./organizations_settings_show_organization-sync.md) | Organization sync settings to sync organization memberships from an IdP. |
+| [<code>group-sync</code>](./organizations_settings_show_group-sync)               | Group sync settings to sync groups from an IdP.                          |
+| [<code>role-sync</code>](./organizations_settings_show_role-sync)                 | Role sync settings to sync organization roles from an IdP.               |
+| [<code>organization-sync</code>](./organizations_settings_show_organization-sync) | Organization sync settings to sync organization memberships from an IdP. |

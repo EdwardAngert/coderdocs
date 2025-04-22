@@ -1,3 +1,9 @@
+---
+title: start
+description: Start a workspace
+version: main
+audience: developer
+---
 <!-- DO NOT EDIT | GENERATED CONTENT -->
 # start
 
